@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  display: inline-block; /* Set display property to inline-block */
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none; /* Remove border on the right side of the last li */
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+.header {
+  font-family: "Courier New", monospace; /* Change to your desired font */
+  font-size: 3vw;
+}
+
+body {
+  background-image: url(background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 60px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #111;
+}
+
+li.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li class="dropdown">
+    <a class="active" href="#music" class="dropbtn">Music</a>
+    <div class="dropdown-content">
+      <a href="projects.html">Projects</a>
+      <a href="personal.html">Personal</a>
+    </div>
+  </li>
+  <li><a href="contact.html">Contact</a></li>
+</ul>
+
+<h1 class="header">PROJECTS!</h1>
+
+</body>
+</html>
