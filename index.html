@@ -2,21 +2,36 @@
 <html>
 <head>
 <style>
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  margin-bottom: 20px;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  background-color: #333;
-  display: inline-block; /* Set display property to inline-block */
+  background-color: transparent;
+  font-size: 2vw; /* Initial font size */
+  width: 100%;
 }
 
 li {
-  float: left;
-  border-right:1px solid #bbb;
+  display: inline-block;
+  border-right: 4px solid #bbb;
+  padding: 1px 1%;
 }
 
 li:last-child {
-  border-right: none; /* Remove border on the right side of the last li */
+  border-right: none;
 }
 
 li a {
@@ -28,24 +43,25 @@ li a {
 }
 
 li a:hover:not(.active) {
-  background-color: #111;
+  background-color: rgba(4, 170, 109, 0.5);
 }
 
 .active {
-  background-color: #04AA6D;
+  background-color: rgba(4, 170, 109, 1);
 }
 
 .header {
-  font-family: "Courier New", monospace; 
+  font-family: "Courier New", monospace;
   font-size: 3vw;
+  color: black;
+  margin-top: 70px;
 }
 
 body {
-  background-image: url(background.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  background: linear-gradient(to top, #E9FFFF, #00008B, #99C4D2);
   text-align: center;
+  margin: 20px 0 0; /* Adjusted margin-top */
+  padding: 0;
 }
 
 h1 {
@@ -56,14 +72,15 @@ h1 {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #333;
+  background-color: rgba(51, 51, 51, 0.7);
   min-width: 60px;
   z-index: 1;
 }
 
 .dropdown-content a {
   color: white;
-  padding: 12px 16px;
+  padding: 4px 8px;
+  font-size: 18px;
   text-decoration: none;
   display: block;
   text-align: left;
@@ -76,23 +93,62 @@ h1 {
 li.dropdown:hover .dropdown-content {
   display: block;
 }
+
+.center-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  width: 30%; /* Initial width */
+}
+
+@media screen and (max-width: 600px) {
+  ul {
+    width: 100%;
+    font-size: 4vw; /* Adjust font size */
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1200px) {
+  li {
+    padding: 1px 2%; /* Adjust padding */
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  li {
+    padding: 1px 3%; /* Adjust padding */
+  }
+}
+
 </style>
 </head>
 <body>
 
+<header>
 <ul>
   <li><a class="active" href="index.html">Home</a></li>
   <li class="dropdown">
-    <a href="#music" class="dropbtn">Music</a>
+    <a href="#music" class="dropbtn">My Stuff</a>
     <div class="dropdown-content">
-      <a href="projects.html">Projects</a>
-      <a href="personal.html">Personal</a>
+      <a href="musics.html">Music</a>
+      <a href="implementation.html">Implementation</a>
     </div>
   </li>
   <li><a href="contact.html">Contact</a></li>
 </ul>
+</header>
 
 <h1 class="header">RYAN AUSTIN</h1>
+
+<div class="center-image">
+  <img src="me.jpg" alt="Image of Me">
+</div>
 
 </body>
 </html>

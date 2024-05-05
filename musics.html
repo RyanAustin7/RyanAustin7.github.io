@@ -1,26 +1,35 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 <style>
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
 ul {
   list-style-type: none;
-  margin: 20px;
+  margin: 0;
   padding: 0;
-  background-color: transparent;
-  display: inline-block;
+  background-color: transparent; /* Remove background color */
   font-size: 20px;
-  margin-bottom: 30px;
 }
 
 li {
-  float: left;
-  border-right:1px solid #bbb;
+  display: inline-block;
+  border-right: 1px solid #bbb;
   padding: 1px 30px;
 }
 
 li:last-child {
-  border-right: none; 
+  border-right: none;
 }
 
 li a {
@@ -42,13 +51,12 @@ li a:hover:not(.active) {
 .header {
   font-family: "Courier New", monospace;
   font-size: 3vw;
+  color: black;
+  margin-top: 70px;
 }
 
 body {
-  background-image: url(background.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  background: linear-gradient(to top, #ADD8E6, #00008B, #ADD8E6);
   text-align: center;
 }
 
@@ -85,23 +93,21 @@ li.dropdown:hover .dropdown-content {
 </head>
 <body>
 
+<header>
   <ul>
-  <li><a href="index.html">Home</a></li>
-  <li class="dropdown">
-    <a href="#music" class="dropbtn">My Stuff</a>
-    <div class="dropdown-content">
-      <a href="musics.html">Music</a>
-      <a href="implementation.html">Implementation</a>
-    </div>
-  </li>
-  <li><a class="active" href="contact.html">Contact</a></li>
-</ul>
+    <li><a href="index.html">Home</a></li>
+    <li class="dropdown">
+      <a class="active" href="#music" class="dropbtn">My Stuff</a>
+      <div class="dropdown-content">
+        <a href="musics.html">Music</a>
+        <a href="implementation.html">Implementation</a>
+      </div>
+    </li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</header>
 
-
-
-
-<h1 class="header">Contact Me!</h1>
-
+<h1 class="header">My Music!</h1>
 
 </body>
 </html>
