@@ -24,6 +24,7 @@ header {
   position: fixed;
   top: 0;
   margin-bottom: 20px;
+   min-height: 60px;
 }
 
 ul {
@@ -51,6 +52,7 @@ li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  min-font-size: 12px;
 }
 
 li a:hover:not(.active) {
@@ -116,6 +118,8 @@ img {
   max-width: 100%;
   height: auto;
   width: 30%;
+  min-width: 200px;
+  min-height: 200px;
 }
 
 .body-paragraph {
@@ -124,24 +128,48 @@ img {
   margin: 0 auto;
   padding: 0 20px;
   z-index: 1;
+  min-width: 300px;
+  min-height: 100px;
+  min-font-size: 14px;
 }
 
-@media screen and (max-width: 600px) {
+/*@media screen and (max-width: 600px) {
   ul {
     width: 100%;
-    font-size: 4vw; /* Adjust font size */
+    font-size: 4vw;
+  }
+}
+*/
+@media screen and (max-width: 600px) {
+  /* Adjustments for smaller screens */
+  header ul {
+    font-size: 16px; /* Increase font size for better readability */
+  }
+
+  .header {
+    font-size: 6vw; /* Increase header font size */
+    margin-top: 30px; /* Reduce margin-top */
+  }
+
+  img {
+    width: 80%; /* Adjust image width */
+  }
+
+  .body-paragraph {
+    font-size: 4vw; /* Adjust paragraph font size */
+    padding: 0 10px; /* Adjust padding */
   }
 }
 
 @media screen and (min-width: 601px) and (max-width: 1200px) {
   li {
-    padding: 1px 2%; /* Adjust padding */
+    padding: 1px 2%;
   }
 }
 
 @media screen and (min-width: 1201px) {
   li {
-    padding: 1px 3%; /* Adjust padding */
+    padding: 1px 3%;
   }
 }
 
