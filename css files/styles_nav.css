@@ -9,6 +9,7 @@ header {
   position: fixed;
   top: 0;
   margin-bottom: 20px;
+  z-index: 1000; /* Ensure header is above other content */
 }
 
 ul {
@@ -53,7 +54,6 @@ li a:hover:not(.active) {
   margin-top: 70px;
 }
 
-
 h1 {
   color: black;
   text-align: center;
@@ -84,9 +84,7 @@ li.dropdown:hover .dropdown-content {
   display: block;
 }
 
-
 @media screen and (max-width: 600px) {
-
   header ul {
     font-size: 25px;
   }
@@ -95,9 +93,7 @@ li.dropdown:hover .dropdown-content {
     font-size: 5vw;
     margin-top: 70px;
   }
-
 }
-
 
 @media screen and (min-width: 601px) and (max-width: 1200px) {
   li {
