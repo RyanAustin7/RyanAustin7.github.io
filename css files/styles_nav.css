@@ -37,6 +37,8 @@ li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.2); /* Transparent gray background for inactive tabs */
+  transition: background-color 0.3s ease;
 }
 
 li a:hover:not(.active) {
@@ -48,7 +50,7 @@ li a:hover:not(.active) {
 }
 
 .page_name {
-  font-family: "Courier New", monospace;
+  font-family: Times New Roman, Serif;
   font-size: 36px; /* Fixed font size */
   color: black;
   margin-top: 70px;
