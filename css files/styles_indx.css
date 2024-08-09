@@ -2,7 +2,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  text-align: center;
+  text-align: center; /* Center-aligns the text in the body */
 }
 
 .background-container {
@@ -11,49 +11,102 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, #93E9BE,#2681D9, #2C8CD3, #49AEB6);
+  background: linear-gradient(to top, #93E9BE, #2681D9, #2C8CD3, #49AEB6);
   z-index: -1;
 }
 
-
-
 .center-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  z-index: 1;
+  display: block;
+  margin: 20px auto;
+  width: 100%; /* Ensure it uses full width of the container */
+  max-width: 500px; /* Maximum width of the image */
 }
 
 img {
-  max-width: 100%;
+  width: 100%; /* Full width of the container */
   height: auto;
-  width: 30%;
-  min-width: 200px;
-  min-height: 200px;
 }
 
 .body-paragraph {
-  font-size: 2.5vw;
-  max-width: 500px;
+  font-size: 32px; /* Increased font size */
+  max-width: 700px; /* Increased max-width */
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 20px;
   z-index: 1;
-  min-width: 300px;
-  min-height: 100px;
+  text-align: center; /* Center-aligns the text in .body-paragraph */
 }
 
+.body-paragraph ul {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+  margin: 10px auto; /* Center the list container */
+  text-align: center; /* Center-align list items */
+}
 
-@media screen and (max-width: 600px) {
+.body-paragraph li {
+  display: list-item;
+  margin-bottom: 10px;
+  font-size: inherit;
+  border: none; /* Ensure no border is applied */
+}
 
-  img {
-    width: 70%;
-    height: auto;
-    margin-top: 10px;
-  }
+li::after {
+  content: "";
+  display: none; /* Ensure the pseudo-element doesn't display */
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center; /* Center-aligns the text in the body */
+}
 
-  .body-paragraph {
-    font-size: 4vw;
-    padding: 0 10px;
-  }
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #93E9BE, #2681D9, #2C8CD3, #49AEB6);
+  z-index: -1;
+}
+
+.center-image {
+  display: block;
+  margin: 1px auto; /* Reduced margin to decrease vertical distance */
+  width: 100%; /* Ensure it uses full width of the container */
+  max-width: 500px; /* Maximum width of the image */
+}
+
+img {
+  width: 100%; /* Full width of the container */
+  height: auto;
+}
+
+.body-paragraph {
+  font-size: 32px; /* Increased font size */
+  max-width: 700px; /* Increased max-width */
+  margin: 0 auto;
+  padding: 1px;
+  z-index: 1;
+  text-align: center; /* Center-aligns the text in .body-paragraph */
+}
+
+.body-paragraph ul {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+  margin: 10px auto; /* Center the list container */
+  text-align: center; /* Center-align list items */
+}
+
+.body-paragraph li {
+  display: list-item;
+  margin-bottom: 10px;
+  font-size: inherit;
+  border: none; /* Ensure no border is applied */
+}
+
+li::after {
+  content: "";
+  display: none; /* Ensure the pseudo-element doesn't display */
 }

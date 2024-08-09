@@ -21,15 +21,14 @@ html, body {
 }
 
 .video-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: block; /* Stack video containers vertically */
+  text-align: center;
 }
 
 .video-container {
-  flex: 1;
-  margin: 10px;
-  max-width: 48%;
+  margin: 20px auto; /* Center the video containers horizontally */
+  width: 70%; /* Adjust width to fit content */
+  max-width: 600px; /* Set a max-width to prevent it from becoming too wide */
   position: relative;
   text-align: center;
 }
@@ -39,7 +38,6 @@ html, body {
   width: 100%; /* Make iframe responsive */
   height: auto;
   aspect-ratio: 16 / 9; /* Maintain aspect ratio */
-
 }
 
 /* Thumbnail settings */
@@ -65,23 +63,4 @@ html, body {
   font-size: 14px; /* Small font size for subtext */
   margin-top: 8px;
   color: #333;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .video-container {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 600px) {
-  .video-container {
-    width: 80%;
-    height: auto;
-  }
-
-  .body-paragraph {
-    font-size: 4vw;
-    padding: 0 10px;
-  }
 }

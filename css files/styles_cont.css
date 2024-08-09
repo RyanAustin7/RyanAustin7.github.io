@@ -15,26 +15,24 @@ html, body {
   z-index: -1;
 }
 
-
 .body-paragraph {
-  font-size: 2.5vw;
+  font-size: 24px; /* Fixed font size */
   max-width: 500px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 20px; /* Fixed padding */
   z-index: 1;
-  min-width: 300px;
-  min-height: 100px;
+  text-align: left; /* Align text to the left */
 }
 
 .socials {
-  font-size: 2.9vw;
+  font-size: 28px; /* Fixed font size */
   max-width: 500px;
-  margin: 0 auto;
-  padding: 0 20px;
+  margin: 40px auto; /* Added margin-top for spacing */
+  padding: 20px; /* Fixed padding */
   z-index: 1;
-  min-width: 300px;
-  min-height: 100px;
+  text-align: left; /* Align text to the left */
 }
+
 .socials a {
   font-family: Arial, sans-serif;
   color: #007bff;
@@ -44,17 +42,4 @@ html, body {
 .socials a:hover {
   text-decoration: underline;
   background-color: rgba(4, 170, 109, 0.5);
-}
-
-@media screen and (max-width: 600px) {
-
-
-  .body-paragraph {
-    font-size: 4vw;
-    padding: 0 10px;
-  }
-  .socials {
-    font-size: 4vw;
-    padding: 0 10px;
-  }
 }
