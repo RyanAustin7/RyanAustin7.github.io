@@ -23,7 +23,7 @@ html, body {
 
 .video-row {
   display: block; /* Stack video containers vertically */
-  text-align: left; /* Align video containers to the left */
+  text-align: center; /* Align video containers to the middle */
   padding: 0 20px; /* Optional: Add padding to the container */
 }
 
