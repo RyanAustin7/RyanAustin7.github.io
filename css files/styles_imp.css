@@ -2,7 +2,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  text-align: center;
+  text-align: center; /* Center-align text in the body */
 }
 
 .background-container {
@@ -15,13 +15,28 @@ html, body {
   z-index: -1;
 }
 
+.page_name {
+  font-size: 24px; /* Adjust font size for consistency */
+  margin: 20px 0; /* Add spacing above and below the title */
+}
 
 .video-container {
-  width: 100%;
-  margin: 0 auto;
+  margin: 20px auto; /* Center the video container */
+  width: 70%; /* Set the width similar to the videos on musics.html */
+  max-width: 600px; /* Set a max-width to prevent it from becoming too wide */
+  text-align: center; /* Center-align the iframe inside */
 }
 
 .video-container iframe {
-  width: 80%;
-  height: 500px;
+  width: 100%; /* Make iframe responsive */
+  height: auto; /* Maintain aspect ratio */
+  aspect-ratio: 16 / 9; /* Maintain aspect ratio */
+}
+
+.video-subtext {
+  font-size: 18px; /* Small font size for subtext */
+  margin-top: 4px;
+  margin-bottom: 50px;
+  color: #FFFFFF; /* Adjust color if needed */
+  text-align: center; /* Center-align the subtext */
 }

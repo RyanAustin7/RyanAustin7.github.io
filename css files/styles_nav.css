@@ -85,3 +85,26 @@ h1 {
 li.dropdown:hover .dropdown-content {
   display: block;
 }
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+  ul {
+    font-size: 20px; /* Slightly smaller font size */
+  }
+
+  li {
+    padding: 0 15px; /* Slightly reduced padding */
+  }
+
+  li a {
+    padding: 12px 14px; /* Slightly reduced padding */
+  }
+
+  .page_name {
+    font-size: 32px; /* Slightly smaller font size for page title */
+  }
+
+  .dropdown-content a {
+    font-size: 18px; /* Slightly smaller font size for dropdown links */
+  }
+}

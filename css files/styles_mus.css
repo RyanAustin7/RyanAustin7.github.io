@@ -23,12 +23,12 @@ html, body {
 
 .video-row {
   display: block; /* Stack video containers vertically */
-  text-align: center; /* Align video containers to the middle */
+  text-align: center; /* Center-align the video containers */
   padding: 0 20px; /* Optional: Add padding to the container */
 }
 
 .video-container {
-  margin: 20px 0; /* Space between video containers */
+  margin: 20px auto; /* Center the video containers */
   width: 70%; /* Adjust width to fit content */
   max-width: 600px; /* Set a max-width to prevent it from becoming too wide */
   position: relative;
@@ -62,9 +62,10 @@ html, body {
 
 /* Subtext styling */
 .video-subtext {
-  font-size: 14px; /* Small font size for subtext */
-  margin-top: 8px;
-  color: #333;
+  font-size: 18px; /* Small font size for subtext */
+  margin-top: 4px;
+  margin-bottom: 40px;
+  color: #000000;
 }
 
 /* Title styling */
@@ -72,6 +73,10 @@ html, body {
     font-size: 24px;
     margin: 20px 0;
     color: #000;
-    text-align: left;
-    padding-left: 20px;
-  }
+    text-align: center; /* Center-align the title (optional) */
+    padding-left: 0; /* Remove left padding */
+}
+
+.video-row:last-of-type {
+  padding-bottom: 100px; /* Adjust this value to control the space at the bottom */
+}

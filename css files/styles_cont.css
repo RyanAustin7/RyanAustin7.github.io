@@ -16,19 +16,19 @@ html, body {
 }
 
 .body-paragraph {
-  font-size: 24px; /* Fixed font size */
-  max-width: 500px;
-  margin: 0 auto;
+  font-size: 36px; /* Increase font size */
+  max-width: 600px; /* Slightly reduced max-width */
+  margin: 0 auto; /* Center the text block */
   padding: 20px; /* Fixed padding */
   z-index: 1;
-  text-align: left; /* Align text to the left */
+  text-align: center; /* Center-align the text */
 }
 
 .socials {
-  font-size: 28px; /* Fixed font size */
+  font-size: 32px; /* Fixed font size */
   max-width: 500px;
-  margin: 40px auto; /* Added margin-top for spacing */
-  padding: 20px; /* Fixed padding */
+  margin: 20px auto; /* Added margin-top for spacing */
+  padding: 40px; /* Fixed padding */
   z-index: 1;
   text-align: left; /* Align text to the left */
 }
@@ -37,6 +37,10 @@ html, body {
   font-family: Arial, sans-serif;
   color: #007bff;
   text-decoration: none;
+}
+
+.socials p {
+  margin-bottom: 70px; /* Space between each social link */
 }
 
 .socials a:hover {
