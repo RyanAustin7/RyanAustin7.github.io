@@ -11,7 +11,6 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, #ADD8E6, #00008B, #ADD8E6);
   z-index: -1;
 }
 
@@ -37,6 +36,61 @@ html, body {
   font-size: 18px; /* Small font size for subtext */
   margin-top: 4px;
   margin-bottom: 50px;
-  color: #FFFFFF; /* Adjust color if needed */
+  color: #000000; /* Adjust color if needed */
   text-align: center; /* Center-align the subtext */
+}
+
+/* Add padding to the last video container */
+.video-container:last-of-type {
+  padding-bottom: 100px; /* Adjust this value for space below the last video */
+}
+
+/* Flex container for images */
+.image-flex-container {
+  display: flex; /* Enable Flexbox */
+  flex-direction: row; /* Keep images in a horizontal layout */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  margin: 20px auto; /* Center the image container */
+  top: 30px; /* Space from the top; adjust as needed */
+  padding: 0 100px; /* Add padding to left and right edges */
+}
+
+/* Image container styles */
+.image-container {
+  display: flex; /* Enable Flexbox for image container */
+  justify-content: center; /* Center images */
+  align-items: center; /* Center images horizontally */
+  margin: 15px 0 20px; /* Remove margin around image container */
+}
+
+/* Image styles */
+.responsive-image {
+  width: 250px; /* Set a fixed width for images */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 10px; /* Space between images */
+}
+
+@media (max-width: 1300px) {
+  .responsive-image {
+    width: 200px; /* Slightly reduce width for medium screens */
+  }
+}
+
+@media (max-width: 1000px) {
+  .responsive-image {
+    width: 180px; /* Slightly reduce width for medium screens */
+  }
+}
+
+@media (max-width: 800px) {
+  .responsive-image {
+    width: 130px; /* Slightly reduce width for medium screens */
+  }
+}
+
+@media (max-width: 500px) {
+  .responsive-image {
+    width: 115px; /* Further reduce width for smaller screens */
+  }
 }

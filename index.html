@@ -6,6 +6,22 @@
   <link rel="stylesheet" type="text/css" href="css files/styles_nav.css" >
   <link rel="stylesheet" type="text/css" href="css files/styles_indx.css" >
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const gradients = [
+        'linear-gradient(to top, #3A6A2A, #6DAF6D, #A3D89B, #B7E2B7)', // Dark forest green to light green
+        'linear-gradient(to top, #93E9BE, #2681D9, #2C8CD3, #49AEB6)', // Light teal to medium blue
+        'linear-gradient(to top, #49AEB6, #2681D9, #2C8CD3, #93E9BE)', // inverese of one above
+        'linear-gradient(to top, #ADD8E6, #1C86EE, #ADD8E6)', // Light blue to dodger blue and back to light blue
+        'linear-gradient(to top, #FFD700, #FF8C00, #FF6347)', // Gold to dark orange to tomato red
+        'linear-gradient(to top, #C0C0C0, #D2B48C, #FAFAD2, #F5F5DC, #FAEBD7)', // Silver to tan to off-white
+      ];
+
+      const randomGradient = gradients[Math.floor(Math.random() * gradients.length)];
+      document.querySelector('.background-container').style.background = randomGradient;
+    });
+</script>
+
 </head>
 <body>
 
