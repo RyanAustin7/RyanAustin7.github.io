@@ -25,12 +25,12 @@ html, body {
 }
 
 .socials {
-  font-size: 32px; /* Fixed font size */
+  font-size: 40px; /* Fixed font size */
   max-width: 500px;
   margin: 20px auto; /* Added margin-top for spacing */
   padding: 40px; /* Fixed padding */
   z-index: 1;
-  text-align: left; /* Align text to the left */
+  text-align: center; /* Align text to the center */
 }
 
 .socials a {
