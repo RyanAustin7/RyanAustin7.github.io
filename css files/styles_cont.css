@@ -56,10 +56,10 @@ html, body {
 
   .socials {
     font-size: 24px; /* Smaller font size for social links */
-    padding: 10px 0; /* Adjusted padding for smaller screens */
+    padding: 0px 0; /* Adjusted padding for smaller screens */
   }
 
   .socials p {
-    margin: 20px 0; /* Reduced space between each social link for smaller screens */
+    margin: 100px 0; /* Reduced space between each social link for smaller screens */
   }
 }

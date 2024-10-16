@@ -57,7 +57,8 @@ li::after {
 @media (max-width: 600px) {
   .body-paragraph {
     font-size: 18px; /* Smaller font size for the paragraph on small screens */
-    padding: 0 10px; /* Adjusted padding for smaller screens */
+    padding-bottom: 40px; /* Adjusted padding for smaller screens */
+    margin-bottom: 20px;
   }
 
   .body-paragraph ul {
