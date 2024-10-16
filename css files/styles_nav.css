@@ -49,6 +49,11 @@ li a:hover:not(.active) {
   background-color: rgba(4, 170, 109, 1);
 }
 
+.semi-active {
+  background-color: rgba(100, 200, 150, 0.65); /* Less opacity than the .active class */
+}
+
+
 .page_name {
   font-family: Times New Roman, Serif;
   font-size: 36px; /* Fixed font size */
