@@ -60,6 +60,6 @@ html, body {
   }
 
   .socials p {
-    margin: 5px 0; /* Reduced space between each social link for smaller screens */
+    margin: 20px 0; /* Reduced space between each social link for smaller screens */
   }
 }
