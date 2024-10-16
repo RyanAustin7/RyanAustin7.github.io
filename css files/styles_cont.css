@@ -18,7 +18,7 @@ html, body {
   font-size: 36px; /* Increase font size */
   max-width: 600px; /* Slightly reduced max-width */
   margin: 0 auto; /* Center the text block */
-  padding: 20px; /* Fixed padding */
+  padding: 0; /* No padding */
   z-index: 1;
   text-align: center; /* Center-align the text */
 }
@@ -26,8 +26,8 @@ html, body {
 .socials {
   font-size: 40px; /* Fixed font size */
   max-width: 500px;
-  margin: 20px auto; /* Added margin-top for spacing */
-  padding: 40px; /* Fixed padding */
+  margin: 0 auto; /* Center the social links */
+  padding: 20px 0; /* Adjust padding to only include top and bottom */
   z-index: 1;
   text-align: center; /* Align text to the center */
 }
@@ -36,13 +36,30 @@ html, body {
   font-family: Arial, sans-serif;
   color: #007bff;
   text-decoration: none;
+  margin: 0; /* Remove any margin from links */
 }
 
 .socials p {
-  margin-bottom: 70px; /* Space between each social link */
+  margin: 75px 0; /* Space between each social link */
 }
 
 .socials a:hover {
   text-decoration: underline;
   background-color: rgba(4, 170, 109, 0.5);
+}
+
+@media (max-width: 600px) {
+  .body-paragraph {
+    font-size: 20px; /* Smaller font size for the paragraph */
+    margin-bottom: 10px; /* Reduced space between the paragraph and links */
+  }
+
+  .socials {
+    font-size: 24px; /* Smaller font size for social links */
+    padding: 10px 0; /* Adjusted padding for smaller screens */
+  }
+
+  .socials p {
+    margin: 5px 0; /* Reduced space between each social link for smaller screens */
+  }
 }
