@@ -125,7 +125,7 @@ html, body {
   }
 }
 
-@media (max-width: 490px) {
+@media (max-width: 501px) {
   .responsive-image {
     width: 95px;
   }
