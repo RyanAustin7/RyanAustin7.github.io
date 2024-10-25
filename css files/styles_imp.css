@@ -73,54 +73,60 @@ html, body {
 
 @media (max-width: 1300px) {
   .responsive-image {
-    width: 220px; /* Slightly reduce width for medium screens */
+    width: 220px; 
   }
 }
 
 @media (max-width: 1100px) {
   .responsive-image {
-    width: 200px; /* Slightly reduce width for medium screens */
+    width: 200px; 
   }
 }
 
 @media (max-width: 900px) {
   .responsive-image {
-    width: 170px; /* Further reduce width for smaller screens */
+    width: 170px; 
   }
 }
 
 @media (max-width: 800px) {
   .responsive-image {
-    width: 155px; /* Slightly reduce width for medium screens */
+    width: 155px; 
   }
 }
 
 @media (max-width: 700px) {
   .responsive-image {
-    width: 140px; /* Further reduce width for smaller screens */
+    width: 140px
   }
 }
 
 @media (max-width: 635px) {
   .responsive-image {
-    width: 130px; /* Further reduce width for smaller screens */
+    width: 130px;
   }
 }
 
 @media (max-width: 590px) {
   .responsive-image {
-    width: 120px; /* Further reduce width for smaller screens */
+    width: 120px;
   }
 }
 
 @media (max-width: 555px) {
   .responsive-image {
-    width: 110px; /* Further reduce width for smaller screens */
+    width: 110px;
   }
 }
 
 @media (max-width: 510px) {
   .responsive-image {
-    width: 103px; /* Further reduce width for smaller screens */
+    width: 103px;
+  }
+}
+
+@media (max-width: 490px) {
+  .responsive-image {
+    width: 95px;
   }
 }
