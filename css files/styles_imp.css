@@ -119,13 +119,13 @@ html, body {
   width: 25%; /* Scales based on container width */
   max-width: 250px; /* Limits the maximum width */
   height: auto; /* Maintains aspect ratio */
-  margin: 0 15px; /* Adds horizontal space between images */
+  margin: 0 14px; /* Adds horizontal space between images */
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .responsive-image {
-    width: 30%; /* Scales better for small screens */
-    max-width: 170px; /* Further limits the size */
+    width: 33%; /* Scales better for small screens */
+    max-width: 140px; /* Further limits the size */
     margin: 0 10px; /* Slightly reduces spacing on smaller screens */
   }
 }
