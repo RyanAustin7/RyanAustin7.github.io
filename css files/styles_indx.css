@@ -17,7 +17,7 @@ html, body {
 .center-image {
   display: block;
   margin: 20px auto; /* Adjust margin as needed */
-  width: 100%; /* Ensure it uses full width of the container */
+  width: 85%; /* Ensure it uses full width of the container */
   max-width: 500px; /* Maximum width of the image */
 }
 
@@ -34,6 +34,11 @@ img {
   z-index: 1;
   text-align: center; /* Center-aligns the text in .body-paragraph */
 }
+
+.list-item {
+  margin-right: 13px; /* Adjust this value to control the space between items */
+}
+
 
 .body-paragraph ul {
   list-style-type: none; /* Remove bullet points */
