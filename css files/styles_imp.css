@@ -124,11 +124,12 @@ html, body {
 
 @media (max-width: 700px) {
   .responsive-image {
-    width: 33%; /* Scales better for small screens */
-    max-width: 140px; /* Further limits the size */
+    width: 35%; /* Scales better for small screens */
+    max-width: 110px; /* Further limits the size */
     margin: 0 10px; /* Slightly reduces spacing on smaller screens */
   }
 }
+
 
 /* Responsive design: Adjust buttons' sizes on smaller screens */
 @media (max-width: 800px) {
