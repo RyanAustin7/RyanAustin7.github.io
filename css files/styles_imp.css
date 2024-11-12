@@ -133,7 +133,7 @@ html, body {
 @media (max-width: 410px) {
   .responsive-image {
     width: 47%; /* Scales better for small screens */
-    max-width: 90px; /* Further limits the size */
+    max-width: 85px; /* Further limits the size */
     margin: 0 5px; /* Slightly reduces spacing on smaller screens */
   }
 }
