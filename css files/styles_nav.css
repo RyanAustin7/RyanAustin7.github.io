@@ -120,18 +120,18 @@ li.dropdown:hover .dropdown-content {
   }
 
   li {
-    padding: 0 12px; /* Slightly reduced padding */
+    padding: 0 8px; /* Slightly reduced padding */
   }
 
   li a {
-    padding: 12px 14px; /* Slightly reduced padding */
+    padding: 11px 13px; /* Slightly reduced padding */
   }
 
   .page_name {
-    font-size: 32px; /* Slightly smaller font size for page title */
+    font-size: 30px; /* Slightly smaller font size for page title */
   }
 
   .dropdown-content a {
-    font-size: 18px; /* Slightly smaller font size for dropdown links */
+    font-size: 14px; /* Slightly smaller font size for dropdown links */
   }
 }
