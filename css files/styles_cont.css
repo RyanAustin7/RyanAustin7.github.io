@@ -48,10 +48,11 @@ html, body {
   background-color: rgba(4, 170, 109, 0.5);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .body-paragraph {
     font-size: 20px; /* Smaller font size for the paragraph */
     margin-bottom: 10px; /* Reduced space between the paragraph and links */
+    padding: 0 15px;
   }
 
   .socials {
@@ -60,6 +61,6 @@ html, body {
   }
 
   .socials p {
-    margin: 100px 0; /* Reduced space between each social link for smaller screens */
+    margin: 80px 0; /* Reduced space between each social link for smaller screens */
   }
 }
