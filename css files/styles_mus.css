@@ -27,18 +27,18 @@ html, body {
 
 .video-container {
   margin: 20px auto; /* Center the video containers */
-  width: 70%; /* Adjust width to fit content */
-  max-width: 600px; /* Set a max-width to prevent it from becoming too wide */
+  width: 75%; /* Make the container occupy more space */
+  max-width: 700px; /* Increase the max width for larger videos */
   position: relative;
   text-align: center;
 }
 
-/* Full size settings */
 .video-container iframe {
-  width: 100%; /* Make iframe responsive */
-  height: auto;
-  aspect-ratio: 16 / 9; /* Maintain aspect ratio */
+  width: 100%; /* Make iframe fill the container */
+  aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */
+  height: auto; /* Adjust height dynamically */
 }
+
 
 /* Thumbnail settings */
 .video-container img {

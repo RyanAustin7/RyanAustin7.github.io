@@ -2,7 +2,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  text-align: center; /* Center-aligns the text in the body */
+  text-align: center; /* Center-align text in the body */
 }
 
 .background-container {
@@ -14,59 +14,145 @@ html, body {
   z-index: -1;
 }
 
-.center-image {
-  display: block;
-  margin: 20px auto; /* Adjust margin as needed */
-  width: 85%; /* Ensure it uses full width of the container */
-  max-width: 500px; /* Maximum width of the image */
-}
-
-img {
-  width: 100%; /* Full width of the container */
-  height: auto;
-}
-
-.body-paragraph {
-  font-size: 32px; /* Increased font size */
-  max-width: 700px; /* Increased max-width */
-  margin: 0 auto;
-  padding: 0px 20px 100px; /* Corrected padding syntax */
-  z-index: 1;
-  text-align: center; /* Center-aligns the text in .body-paragraph */
-}
-
-.list-item {
-  margin-right: 13px; /* Adjust this value to control the space between items */
+.page_name {
+  font-size: 24px; /* Adjust font size for consistency */
+  margin: 20px 0; /* Add spacing above and below the title */
 }
 
 
-.body-paragraph ul {
-  list-style-type: none; /* Remove bullet points */
-  padding: 0; /* Remove padding */
-  margin: 10px auto; /* Center the list container */
-  text-align: center; /* Center-align list items */
+.video-container {
+  margin: 0 auto; /* Center-align the container */
+  margin-top: 50px;
+  width: 80%; /* Adjust width to make room for a larger video */
+  max-width: 1000px; /* Match or exceed iframe's max-width */
+  text-align: center; /* Ensure centered alignment */
 }
 
-.body-paragraph li {
-  display: list-item;
-  margin-bottom: 10px;
-  font-size: inherit;
-  border: none; /* Ensure no border is applied */
+.video-container iframe {
+  width: 100%; /* Fully utilize the container's width */
+  max-width: 1000px; /* Ensure the iframe can grow larger */
+  aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */
+  margin: 0 auto; /* Center-align the iframe */
+  display: block; /* Ensure proper alignment and spacing */
 }
 
-li::after {
-  content: "";
-  display: none; /* Ensure the pseudo-element doesn't display */
+
+
+.video-subtext {
+  font-size: 18px; /* Small font size for subtext */
+  margin-top: 4px;
+  margin-bottom: 50px;
+  color: #000000; /* Adjust color if needed */
+  text-align: center; /* Center-align the subtext */
+}
+
+/* Add padding to the last video container */
+.video-container:last-of-type {
+  padding-bottom: 200px; /* Adjust this value for space below the last video */
+}
+
+/* Flex container for images */
+.image-flex-container {
+  display: flex; /* Enable Flexbox */
+  flex-direction: row; /* Keep images in a horizontal layout */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  margin: 20px auto; /* Center the image container */
+  top: 30px; /* Space from the top; adjust as needed */
+  padding: 0 100px; /* Add padding to left and right edges */
+}
+
+/* Image container styles */
+.image-container {
+  display: flex; /* Enable Flexbox for image container */
+  justify-content: center; /* Center images */
+  align-items: center; /* Center images horizontally */
+  margin: 15px 0 20px; /* Remove margin around image container */
+}
+
+/* Update the flex container for videos and buttons */
+
+.video-button-container {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center-align the container */
+  justify-content: center; /* Centers the content */
+  margin: 0 auto; /* No margin at all */
+  max-width: 700px; /* Limiting the max width */
+}
+
+/* Update the download container to display buttons in a row */
+.download-container {
+  display: flex;
+  justify-content: center; /* Center-align buttons horizontally */
+  gap: 10px; /* Adjust space between buttons */
+  margin-bottom: 65px; /* Adjust this value to increase the space below the buttons */
+}
+
+
+
+/* Styling for each button */
+.download-button {
+  display: inline-block;
+  padding: 10px 20px; /* Base padding */
+  font-size: 18px; /* Base font size */
+  text-align: center;
+  line-height: 1.5; /* Helps balance the two lines */
+  border: 2px solid #000; /* Adjust border style */
+  border-radius: 5px; /* Rounded corners for the button */
+  text-decoration: none;
+  color: #000; /* Text color */
+  background-color: #c6f0ff; /* Light sky blue */
+  transition: background-color 0.3s ease, font-size 0.3s ease, padding 0.3s ease; /* Hover and size transitions */
+  font-style: italic; /* Make text italic */
+  font-weight: bold;
+}
+
+/* Button hover effect */
+.download-button:hover {
+  background-color: yellow; /* Change to yellow on hover */
+}
+
+/* Button active (clicked) effect */
+.download-button:active {
+  background-color: #4CAF50; /* Vibrant grass green */
+}
+
+
+/* Image styles */
+.responsive-image {
+  width: 25%; /* Scales based on container width */
+  max-width: 250px; /* Limits the maximum width */
+  height: auto; /* Maintains aspect ratio */
+  margin: 0 14px; /* Adds horizontal space between images */
+}
+
+@media (max-width: 700px) {
+  .responsive-image {
+    width: 33%; /* Scales better for small screens */
+    max-width: 140px; /* Further limits the size */
+    margin: 0 10px; /* Slightly reduces spacing on smaller screens */
+  }
+}
+
+/* Responsive design: Adjust buttons' sizes on smaller screens */
+@media (max-width: 800px) {
+  .download-button {
+    padding: 8px 16px; /* Adjust padding */
+    font-size: 14px; /* Smaller font size */
+  }
 }
 
 @media (max-width: 600px) {
-  .body-paragraph {
-    font-size: 18px; /* Smaller font size for the paragraph on small screens */
-    padding-bottom: 40px; /* Adjusted padding for smaller screens */
-    margin-bottom: 20px;
+  .download-button {
+    padding: 6px 12px; /* Further reduce padding */
+    font-size: 12px; /* Even smaller font size */
   }
+}
 
-  .body-paragraph ul {
-    font-size: 16px; /* Optional: Smaller font size for list items */
+@media (max-width: 400px) {
+  .download-button {
+    padding: 5px 10px; /* Minimal padding for very small screens */
+    font-size: 10px; /* Compact font size */
   }
 }
