@@ -92,13 +92,13 @@ li.dropdown:hover .dropdown-content {
 }
 
 /* Media query for mobile screens */
-@media (max-width: 768px) {
+@media (max-width: 675px) {
   ul {
-    font-size: 20px; /* Slightly smaller font size */
+    font-size: 17px; /* Slightly smaller font size */
   }
 
   li {
-    padding: 0 15px; /* Slightly reduced padding */
+    padding: 0 14px; /* Slightly reduced padding */
   }
 
   li a {
