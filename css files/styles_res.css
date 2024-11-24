@@ -24,8 +24,6 @@ html, body {
   position: relative;
 }
 
-
-
 .center-image embed {
   width: 100%;
   height: 100%;
@@ -52,12 +50,7 @@ img {
 @media (max-width: 500px) {
   .center-image {
     width: 100%; /* Ensure the image scales well on smaller devices */
-    height: calc(100vh - 100px); /* Adjust height to better fit mobile screens */
+    height: calc(99vh); /* Adjust height to better fit mobile screens */
     margin: 10px auto; /* Add some margin to avoid it touching screen edges */
-  }
-
-  .center-image embed {
-    width: 100%;
-    height: auto; /* Ensures embed scales correctly without overflowing */
   }
 }
