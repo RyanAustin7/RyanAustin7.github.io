@@ -19,38 +19,34 @@ html, body {
   display: block;
   margin: 20px auto;
   width: 85%;
-  max-width: 100%; /* Updated for responsiveness */
+  max-width: 100%; /* Ensures responsiveness */
   height: calc(100vh - 200px); /* Subtract the total margin (top + bottom) */
   position: relative;
 }
 
-.center-image embed {
+/* Object tag inside center-image */
+.center-image object {
   width: 100%;
   height: 100%;
   object-fit: contain; /* This allows the PDF to scale while maintaining its aspect ratio */
 }
 
-img {
-  width: 100%; /* Full width of the container */
-  height: auto;
-}
-
-/* Active and Semi-active styles for dropdown */
-.active {
-  font-weight: bold;
-  color: #2681D9; /* Highlighted color */
-}
-
-.semi-active {
-  font-weight: bold;
-  color: #2681D9; /* Highlighted color */
+/* Optional: If you want to change the fallback message appearance */
+.center-image object p {
+  font-size: 16px;
+  color: #333;
 }
 
 /* Media query for mobile screens */
 @media (max-width: 500px) {
   .center-image {
-    width: 100%; /* Ensure the image scales well on smaller devices */
+    width: 100%; /* Full width on smaller screens */
     height: calc(99vh); /* Adjust height to better fit mobile screens */
-    margin: 10px auto; /* Add some margin to avoid it touching screen edges */
+    margin: 10px auto; /* Add some margin for spacing */
+  }
+
+  /* Adjust object within center-image for mobile screens */
+  .center-image object {
+    height: 400px; /* Adjust this height based on how you want the PDF to look on mobile */
   }
 }
