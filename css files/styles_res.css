@@ -1,0 +1,56 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center; /* Center-aligns the text in the body */
+}
+
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100%; /* Ensure it grows with content */
+  z-index: -1;
+}
+
+.center-image {
+  display: block;
+  margin: 20px auto;
+  width: 85%;
+  max-width: 100%; /* Updated for responsiveness */
+  height: calc(100vh - 200px); /* Subtract the total margin (top + bottom) */
+  position: relative;
+}
+
+
+
+.center-image embed {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* This allows the PDF to scale while maintaining its aspect ratio */
+}
+
+img {
+  width: 100%; /* Full width of the container */
+  height: auto;
+}
+
+/* Active and Semi-active styles for dropdown */
+.active {
+  font-weight: bold;
+  color: #2681D9; /* Highlighted color */
+}
+
+.semi-active {
+  font-weight: bold;
+  color: #2681D9; /* Highlighted color */
+}
+
+@media (max-width: 600px) {
+  .center-image {
+    width: 100%; /* Ensure the image scales well on smaller devices */
+    max-width: 100%;
+  }
+}

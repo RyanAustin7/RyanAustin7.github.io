@@ -39,3 +39,13 @@ html, body {
   color: #000000; /* Adjust color if needed */
   text-align: center; /* Center-align the subtext */
 }
+
+.active {
+  font-weight: bold;
+  color: #2681D9; /* Highlighted color */
+}
+
+.semi-active {
+  font-weight: bold;
+  color: #2681D9; /* Highlighted color */
+}

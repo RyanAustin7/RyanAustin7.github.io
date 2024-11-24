@@ -39,6 +39,16 @@ html, body {
   margin: 0; /* Remove any margin from links */
 }
 
+.active {
+  font-weight: bold;
+  color: #2681D9; /* Highlighted color */
+}
+
+.semi-active {
+  font-weight: bold;
+  color: #2681D9; /* Highlighted color */
+}
+
 .socials p {
   margin: 75px 0; /* Space between each social link */
 }

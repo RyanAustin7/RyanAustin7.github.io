@@ -113,6 +113,15 @@ html, body {
   background-color: #4CAF50; /* Vibrant grass green */
 }
 
+.active {
+  font-weight: bold;
+  color: #2681D9; /* Highlighted color */
+}
+
+.semi-active {
+  font-weight: bold;
+  color: #2681D9; /* Highlighted color */
+}
 
 /* Image styles */
 .responsive-image {

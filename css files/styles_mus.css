@@ -78,3 +78,13 @@ html, body {
 .video-row:last-of-type {
   padding-bottom: 100px; /* Adjust this value to control the space at the bottom */
 }
+
+.active {
+  font-weight: bold;
+  color: #2681D9; /* Highlighted color */
+}
+
+.semi-active {
+  font-weight: bold;
+  color: #2681D9; /* Highlighted color */
+}
