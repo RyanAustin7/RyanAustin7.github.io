@@ -31,11 +31,14 @@ html, body {
   object-fit: contain; /* This allows the PDF to scale while maintaining its aspect ratio */
 }
 
-/* Optional: If you want to change the fallback message appearance */
 .center-image object p {
-  font-size: 16px;
-  color: #333;
+  font-size: 16px; /* Increase font size */
+  color: #343231; /* Optional: Set font color */
+  margin-left: 15px; /* Add left margin */
+  margin-right: 15px; /* Add right margin */
+  line-height: 1.5; /* Optional: Improve line spacing for better readability */
 }
+
 
 /* Media query for mobile screens */
 @media (max-width: 500px) {
