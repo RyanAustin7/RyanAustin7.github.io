@@ -2,11 +2,11 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="css files/styles_sd.css">
-  <link rel="stylesheet" type="text/css" href="css files/styles_nav.css">
+  <!-- Update CSS paths to reflect the new structure -->
+  <link rel="stylesheet" type="text/css" href="../css files/styles_imp.css">
+  <link rel="stylesheet" type="text/css" href="../css files/styles_nav.css">
 
-  <link rel="icon" href="MIDIController(16).png" type="image/png">
-
+  <link rel="icon" href="../MIDIController.png" type="image/png">
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -35,9 +35,7 @@
       const randomGradient = gradients[Math.floor(Math.random() * gradients.length)];
       document.querySelector('.background-container').style.background = randomGradient;
     });
-</script>
-
-
+  </script>
 </head>
 <body>
 
@@ -45,28 +43,59 @@
 
 <header>
   <ul>
-    <li><a href="index.html">Demo</a></li>
+    <li><a href="index.html">Demo</a></li> <!-- Updated to point to root index.html -->
     <li class="dropdown">
-      <a href="musics.html" class="dropbtn active">My Stuff</a>
+      <a href="musics.html" class="dropbtn active">My Stuff</a> <!-- Updated to point to root musics.html -->
       <div class="dropdown-content">
-        <a href="musics.html">Music</a>
-        <a href="implementation.html">Implementation</a>
-        <a href="SoundDesign.html" class="semi-active">Sound Design</a>
+        <a href="musics.html">Music</a> <!-- Updated -->
+        <a href="implementation.html" class="semi-active">Implementation</a> <!-- Updated -->
+        <a href="SoundDesign.html">Sound Design</a> <!-- Updated -->
       </div>
     </li>
-    <li><a href="bio.html">Bio</a></li>
-    <li><a href="contact.html">Contact</a></li>
+    <li><a href="bio.html">Bio</a></li> <!-- Updated -->
+    <li><a href="contact.html">Contact</a></li> <!-- Updated -->
   </ul>
 </header>
 
-<h1 class="page_name">Sound Design Demos:</h1>
+<h1 class="page_name">Audio Implementation</h1>
 
-<div class="video-container">
-  <!-- Placeholder for new video -->
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/dA608WRvMuE?si=EyyeiBjyegcDO5Lb" frameborder="0" allowfullscreen></iframe>
-  <p class="video-subtext">The Last of Us - Re-Sound Designed (Foley Project)</p>
+<div class="flex-container image-flex-container">
+  <img src="../101.jpg" alt="101 cert" class="responsive-image"> <!-- Updated path -->
+  <img src="../201.jpg" alt="201 cert" class="responsive-image"> <!-- Updated path -->
+  <img src="../251.jpg" alt="251 cert" class="responsive-image"> <!-- Updated path -->
+  <img src="../301.jpg" alt="301 cert" class="responsive-image"> <!-- Updated path -->
 </div>
 
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/ElOdl83fDoM?si=3FTlXcwWaeZnh4KK"
+    title="Flighting Game Demo"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+  <p class="video-subtext">"FLIGHTING GAME" – Self-Made Game Demo / Full Breakdown</p>
+  <div class="download-container">
+    <!-- Windows Download Button -->
+    <a href="https://drive.google.com/uc?export=download&id=1z14LgGmaz1jL1iQMfJ4KNWaG6mmq9yM5" class="download-button" target="_blank">
+      Download Flighting Game (Windows)
+    </a>
+    <!-- Mac Download Button -->
+    <a href="https://drive.google.com/uc?export=download&id=1FbdbFKd4ec6oRvAaPp-bbMkx7Xl-O3ES" class="download-button" target="_blank">
+      Download Flighting Game  (Mac)
+    </a>
+    <!-- Google Drive Link Button -->
+    <a href="https://drive.google.com/drive/folders/1F7Wj1C_91dtkIqzomN4I4JhrKA1BrmwI?usp=sharing" class="download-button" target="_blank">
+      Download Flighting Game from Google Drive
+    </a>
+  </div>
+</div>
+
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/osWUlkm5ZDY"
+    title="Adventure Audio Breakdown"
+    frameborder="0"
+    allowfullscreen></iframe>
+  <p class="video-subtext">A Random Adventure Wwise/Unity Audio Breakdown :)</p>
+</div>
 
 </body>
 </html>

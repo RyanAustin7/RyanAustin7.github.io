@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Corrected paths for CSS files -->
+  <link rel="stylesheet" type="text/css" href="../css files/styles_nav.css">
+  <link rel="stylesheet" type="text/css" href="../css files/styles_cont.css">
+
+  <!-- Corrected favicon path -->
+  <link rel="icon" href="../MIDIController.png" type="image/png">
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const gradients = [
+        'linear-gradient(to top, #3A6A2A, #6DAF6D, #A3D89B, #B7E2B7)', // Dark forest green to light green
+        'linear-gradient(to top, #C0C0C0, #D2B48C, #FAFAD2, #F5F5DC, #FAEBD7)', // Silver to tan to off-white
+        'linear-gradient(to top, #FF7E5F, #FEB47B)', // Coral to light peach
+        'linear-gradient(to top, #A8E0B1, #78D2C8)', // Mint green to light teal
+        'linear-gradient(to top, #FFB74D, #FFCC80, #FFE0B2)', // Gold to light orange to very light orange
+        'linear-gradient(to top, #4B6F44, #A7C6B9, #E1E9D2, #F2F2F2)', // Dark green to teal to pale green to light gray
+        'linear-gradient(to top, #0A9396, #94D2BD, #E9D8A6)', // Teal to light teal to pale yellow
+      ];
+
+      const randomGradient = gradients[Math.floor(Math.random() * gradients.length)];
+      document.querySelector('.background-container').style.background = randomGradient;
+    });
+  </script>
+
+</head>
+<body>
+
+<!-- Background container -->
+<div class="background-container"></div>
+
+<header>
+  <ul>
+    <li><a href="index.html">Demo</a></li> <!-- Corrected relative link -->
+    <li class="dropdown">
+      <a href="musics.html" class="dropbtn">My Stuff</a> <!-- Corrected relative link -->
+      <div class="dropdown-content">
+        <a href="musics.html">Music</a> <!-- Corrected relative link -->
+        <a href="implementation.html">Implementation</a> <!-- Corrected relative link -->
+        <a href="SoundDesign.html">Sound Design</a> <!-- Corrected relative link -->
+      </div>
+    </li>
+    <li><a href="bio.html">Bio</a></li> <!-- Corrected relative link -->
+    <li><a class="active" href="contact.html">Contact</a></li> <!-- Corrected relative link -->
+  </ul>
+</header>
+
+<h1 class="page_name">Contact Me!</h1>
+
+<div class="body-paragraph">
+  <p>Shoot me an Email, and follow me on Instagram and YouTube!</p>
+</div>
+
+<!-- Social media links -->
+<div class="socials">
+  <p><a href="mailto:raustintex@gmail.com">Email Me</a></p>
+  <p><a href="https://www.instagram.com/ryan.austin_/">My Instagram</a></p>
+  <p><a href="https://www.youtube.com/channel/UCsLjAG6WBFxUZ_8kdu-JDmg">My YouTube Channel</a></p>
+</div>
+
+</body>
+</html>
