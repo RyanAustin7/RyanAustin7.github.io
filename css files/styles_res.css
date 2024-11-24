@@ -48,7 +48,7 @@ img {
   color: #2681D9; /* Highlighted color */
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .center-image {
     width: 100%; /* Ensure the image scales well on smaller devices */
     max-width: 100%;
