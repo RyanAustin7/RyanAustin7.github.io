@@ -116,7 +116,7 @@ li.dropdown:hover .dropdown-content {
 
 @media (max-width: 550px) {
   ul {
-    font-size: 14px; /* Slightly smaller font size */
+    font-size: 15px; /* Slightly smaller font size */
   }
 
   li {
