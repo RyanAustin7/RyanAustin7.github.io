@@ -40,13 +40,12 @@ html, body {
 /* Media query for mobile screens */
 @media (max-width: 500px) {
   .center-image {
-    width: 100%; /* Full width on smaller screens */
-    height: calc(99vh); /* Adjust height to better fit mobile screens */
-    margin: 10px auto; /* Add some margin for spacing */
+    width: 100%;
+    height: 80vh; /* Set height more explicitly for better scaling */
+    margin: 10px auto;
   }
 
-  /* Adjust object within center-image for mobile screens */
   .center-image object {
-    height: 400px; /* Adjust this height based on how you want the PDF to look on mobile */
+    height: 100%;
   }
 }
