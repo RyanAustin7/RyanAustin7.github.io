@@ -30,7 +30,7 @@ html, body {
   font-size: 40px; /* Fixed font size */
   max-width: 500px;
   margin: 0 auto; /* Center the social links */
-  padding: 20px 0; /* Adjust padding to only include top and bottom */
+  padding: 20px 27.5px; /* Adjust padding to only include top and bottom */
   z-index: 1;
   text-align: center; /* Align text to the center */
 }
@@ -52,12 +52,21 @@ html, body {
 }
 
 .socials p {
-  margin: 75px 0; /* Space between each social link */
+  display: flex;
+  align-items: center; /* Vertically center the image and text */
+  margin-bottom: 150px; /* Add some space between the links */
 }
+
+.socials .social-icon {
+  width: 50px; /* Adjust size of the icons */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 25px; /* Space between the image and the text */
+}
+
 
 .socials a:hover {
   text-decoration: underline;
-  background-color: rgba(4, 170, 109, 0.5);
+  background-color: rgba(255, 234, 0, 0.1);
 }
 
 @media (max-width: 500px) {
