@@ -58,7 +58,7 @@ html, body {
 }
 
 .socials .social-icon {
-  width: 50px; /* Adjust size of the icons */
+  width: 70px; /* Adjust size of the icons */
   height: auto; /* Maintain aspect ratio */
   margin-right: 25px; /* Space between the image and the text */
 }
@@ -76,9 +76,13 @@ html, body {
     padding: 0 15px;
   }
 
+  .socials .social-icon {
+    width: 50px; /* Smaller icon size on mobile */
+    margin-right: 15px; /* Less space between icon and text on mobile */
+  }
+
   .socials {
     font-size: 24px; /* Smaller font size for social links */
-    padding: 0px 0; /* Adjusted padding for smaller screens */
   }
 
   .socials p {
