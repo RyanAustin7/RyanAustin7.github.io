@@ -8,34 +8,7 @@
 
   <link rel="icon" href="../MIDIController.png" type="image/png">
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const gradients = [
-        'linear-gradient(to top, #3A6A2A, #6DAF6D, #A3D89B, #B7E2B7)', // Dark forest green to light green
-        'linear-gradient(to top, #93E9BE, #2681D9, #2C8CD3, #49AEB6)', // Light teal to medium blue
-        'linear-gradient(to top, #ADD8E6, #1C86EE, #ADD8E6)', // Light blue to dodger blue and back to light blue
-        'linear-gradient(to top, #FFD700, #FF8C00, #FF6347)', // Gold to dark orange to tomato red
-        'linear-gradient(to top, #FFB6C1, #FF69B4, #FF1493)', // Light pink to hot pink to deep pink
-        'linear-gradient(to top, #E6E6FA, #DDA0DD, #BA55D3)', // Lavender to plum to medium orchid
-        'linear-gradient(to top, #C0C0C0, #D2B48C, #FAFAD2, #F5F5DC, #FAEBD7)', // Silver to tan to off-white
-        'linear-gradient(to top, #FF5F6D, #FFC371)', // Pinkish-red to soft yellow
-        'linear-gradient(to top, #00BFFF, #1E90FF, #87CEFA)', // Deep sky blue to dodger blue to light sky blue
-        'linear-gradient(to top, #EAB8E4, #D8BFD8, #DDA0DD)', // Light lavender to thistle to plum
-        'linear-gradient(to top, #FF7E5F, #FEB47B)', // Coral to light peach
-        'linear-gradient(to top, #A8E0B1, #78D2C8)', // Mint green to light teal
-        'linear-gradient(to top, #FFB74D, #FFCC80, #FFE0B2)', // Gold to light orange to very light orange
-        'linear-gradient(to top, #FF6A00, #FF9E00, #F0D200, #D6E000)', // Dark orange to light orange to yellow to lime green
-        'linear-gradient(to top, #4B6F44, #A7C6B9, #E1E9D2, #F2F2F2)', // Dark green to teal to pale green to light gray
-        'linear-gradient(to top, #B57336, #C68A3A, #E5B04D, #F3E09D)', // Dark brown to medium brown to yellow to light yellow
-        'linear-gradient(to top, #005F73, #0A9396, #94D2BD, #E9D8A6)', // Dark teal to teal to light teal to pale yellow
-        'linear-gradient(to top, #D5B1E5, #EAB8E4, #E4B5D4, #DDA0DD)', // Light purple to lavender to light pink to mauve
-        'linear-gradient(to top, #A4C8E1, #E0F7FA, #B2EBF2, #FFCCBC)' // Light blue to very light blue to light turquoise to soft peach
-      ];
 
-      const randomGradient = gradients[Math.floor(Math.random() * gradients.length)];
-      document.querySelector('.background-container').style.background = randomGradient;
-    });
-  </script>
 </head>
 <body>
 
@@ -63,23 +36,23 @@
   </ul>
 </header>
 
-<h1 class="page_name">Audio Implementation</h1>
+<h1 class="page_name fade-in">Audio Implementation</h1>
 
 <div class="flex-container image-flex-container">
-  <img src="../101.jpg" alt="101 cert" class="responsive-image"> <!-- Updated path -->
-  <img src="../201.jpg" alt="201 cert" class="responsive-image"> <!-- Updated path -->
-  <img src="../251.jpg" alt="251 cert" class="responsive-image"> <!-- Updated path -->
-  <img src="../301.jpg" alt="301 cert" class="responsive-image"> <!-- Updated path -->
+  <img src="../101.jpg" alt="101 cert" class="responsive-image fade-in-hidden fade-in fade-in-delay-1"> <!-- Updated path -->
+  <img src="../201.jpg" alt="201 cert" class="responsive-image fade-in-hidden fade-in fade-in-delay-2"> <!-- Updated path -->
+  <img src="../251.jpg" alt="251 cert" class="responsive-image fade-in-hidden fade-in fade-in-delay-3"> <!-- Updated path -->
+  <img src="../301.jpg" alt="301 cert" class="responsive-image fade-in-hidden fade-in fade-in-delay-4"> <!-- Updated path -->
 </div>
 
-<div class="video-container">
+<div class="video-container fade-in-hidden fade-in fade-in-delay-1">
   <iframe src="https://www.youtube.com/embed/ElOdl83fDoM?si=3FTlXcwWaeZnh4KK"
     title="Flighting Game Demo"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen></iframe>
-  <p class="video-subtext">"FLIGHTING GAME" – Self-Made Game Demo / Full Breakdown</p>
-  <div class="download-container">
+  <p class="video-subtext fade-in-hidden fade-in fade-in-delay-1">"FLIGHTING GAME" – Self-Made Game Demo / Full Breakdown</p>
+  <div class="download-container fade-in-hidden fade-in fade-in-delay-3">
     <!-- Windows Download Button -->
     <a href="https://drive.google.com/uc?export=download&id=1z14LgGmaz1jL1iQMfJ4KNWaG6mmq9yM5" class="download-button" target="_blank">
       Download Flighting Game (Windows)
@@ -95,12 +68,12 @@
   </div>
 </div>
 
-<div class="video-container">
+<div class="video-container fade-in-hidden fade-in fade-in-delay-2">
   <iframe src="https://www.youtube.com/embed/osWUlkm5ZDY"
     title="Adventure Audio Breakdown"
     frameborder="0"
     allowfullscreen></iframe>
-  <p class="video-subtext">A Random Adventure Wwise/Unity Audio Breakdown :)</p>
+  <p class="video-subtext fade-in-hidden fade-in fade-in-delay-2">A Random Adventure Wwise/Unity Audio Breakdown :)</p>
 </div>
 
 </body>

@@ -13,6 +13,8 @@ html, body {
   height: 100%;
   min-height: 100%; /* Ensure it grows with content */
   z-index: -1;
+  background-color: #454447; /* Set your desired background color */
+
 }
 
 .center-image {

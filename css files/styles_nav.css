@@ -57,7 +57,7 @@ li a:hover:not(.active) {
 .page_name {
   font-family: Times New Roman, Serif;
   font-size: 36px; /* Fixed font size */
-  color: black;
+  color: #FFFFFF; /* Change to your desired font color */
   margin-top: 70px;
 }
 
@@ -90,6 +90,80 @@ h1 {
 li.dropdown:hover .dropdown-content {
   display: block;
 }
+
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Slight upward motion */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Prevent elements from appearing before animation starts */
+.fade-in-hidden {
+  opacity: 0; /* Start fully hidden */
+  visibility: hidden; /* Avoid interaction before fade-in */
+  animation-fill-mode: forwards; /* Retain end state after animation */
+}
+/* Generic fade-in class */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+  animation-fill-mode: forwards; /* Retain final state after animation */
+}
+/* Staggered delays */
+.fade-in-delay-1 {
+  animation-delay: 0.2s;
+}
+.fade-in-delay-2 {
+  animation-delay: 0.4s;
+}
+.fade-in-delay-3 {
+  animation-delay: 0.6s;
+}
+.fade-in-delay-4 {
+  animation-delay: 0.8s;
+}
+.fade-in-delay-5 {
+  animation-delay: 0.9s;
+}
+.fade-in-delay-01 {
+  animation-delay: 0.23s;
+}
+.fade-in-delay-02 {
+  animation-delay: 0.26s;
+}
+.fade-in-delay-03 {
+  animation-delay: 0.29s;
+}
+.fade-in-delay-04 {
+  animation-delay: 0.32s;
+}
+.fade-in-delay-05 {
+  animation-delay: 0.35s;
+}
+.fade-in-delay-06 {
+  animation-delay: 0.38s;
+}
+.fade-in-delay-07 {
+  animation-delay: 0.41s;
+}
+.fade-in-delay-08 {
+  animation-delay: 0.44s;
+}
+.fade-in-delay-09 {
+  animation-delay: 0.47s;
+}
+/* Combine fade-in and visibility change */
+.fade-in {
+  visibility: visible; /* Restore visibility during animation */
+}
+
+
+
 
 /* Media query for mobile screens */
 @media (max-width: 675px) {

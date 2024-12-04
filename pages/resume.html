@@ -10,24 +10,7 @@
 
   <link rel="icon" href="../MIDIController.png" type="image/png">
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const gradients = [
-        'linear-gradient(to top, #93E9BE, #2681D9, #2C8CD3, #49AEB6)', // Light teal to medium blue
-        'linear-gradient(to top, #49AEB6, #2681D9, #2C8CD3, #93E9BE)', // Inverse of one above
-        'linear-gradient(to top, #ADD8E6, #1C86EE, #ADD8E6)', // Light blue to dodger blue and back to light blue
-        'linear-gradient(to top, #C0C0C0, #D2B48C, #FAFAD2, #F5F5DC, #FAEBD7)', // Silver to tan to off-white
-        'linear-gradient(to top, #B0E0E6, #AFEEEE, #87CEFA, #00BFFF)', // Light blue shades
-        'linear-gradient(to top, #E0F7FA, #B2EBF2, #80DEEA)', // Light cyan to aqua
-        'linear-gradient(to top, #C1E1C1, #A3D89B, #D9F0D9)', // Light green shades
-        'linear-gradient(to top, #B2F2BB, #A0E7E5, #D0F0C0)', // Light mint to green
-        'linear-gradient(to top, #E0F8E0, #B2FFB2, #A7F3D0)', // Light green to pale green
-      ];
 
-      const randomGradient = gradients[Math.floor(Math.random() * gradients.length)];
-      document.querySelector('.background-container').style.background = randomGradient;
-    });
-  </script>
 
 </head>
 <body>
@@ -58,13 +41,13 @@
   </ul>
 </header>
 
-<h1 class="page_name">My Resume:</h1>
+<h1 class="page_name fade-in">My Resume:</h1>
 
-<div class="center-image">
+<div class="center-image fade-in-hidden fade-in fade-in-delay-1">
   <!-- Replace embed with object for PDF display -->
   <object data="../RyanAustin_Resume.pdf" type="application/pdf" width="100%" height="100%">
     <p>Your web browser doesn't have a PDF plugin (are you on your phone?) <br><br> Instead, you can<br>
-       <a href="../RyanAustin_Resume.pdf" download>click here to see the PDF file.</a>
+       <a class="center-image fade-in-hidden fade-in fade-in-delay-2" href="../RyanAustin_Resume.pdf" download>click here to see the PDF file.</a>
        <br>
     </p>
   </object>

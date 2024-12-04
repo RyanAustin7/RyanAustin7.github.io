@@ -12,6 +12,8 @@ html, body {
   width: 100%;
   height: 100%;
   z-index: -1;
+  background-color: #454447; /* Set your desired background color */
+
 }
 
 .page_name {
@@ -36,13 +38,12 @@ html, body {
   font-size: 18px; /* Font size for subtext */
   margin-top: 4px;
   margin-bottom: 50px;
-  color: #000000; /* Adjust color if needed */
+  color: #FFFFFF; /* Adjust color if needed */
   text-align: center; /* Center-align the subtext */
 }
 
 .active {
   font-weight: bold;
-  color: #2681D9; /* Highlighted color */
 }
 
 .semi-active {
