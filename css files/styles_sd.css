@@ -35,7 +35,7 @@ html, body {
 }
 
 .video-subtext {
-  font-size: 18px; /* Font size for subtext */
+  font-size: 25px; /* Font size for subtext */
   margin-top: 4px;
   margin-bottom: 50px;
   color: #FFFFFF; /* Adjust color if needed */
@@ -49,4 +49,10 @@ html, body {
 .semi-active {
   font-weight: bold;
   color: #2681D9; /* Highlighted color */
+}
+
+@media (max-width: 400px) {
+  .video-subtext {
+    font-size: 18px; /* Small font size for subtext */
+  }
 }

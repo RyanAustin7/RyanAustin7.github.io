@@ -66,13 +66,6 @@ h1 {
   text-align: center;
 }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: rgba(44, 44, 44, 0.9);
-  min-width: 60px;
-  z-index: 1;
-}
 
 .dropdown-content a {
   color: white;
@@ -87,11 +80,35 @@ h1 {
   background-color: #111;
 }
 
-li.dropdown:hover .dropdown-content {
-  display: block;
+/* Dropdown content starts hidden */
+.dropdown-content {
+  display: none;
+  opacity: 0;
+  visibility: hidden; /* Initially hidden */
+  position: absolute;
+  background-color: rgba(44, 44, 44, 0.9);
+  min-width: 60px;
+  z-index: 1;
+  transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth fade-in effect */
 }
 
+/* When hovering over the dropdown tab, show the dropdown menu with fade-in */
+li.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1; /* Fade in */
+  visibility: visible; /* Make it visible */
+  animation: fadeInNav 0.3s ease-in-out forwards; /* Smooth fade-in animation */
+}
 
+/* Fade-in animation without verticality */
+@keyframes fadeInNav {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /* Fade-in animation */
 @keyframes fadeIn {
   from {
@@ -101,6 +118,16 @@ li.dropdown:hover .dropdown-content {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+@keyframes fadeInA {
+  from {
+    opacity: 0;
+    transform: translateX(20px); /* Slight upward motion */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 /* Prevent elements from appearing before animation starts */
@@ -113,6 +140,18 @@ li.dropdown:hover .dropdown-content {
 .fade-in {
   animation: fadeIn 0.5s ease-in-out;
   animation-fill-mode: forwards; /* Retain final state after animation */
+}
+.fade-in-a {
+  animation: fadeInA 0.17s ease-in-out;
+  animation-fill-mode: forwards; /* Retain final state after animation */
+  visibility: visible; /* Ensure visibility when the animation starts */
+
+}
+.fade-in-delay-1a {
+  animation-delay: 0.117s;
+}
+.fade-in-delay-1b {
+  animation-delay: 0.17s;
 }
 /* Staggered delays */
 .fade-in-delay-1 {

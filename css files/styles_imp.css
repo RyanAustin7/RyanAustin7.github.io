@@ -29,7 +29,7 @@ html, body {
 }
 
 .video-subtext {
-  font-size: 18px; /* Small font size for subtext */
+  font-size: 25px; /* Small font size for subtext */
   margin-top: 4px;
   margin-bottom: 10px;
   color: #FFFFFF; /* Adjust color if needed */
@@ -168,5 +168,8 @@ html, body {
   .download-button {
     padding: 5px 10px; /* Minimal padding for very small screens */
     font-size: 10px; /* Compact font size */
+  }
+  .video-subtext {
+    font-size: 18px; /* Small font size for subtext */
   }
 }
