@@ -16,6 +16,9 @@ html, body {
   background-color: #454447; /* Set your desired background color */
 
 }
+.page_name {
+  margin-top: 70px;
+}
 
 .center-image {
   display: block;

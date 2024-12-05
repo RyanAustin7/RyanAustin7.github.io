@@ -21,7 +21,7 @@ html, body {
 
 .page_name {
   font-size: 24px; /* Adjust font size for consistency */
-  margin: 20px 0; /* Add spacing above and below the title */
+  margin: 0 0 40px 0;
   color: #EDE3D9; /* Change to your desired font color */
 }
 
@@ -76,6 +76,14 @@ html, body {
   margin: 15px 0 20px; /* Remove margin around image container */
 }
 
+/* Image styles */
+.responsive-image {
+  width: 25%; /* Scales based on container width */
+  max-width: 200px; /* Limits the maximum width */
+  height: auto; /* Maintains aspect ratio */
+  margin: 0 25px; /* Adds horizontal space between images */
+}
+
 /* Update the flex container for videos and buttons */
 
 .video-button-container {
@@ -128,19 +136,17 @@ html, body {
   font-weight: bold;
 }
 
-
-/* Image styles */
-.responsive-image {
-  width: 25%; /* Scales based on container width */
-  max-width: 250px; /* Limits the maximum width */
-  height: auto; /* Maintains aspect ratio */
-  margin: 0 14px; /* Adds horizontal space between images */
+@media (max-width: 1000px) {
+  .responsive-image {
+    margin: 0 10px; /* Adds horizontal space between images */
+    max-width: 270px; /* Limits the maximum width */
+  }
 }
 
 @media (max-width: 700px) {
   .responsive-image {
     width: 33%; /* Scales better for small screens */
-    max-width: 140px; /* Further limits the size */
+    max-width: 138px; /* Further limits the size */
     margin: 0 10px; /* Slightly reduces spacing on smaller screens */
   }
 }
@@ -150,6 +156,13 @@ html, body {
     width: 47%; /* Scales better for small screens */
     max-width: 85px; /* Further limits the size */
     margin: 0 5px; /* Slightly reduces spacing on smaller screens */
+  }
+  .download-button {
+    padding: 5px 10px; /* Minimal padding for very small screens */
+    font-size: 10px; /* Compact font size */
+  }
+  .video-subtext {
+    font-size: 18px; /* Small font size for subtext */
   }
 }
 
@@ -165,15 +178,5 @@ html, body {
   .download-button {
     padding: 6px 12px; /* Further reduce padding */
     font-size: 12px; /* Even smaller font size */
-  }
-}
-
-@media (max-width: 400px) {
-  .download-button {
-    padding: 5px 10px; /* Minimal padding for very small screens */
-    font-size: 10px; /* Compact font size */
-  }
-  .video-subtext {
-    font-size: 18px; /* Small font size for subtext */
   }
 }

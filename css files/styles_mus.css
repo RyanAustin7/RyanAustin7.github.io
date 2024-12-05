@@ -16,6 +16,10 @@ html, body {
 
 }
 
+.page_name {
+  margin-top: 70px;
+}
+
 .body-paragraph {
   margin-top: 40px;
   font-size: 2vw;

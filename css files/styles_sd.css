@@ -17,8 +17,7 @@ html, body {
 }
 
 .page_name {
-  font-size: 24px; /* Adjust font size */
-  margin: 20px 0; /* Add spacing above and below the title */
+  margin-top: 70px;
 }
 
 .video-container {
