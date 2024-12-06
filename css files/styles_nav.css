@@ -73,7 +73,7 @@ li a:hover:not(.active) {
 .hero-name {
   font-size: 3rem; /* Large font size for your name */
   margin: 20px 50px 10px 50px;
-  color: #222123;
+  color: #121212;
 }
 
 .hero-title {
@@ -312,7 +312,7 @@ li.dropdown:hover .dropdown-content {
   }
 
   .hero-name {
-    font-size: 24px;
+    font-size: 25px;
     margin: auto;
   }
   .hero-title {
