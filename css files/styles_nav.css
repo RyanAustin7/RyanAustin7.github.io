@@ -6,25 +6,42 @@ html, body {
 
 header {
   width: 100%;
-  position: fixed;
   top: 0;
   margin-bottom: 20px;
   z-index: 1000; /* Ensure header is above other content */
 }
 
-ul {
+.bio-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  background-color: transparent;
-  font-size: 24px; /* Fixed font size */
+  font-size: 24px;
   width: 100%;
 }
 
+.bio-list li {
+  margin-bottom: 10px; /* Adjust spacing between items as needed */
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  background-color: transparent;
+  font-size: 20px; /* Fixed font size */
+  width: 100%;
+}
+
+.nav-list {
+  display: flex; /* Make the list a flex container */
+  justify-content: center; /* Center the items horizontally */
+  margin: 0 auto; /* Center the .nav-list container */
+  padding: 0 10px; /* Optional: Add padding for space between items and screen edges */
+}
+
+
 li {
   display: inline-block;
-  border-right: 4px solid #bbb;
-  padding: 0 30px; /* Fixed padding */
+  padding: 0 35px; /* Fixed padding */
 }
 
 li:last-child {
@@ -33,24 +50,26 @@ li:last-child {
 
 li a {
   display: block;
-  color: white;
+  color: #D3D3D3;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  background-color: rgba(0, 0, 0, 0.2); /* Transparent gray background for inactive tabs */
+  background-color: rgba(0, 0, 0, 0); /* Transparent gray background for inactive tabs */
   transition: background-color 0.3s ease;
 }
 
-li a:hover:not(.active) {
-  background-color: rgba(4, 170, 109, 0.5);
+li a:hover:not(.active):not(.semi-active) {
+  color: #32CD32;
 }
 
+
 .active {
-  background-color: rgb(45, 199, 142);
+  color: #E0F7FF;
+  text-decoration: underline; /* Underline on hover */
 }
 
 .semi-active {
-  background-color: rgba(97, 219, 158, 0.65); /* Less opacity than the .active class */
+  color: #000000;
 }
 
 
@@ -63,28 +82,36 @@ li a:hover:not(.active) {
 
 .hero {
   text-align: center;
-  background: linear-gradient(180deg,  #3c65a1, #0856a1, #454447); /* Blend into the page background */
-  color: #ffffff; /* Ensure text stands out */
-  padding: 50px 20px 12px;
-  margin-bottom: 0; /* Remove margin for smoother transition */
+  background: radial-gradient(ellipse 45% 100%, #505052, #454447, #454447); /* Slightly larger ellipse */
+}
+
+.herofade{
   animation: fadeInHero 1.5s ease-in-out;
 }
 
 .hero-name {
   font-size: 3rem; /* Large font size for your name */
-  margin: 20px 50px 10px 50px;
+  margin: 20px 50px 0px 50px;
   color: #121212;
 }
 
 .hero-title {
-  font-size: 1.5rem; /* Slightly smaller font for the title */
-  margin: 0 50px 50px 50px;
+  font-size: 1.2rem; /* Slightly smaller font for the title */
+  margin: 0 50px 10px 50px;
   color: rgb(45, 199, 142); /* Optional: Subtle color difference for the title */
 }
 
-.hero-name, .hero-title {
-  animation: fadeInHero 1.5s ease-in-out;
+.line-separator {
+  border-bottom: 2px solid #FFFFFF; /* You can change the color and thickness */
+  margin: 15px auto; /* 15px margin on top and bottom, and auto for left and right */
+  width: 60%; /* Adjust to make the line smaller */
+  max-width: 550px;
 }
+
+
+
+
+
 
 @keyframes fadeInHero {
   from {
@@ -105,7 +132,7 @@ h1 {
 
 
 .dropdown-content a {
-  color: white;
+  color: #D3D3D3;
   padding: 8px 12px;
   font-size: 20px;
   text-decoration: none;
@@ -123,10 +150,14 @@ h1 {
   opacity: 0;
   visibility: hidden; /* Initially hidden */
   position: absolute;
-  background-color: rgba(44, 44, 44, 0.9);
+  background-color: rgba(44, 44, 44, 0.99);
   min-width: 60px;
   z-index: 1;
   transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth fade-in effect */
+}
+
+.dropdown-content a.semi-active {
+  color: #E0F7FF; /* This will ensure that the semi-active links in the dropdown are white */
 }
 
 /* When hovering over the dropdown tab, show the dropdown menu with fade-in */
@@ -243,9 +274,6 @@ li.dropdown:hover .dropdown-content {
 
 /* Media query for mobile screens */
 @media (max-width: 700px) {
-  ul {
-    font-size: 22px; /* Slightly smaller font size */
-  }
 
   li {
     padding: 0 16px; /* Slightly reduced padding */
@@ -264,22 +292,19 @@ li.dropdown:hover .dropdown-content {
   }
 
   .hero-name {
-    font-size: 32px;
-    margin: 10px 10px 0 10px;
+    font-size: 43px;
+    margin: 0px 10px 0 10px;
   }
   .hero-title {
     font-size: 20px;
   }
   .hero {
     margin: 0;
-    padding: 50px 20px 1px;
+    padding: 20px 20px 1px;
   }
 }
 
 @media (max-width: 550px) {
-  ul {
-    font-size: 20px; /* Slightly smaller font size */
-  }
 
   li {
     padding: 0 15px; /* Slightly reduced padding */
@@ -293,9 +318,7 @@ li.dropdown:hover .dropdown-content {
     font-size: 30px; /* Slightly smaller font size for page title */
   }
 
-  .dropdown-content a {
-    font-size: 14px; /* Slightly smaller font size for dropdown links */
-  }
+
 }
 
 @media (max-width: 450px) {
@@ -304,15 +327,19 @@ li.dropdown:hover .dropdown-content {
   }
 
   li {
-    padding: 0 6px; /* Slightly reduced padding */
+    padding: 0 8px; /* Slightly reduced padding */
   }
 
   li a {
     padding: 10px 12px; /* Slightly reduced padding */
   }
 
+  .dropdown-content a {
+    font-size: 14px; /* Slightly smaller font size for dropdown links */
+  }
+
   .hero-name {
-    font-size: 25px;
+    font-size: 30px;
     margin: auto;
   }
   .hero-title {
@@ -320,6 +347,6 @@ li.dropdown:hover .dropdown-content {
   }
   .hero {
     margin: 0;
-    padding: 50px 20px .1px;
+    padding: 15px 20px .1px;
   }
 }
