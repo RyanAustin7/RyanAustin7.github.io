@@ -21,14 +21,14 @@ html, body {
 
 .page_name {
   font-size: 24px; /* Adjust font size for consistency */
-  margin: 0 0 40px 0;
+  margin: 35px 0 30px 0;
   color: #EDE3D9; /* Change to your desired font color */
 }
 
 
 .video-container {
   margin: 0 auto; /* Center-align the container */
-  margin-top: 50px;
+  margin-top: 0px;
   width: 80%; /* Adjust width to make room for a larger video */
   max-width: 1000px; /* Match or exceed iframe's max-width */
   text-align: center; /* Ensure centered alignment */
@@ -46,7 +46,7 @@ html, body {
 
 .video-subtext {
   font-size: 25px; /* Small font size for subtext */
-  margin-top: 4px;
+  margin-top: 18px;
   margin-bottom: 50px;
   color: #FFFFFF; /* Change to your desired font color */
   text-align: center; /* Center-align the subtext */
@@ -140,6 +140,12 @@ html, body {
   .responsive-image {
     margin: 0 10px; /* Adds horizontal space between images */
     max-width: 270px; /* Limits the maximum width */
+  }
+}
+
+@media (max-width: 768px) {
+  .video-subtext {
+    font-size: 20px; /* Small font size for subtext */
   }
 }
 

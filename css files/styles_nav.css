@@ -4,6 +4,108 @@ html, body {
   padding: 0;
 }
 
+/* Lightbox styling */
+#lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#lightbox.hidden {
+  display: none;
+}
+
+.lightbox-content {
+  position: relative;
+  width: 80%;
+  max-width: 960px;
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.9);
+  border: 2px solid #FFFFFF; /* Add an optional white border for styling */
+  border-radius: 10px; /* Optional: Rounded corners */
+  overflow: visible; /* Prevent content from spilling outside */
+}
+
+.lightbox-content iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+#lightbox-close {
+  position: absolute;
+  top: -40px;
+  right: -20px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Thumbnail styling */
+.responsive-thumbnail {
+  max-width: 100%;
+  border-radius: 8px;
+  border: 2px solid #FFFFFF; /* White border for all thumbnails */
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.responsive-thumbnail:hover {
+  transform: scale(1.05);
+}
+
+
+
+
+/* Flex container for small videos */
+.small-video-container {
+  display: flex; /* Arrange the thumbnails horizontally */
+  justify-content: center; /* Center them horizontally */
+  gap: 70px; /* Add space between thumbnails */
+  margin-top: 20px; /* Add some space above the small videos */
+  margin-bottom: 20px;
+}
+
+.small-video-item {
+  display: flex;
+  flex-direction: column; /* Stack thumbnail and subtext vertically */
+  align-items: center; /* Center-align the content */
+  text-align: center; /* Ensure subtext aligns with the thumbnail */
+  max-width: 400px; /* Optional: Limit the width of each video item */
+}
+
+/* Small video thumbnail styles */
+.small-thumbnail {
+  width: 100%; /* Allow two thumbnails to fit side by side */
+  max-width: 400px; /* Ensure a reasonable maximum size */
+  aspect-ratio: 16 / 9; /* Maintain a consistent 16:9 ratio */
+  cursor: pointer; /* Indicate interactivity */
+  border: 2px solid #FFFFFF; /* Add an optional white border for styling */
+  border-radius: 5px; /* Round corners slightly */
+  transition: transform 0.3s ease; /* Smooth scaling effect on hover */
+}
+
+/* Hover effect for thumbnails */
+.small-thumbnail:hover {
+  transform: scale(1.05); /* Slightly enlarge the thumbnail on hover */
+}
+
+/* Small video subtext alignment */
+.small-video-container .video-subtext {
+  font-size: 22px; /* Adjust font size for smaller subtext */
+  margin-top: 8px; /* Add spacing between the thumbnail and the subtext */
+  color: #FFFFFF;
+  /*color: #EDE3D9; /* Ensure consistent text color */
+}
+
+
+
+
 header {
   width: 100%;
   top: 0;
@@ -270,6 +372,24 @@ li.dropdown:hover .dropdown-content {
 }
 
 
+
+@media (max-width: 768px) {
+  .small-video-container {
+    flex-direction: column; /* Stack thumbnails vertically */
+    align-items: center; /* Center thumbnails when stacked */
+    gap: 10px;
+    margin-bottom: 3px;
+    margin-top: 30px; /* Add some space above the small videos */
+  }
+  .small-video-container .video-subtext {
+    font-size: 18px; /* Adjust font size for smaller subtext */
+    margin-top: 0px; /* Add spacing between the thumbnail and the subtext */
+  }
+  .small-thumbnail {
+    width: 80%; /* Reduce width for better fit */
+    margin-bottom: 15px; /* Add space below each thumbnail */
+  }
+}
 
 
 /* Media query for mobile screens */

@@ -18,9 +18,9 @@
 
 <header>
   <ul class="nav-list">
-    <li><a class="active" href="index.html">Demo</a></li>
+    <li><a class="active" href="index.html">Demo Reel</a></li>
     <li class="dropdown">
-      <a href="pages/musics.html" class="dropbtn">My Stuff</a>
+      <a href="pages/musics.html" class="dropbtn">Portfolio</a>
       <div class="dropdown-content">
         <a class="fade-in-a" href="pages/musics.html">Music</a>
         <a class="fade-in-hidden fade-in-a fade-in-delay-1a" href="pages/implementation.html">Implementation</a>
@@ -42,20 +42,57 @@
 
 <h1 class="page_name fade-in">Technical Sound Design - Showcase</h1>
 
+<!--
 <div class="flex-container image-flex-container">
   <img src="101.jpg" alt="101 cert" class="responsive-image fade-in-hidden fade-in fade-in-delay-1">
   <img src="201.jpg" alt="201 cert" class="responsive-image fade-in-hidden fade-in fade-in-delay-2">
   <img src="251.jpg" alt="251 cert" class="responsive-image fade-in-hidden fade-in fade-in-delay-3">
   <img src="301.jpg" alt="301 cert" class="responsive-image fade-in-hidden fade-in fade-in-delay-4">
 </div>
+-->
 
-<div class="video-container fade-in">
-  <iframe src="https://www.youtube.com/embed/634gIqVfeHw?si=u6imWNq_V4X5FlGI"
-    title="Flighting Game Demo"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen></iframe>
+
+<body>
+  <!-- Lightbox container -->
+  <div id="lightbox" class="hidden">
+    <div class="lightbox-content">
+      <iframe
+        id="lightbox-video"
+        src=""
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+      <span id="lightbox-close">&times;</span>
+    </div>
+  </div>
+
+  <div class="video-container fade-in">
+  <a href="https://www.youtube.com/embed/634gIqVfeHw?si=u6imWNq_V4X5FlGI" class="video-lightbox-trigger">
+    <img src="thumbs/demo_thumb.webp" alt="Flighting Game Demo" class="responsive-thumbnail">
+  </a>
   <p class="video-subtext">"FLIGHTING GAME" – Game / Technical Sound Design Showcase</p>
+
+  <div class="small-video-container fade-in-hidden fade-in fade-in-delay-2">
+  <!-- Video 1 -->
+  <div class="small-video-item">
+    <a href="https://www.youtube.com/embed/iY5IjnvGKlw?si=NRsmc_XI0e2akuto" class="video-lightbox-trigger">
+      <img src="thumbs/FG_Music_Thumbnail.png" alt="FG: Music System Breakdown" class="responsive-thumbnail small-thumbnail">
+    </a>
+    <p class="video-subtext">Music System Breakdown</p>
+  </div>
+
+  <!-- Video 2 -->
+  <div class="small-video-item">
+    <a href="https://www.youtube.com/embed/LmkXgKEbWhg?si=_XR-TkClpb0xwMnM" class="video-lightbox-trigger">
+      <img src="thumbs/FG_Menu_Thumbnail.png" alt="FG: Menu System Breakdown" class="responsive-thumbnail small-thumbnail">
+    </a>
+    <p class="video-subtext">Menu System Breakdown</p>
+  </div>
+</div>
+
+
+  <!-- Download container -->
   <div class="download-container fade-in-hidden fade-in fade-in-delay-5">
     <!-- Windows Download Button -->
     <a href="https://drive.google.com/uc?export=download&id=1z14LgGmaz1jL1iQMfJ4KNWaG6mmq9yM5" class="download-button" target="_blank">
@@ -74,3 +111,6 @@
 
 </body>
 </html>
+
+
+<script src="javascript files/lightbox.js"></script>
