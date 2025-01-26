@@ -9,15 +9,17 @@ triggers.forEach(trigger => {
   trigger.addEventListener('click', event => {
     event.preventDefault();
     const videoUrl = trigger.getAttribute('href');
-    lightboxVideo.src = videoUrl + "?autoplay=1"; // Add autoplay parameter
-    lightbox.classList.remove('hidden');
+    // Add autoplay=1 to the video URL (if not already present)
+    const autoplayUrl = videoUrl.includes('?') ? `${videoUrl}&autoplay=1` : `${videoUrl}?autoplay=1`;
+    lightboxVideo.src = autoplayUrl; // Set iframe src with autoplay
+    lightbox.classList.remove('hidden'); // Show lightbox
   });
 });
 
-// Close lightbox
+// Close lightbox function
 const closeLightboxFunction = () => {
-  lightboxVideo.src = ''; // Stop the video
-  lightbox.classList.add('hidden');
+  lightboxVideo.src = ''; // Stop the video by clearing the src
+  lightbox.classList.add('hidden'); // Hide lightbox
 };
 
 closeLightbox.addEventListener('click', closeLightboxFunction);
