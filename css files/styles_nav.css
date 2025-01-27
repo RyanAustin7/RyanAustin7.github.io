@@ -22,9 +22,12 @@ html, body {
   font-family: 'Raleway', sans-serif;
   background-color: rgba(0, 0, 0, 0.4);
   padding: 5px 0px;
-  width: 100%;
+  width: 100%; /* Ensure full width */
   box-sizing: border-box;
-  text-align: center; /* Optional: Center the text */
+  text-align: center;
+  bottom: 0; /* Position it at the bottom */
+  left: 0; /* Ensure it's aligned to the left edge */
+  right: 0; /* Ensure it extends across the screen */
 }
 
 
