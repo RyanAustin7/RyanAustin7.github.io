@@ -4,6 +4,26 @@ html, body {
   padding: 0;
 }
 
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100%; /* Ensure it grows with content */
+  z-index: -1;
+  background-color: #3A393B; /* Set your desired background color */
+}
+
+.section-title {
+  font-size: 2rem; /* Adjust to desired size */
+  font-weight: bold; /* Make it bold */
+  text-align: center; /* Center-align the text */
+  margin-bottom: 40px; /* Add some spacing below */
+  color: #FFFFFF; /* Adjust to desired color */
+}
+
+
 /* Lightbox styling */
 #lightbox {
   position: fixed;
@@ -11,7 +31,7 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(38, 36, 38, 0.75); 
+  background: rgba(38, 36, 38, 0.75);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,24 +90,29 @@ html, body {
   margin-bottom: 20px;
 }
 
+
 .small-video-item {
   display: flex;
-  flex-direction: column; /* Stack thumbnail and subtext vertically */
-  align-items: center; /* Center-align the content */
-  text-align: center; /* Ensure subtext aligns with the thumbnail */
-  max-width: 400px; /* Optional: Limit the width of each video item */
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 400px;
+  width: 100%; /* Ensure it expands to fit its container */
 }
 
 /* Small video thumbnail styles */
 .small-thumbnail {
-  width: 100%; /* Allow two thumbnails to fit side by side */
+  width: 85%; /* Allow two thumbnails to fit side by side */
   max-width: 400px; /* Ensure a reasonable maximum size */
   aspect-ratio: 16 / 9; /* Maintain a consistent 16:9 ratio */
   cursor: pointer; /* Indicate interactivity */
   border: 2px solid #FFFFFF; /* Add an optional white border for styling */
   border-radius: 5px; /* Round corners slightly */
   transition: transform 0.3s ease; /* Smooth scaling effect on hover */
+  object-fit: cover; /* Ensures the image fills the box */
 }
+
+
 
 /* Hover effect for thumbnails */
 .small-thumbnail:hover {
@@ -142,7 +167,7 @@ ul {
 
 li {
   display: inline-block;
-  padding: 0 35px; /* Fixed padding */
+  padding: 0 20px; /* Fixed padding */
 }
 
 li:last-child {
@@ -178,12 +203,13 @@ li a:hover:not(.active):not(.semi-active) {
   font-family: Times New Roman, Serif;
   font-size: 36px; /* Fixed font size */
   color: #FFFFFF; /* Change to your desired font color */
+  margin-top: 10px;
 }
 
 
 .hero {
   text-align: center;
-  background: radial-gradient(ellipse 45% 100%, #505052, #454447, #454447); /* Slightly larger ellipse */
+  background: radial-gradient(ellipse 45% 100%, #58585A, #3A393B, #3A393B); /* Slightly larger ellipse */
 }
 
 .herofade{
@@ -203,9 +229,15 @@ li a:hover:not(.active):not(.semi-active) {
 }
 
 .line-separator {
-  border-bottom: 2px solid #FFFFFF; /* You can change the color and thickness */
+  border-bottom: 3px solid #FFFFFF; /* You can change the color and thickness */
   margin: 15px auto; /* 15px margin on top and bottom, and auto for left and right */
   width: 60%; /* Adjust to make the line smaller */
+  max-width: 550px;
+}
+.line-separator-1 {
+  border-bottom: 2px solid #FFFFFF; /* You can change the color and thickness */
+  margin: 1px auto 30px;
+  width: 45%; /* Adjust to make the line smaller */
   max-width: 550px;
 }
 
@@ -372,6 +404,54 @@ li.dropdown:hover .dropdown-content {
 
 
 
+
+.download-container {
+  display: flex;
+  justify-content: center; /* Center-align buttons horizontally */
+  gap: 10px; /* Adjust space between buttons */
+  margin-bottom: 65px; /* Adjust this value to increase the space below the buttons */
+}
+
+/* Styling for each button */
+.download-button {
+  display: inline-block;
+  padding: 10px 20px; /* Base padding */
+  font-size: 18px; /* Base font size */
+  text-align: center;
+  line-height: 1.5; /* Helps balance the two lines */
+  border: 2px solid #000; /* Adjust border style */
+  border-radius: 5px; /* Rounded corners for the button */
+  text-decoration: none;
+  color: #000; /* Text color */
+  background-color: #c6f0ff; /* Light sky blue */
+  transition: background-color 0.3s ease, font-size 0.3s ease, padding 0.3s ease; /* Hover and size transitions */
+  font-style: italic; /* Make text italic */
+  font-weight: bold;
+}
+
+/* Button hover effect */
+.download-button:hover {
+  background-color: yellow; /* Change to yellow on hover */
+}
+
+/* Button active (clicked) effect */
+.download-button:active {
+  background-color: #4CAF50; /* Vibrant grass green */
+}
+
+
+
+
+
+@media (max-width: 850px) {
+  li {
+    padding: 0 16px; /* Slightly reduced padding */
+  }
+  li a {
+    padding: 12px 14px; /* Slightly reduced padding */
+  }
+}
+
 @media (max-width: 768px) {
   .small-video-container {
     flex-direction: column; /* Stack thumbnails vertically */
@@ -388,6 +468,8 @@ li.dropdown:hover .dropdown-content {
     width: 80%; /* Reduce width for better fit */
     margin-bottom: 15px; /* Add space below each thumbnail */
   }
+
+
 }
 
 
@@ -399,7 +481,7 @@ li.dropdown:hover .dropdown-content {
   }
 
   li a {
-    padding: 12px 14px; /* Slightly reduced padding */
+    padding: 10px 5px; /* Slightly reduced padding */
   }
 
   .page_name {
@@ -424,13 +506,16 @@ li.dropdown:hover .dropdown-content {
 }
 
 @media (max-width: 550px) {
+  ul {
+    font-size: 19px; /* Slightly smaller font size */
+  }
 
   li {
-    padding: 0 15px; /* Slightly reduced padding */
+    padding: 0 14px; /* Slightly reduced padding */
   }
 
   li a {
-    padding: 10px 12px; /* Slightly reduced padding */
+    padding: 12px 1px; /* Slightly reduced padding */
   }
 
   .page_name {
@@ -450,7 +535,7 @@ li.dropdown:hover .dropdown-content {
   }
 
   li a {
-    padding: 10px 12px; /* Slightly reduced padding */
+    padding: 10px 5px; /* Slightly reduced padding */
   }
 
   .dropdown-content a {

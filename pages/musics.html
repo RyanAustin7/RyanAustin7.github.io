@@ -3,15 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MUSIC!</title>
-  <link rel="stylesheet" type="text/css" href="../css files/styles_mus.css">
+  <title>Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="../css files/styles_indx.css">
   <link rel="stylesheet" type="text/css" href="../css files/styles_nav.css">
-
   <link rel="icon" href="../MIDIController.png" type="image/png">
 
-
-
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -22,52 +21,104 @@
   <p class="hero-title">Technical Sound Designer</p>
 </div>
 
-
 <header>
   <ul class="nav-list">
     <li><a href="../index.html">Demo Reel</a></li>
-    <li class="dropdown">
-      <a href="musics.html" class="dropbtn active">Portfolio</a>
-      <div class="dropdown-content">
-        <a class="fade-in-a semi-active" href="musics.html">Music</a>
-        <a class="fade-in-hidden fade-in-a fade-in-delay-1a" href="implementation.html">Implementation</a>
-        <a class="fade-in-hidden fade-in-a fade-in-delay-1b" href="SoundDesign.html">Sound Design</a>
-      </div>
-    </li>
-    <li class="dropdown">
-      <a href="bio.html" class="dropbtn">About</a>
-      <div class="dropdown-content">
-        <a class="fade-in-a" href="bio.html">Bio</a>
-        <a class="fade-in-hidden fade-in-a fade-in-delay-1a" href="resume.html">Resume</a>
-      </div>
-    </li>
+    <li><a href="musics.html" class="active">Portfolio</a></li>
+    <li><a href="resume.html">Resume</a></li>
+    <li><a href="bio.html">Bio</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </header>
 
 <div class="line-separator"></div>
 
-<h1 class="page_name fade-in">MUSIC!</h1>
 
-<!-- Title above the video players -->
-
-<div class="video-row">
-  <div class="video-container fade-in-hidden fade-in fade-in-delay-1">
-    <iframe src="https://www.youtube.com/embed/VX6Heq5EtnY?si=V1THh6IyIzMScO4M" frameborder="0" allowfullscreen></iframe>
-    <p class="video-subtext fade-in-hidden fade-in fade-in-delay-1">"Sparks" - Coldplay (cover)</p>
-  </div>
-  <div class="video-container fade-in-hidden fade-in fade-in-delay-2">
-    <iframe src="https://www.youtube.com/embed/anp5pJiUYzI?si=SzzXQmWKvWO4Bg2I" frameborder="0" allowfullscreen></iframe>
-    <p class="video-subtext fade-in-hidden fade-in fade-in-delay-2">"Halfway Home" - Tommy Emmanuel (cover)</p>
-  </div>
-</div>
-
-<div class="video-row">
-  <div class="video-container fade-in-hidden fade-in fade-in-delay-3">
-    <iframe src="https://www.youtube.com/embed/4A-IdHC0cbc" frameborder="0" allowfullscreen></iframe>
-    <p class="video-subtext fade-in-hidden fade-in fade-in-delay-3">"Amhrán na Coillte" (original)</p>
+<!-- Lightbox container -->
+<div id="lightbox" class="hidden">
+  <div class="lightbox-content">
+    <iframe
+      id="lightbox-video"
+      src=""
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+    <span id="lightbox-close">&times;</span>
   </div>
 </div>
 
+<!-- Implementation Section -->
+<h2 class="section-title fade-in-hidden fade-in fade-in-delay-1a">Implementation Demos</h2>
+<div class="small-video-container fade-in-hidden fade-in fade-in-delay-1a">
+  <!-- Video 1 -->
+  <div class="small-video-item fade-in-hidden fade-in fade-in-delay-1a">
+    <a href="https://www.youtube.com/embed/ElOdl83fDoM?si=3FTlXcwWaeZnh4KK" class="video-lightbox-trigger">
+      <img src="../thumbs/fg_full.webp" alt="'Flighting Game' - Full Breakdown!" class="responsive-thumbnail small-thumbnail">
+    </a>
+    <p class="video-subtext">"FLIGHTING GAME" – Full Breakdown</p>
+  </div>
+
+  <!-- Video 2 -->
+  <div class="small-video-item fade-in-hidden fade-in fade-in-delay-1a">
+    <a href="https://www.youtube.com/embed/osWUlkm5ZDY" class="video-lightbox-trigger">
+      <img src="../thumbs/rando_vid.jpg" alt="'A Random Adventure' Breakdown" class="responsive-thumbnail small-thumbnail">
+    </a>
+    <p class="video-subtext">A Random Adventure: Wwise/Unity Audio Breakdown</p>
+  </div>
+</div>
+
+<div class="line-separator-1 fade-in-hidden fade-in fade-in-delay-1"></div>
+
+<!-- Sound Design Section -->
+<h2 class="section-title fade-in-hidden fade-in fade-in-delay-1">Sound Design Demos</h2>
+<div class="small-video-container fade-in-hidden fade-in fade-in-delay-1">
+  <div class="small-video-item fade-in-hidden fade-in fade-in-delay-1">
+    <a href="https://www.youtube.com/embed/Gq46Bo-M-dc?si=VlYqri2WiYXgNaVT" class="video-lightbox-trigger">
+      <img src="../thumbs/MR.png" alt="Marvel Rivals Launch Trailer - Re-Sound Designed" class="responsive-thumbnail small-thumbnail">
+    </a>
+    <p class="video-subtext">Marvel Rivals Launch Trailer - Re-Sound Designed</p>
+  </div>
+
+  <div class="small-video-item fade-in-hidden fade-in fade-in-delay-1">
+    <a href="https://www.youtube.com/embed/dA608WRvMuE?si=EyyeiBjyegcDO5Lb" class="video-lightbox-trigger">
+      <img src="../thumbs/lou copy.png" alt="The Last of Us - Re-Sound Designed" class="responsive-thumbnail small-thumbnail">
+    </a>
+    <p class="video-subtext">The Last of Us - Re-Sound Designed (Foley Project)</p>
+  </div>
+</div>
+
+<div class="line-separator-1 fade-in-hidden fade-in fade-in-delay-2"></div>
+
+<!-- Music Section -->
+<h2 class="section-title fade-in-hidden fade-in fade-in-delay-2">Music</h2>
+<div class="small-video-container fade-in-hidden fade-in fade-in-delay-3">
+  <div class="small-video-item">
+    <a href="https://www.youtube.com/embed/VX6Heq5EtnY?si=V1THh6IyIzMScO4M" class="video-lightbox-trigger">
+      <img src="../thumbs/Sparks_thumbnail.jpeg" alt="'Sparks' - Coldplay (cover)" class="responsive-thumbnail small-thumbnail">
+    </a>
+    <p class="video-subtext">"Sparks" - Coldplay (cover)</p>
+  </div>
+</div>
+
+<div class="small-video-container fade-in-hidden fade-in fade-in-delay-2">
+  <!-- Video 2 -->
+  <div class="small-video-item fade-in-hidden fade-in fade-in-delay-3">
+    <a href="https://www.youtube.com/embed/anp5pJiUYzI?si=SzzXQmWKvWO4Bg2I" class="video-lightbox-trigger">
+      <img src="../thumbs/guitar.jpeg" alt="'Halfway Home' - Tommy Emmanuel (cover)" class="responsive-thumbnail small-thumbnail">
+    </a>
+    <p class="video-subtext">"Halfway Home" - Tommy Emmanuel (cover)</p>
+  </div>
+
+  <!-- Video 3 -->
+  <div class="small-video-item fade-in-hidden fade-in fade-in-delay-3">
+    <a href="https://www.youtube.com/embed/4A-IdHC0cbc" class="video-lightbox-trigger">
+      <img src="../thumbs/woods.jpeg" alt="'Amhrán na Coillte' (original)" class="responsive-thumbnail small-thumbnail">
+    </a>
+    <p class="video-subtext">"Amhrán na Coillte" (original)</p>
+  </div>
+</div>
+
+<script src="../javascript files/lightbox.js"></script>
 </body>
 </html>

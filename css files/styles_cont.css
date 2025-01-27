@@ -5,16 +5,7 @@ html, body {
   text-align: center;
 }
 
-.background-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-color: #454447; /* Set your desired background color */
 
-}
 .page_name {
   margin-top: 10px;
 }
@@ -30,10 +21,10 @@ html, body {
 }
 
 .socials {
-  font-size: 40px; /* Fixed font size */
+  font-size: 32px; /* Fixed font size */
   max-width: 500px;
   margin: 0 auto; /* Center the social links */
-  padding: 20px 27.5px; /* Adjust padding to only include top and bottom */
+  padding: 20px 20px; /* Adjust padding to only include top and bottom */
   z-index: 1;
   text-align: center; /* Align text to the center */
 }
@@ -57,7 +48,7 @@ html, body {
 .socials p {
   display: flex;
   align-items: center; /* Vertically center the image and text */
-  margin-bottom: 150px; /* Add some space between the links */
+  margin-bottom: 130px; /* Add some space between the links */
 }
 
 .socials .social-icon {
@@ -69,7 +60,7 @@ html, body {
 
 .socials a:hover {
   text-decoration: underline;
-  background-color: rgba(255, 234, 0, 0.1);
+  color: #3399ff;
 }
 
 @media (max-width: 500px) {
