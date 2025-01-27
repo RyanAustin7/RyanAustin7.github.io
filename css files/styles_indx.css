@@ -86,43 +86,6 @@ html, body {
   max-width: 700px; /* Limiting the max width */
 }
 
-/* Update the download container to display buttons in a row */
-.download-container {
-  display: flex;
-  justify-content: center; /* Center-align buttons horizontally */
-  gap: 10px; /* Adjust space between buttons */
-  margin-bottom: 65px; /* Adjust this value to increase the space below the buttons */
-}
-
-
-
-/* Styling for each button */
-.download-button {
-  display: inline-block;
-  padding: 10px 20px; /* Base padding */
-  font-size: 18px; /* Base font size */
-  text-align: center;
-  line-height: 1.5; /* Helps balance the two lines */
-  border: 2px solid #000; /* Adjust border style */
-  border-radius: 5px; /* Rounded corners for the button */
-  text-decoration: none;
-  color: #000000; /* Text color */
-  background-color: #c6f0ff; /* Light sky blue */
-  transition: background-color 0.3s ease, font-size 0.3s ease, padding 0.3s ease; /* Hover and size transitions */
-  font-style: italic; /* Make text italic */
-  font-weight: bold;
-  font-family: 'Raleway', sans-serif;
-}
-
-/* Button hover effect */
-.download-button:hover {
-  background-color: yellow; /* Change to yellow on hover */
-}
-
-/* Button active (clicked) effect */
-.download-button:active {
-  background-color: #4CAF50; /* Vibrant grass green */
-}
 
 .active {
   font-weight: bold;
@@ -155,26 +118,8 @@ html, body {
     max-width: 85px; /* Further limits the size */
     margin: 0 5px; /* Slightly reduces spacing on smaller screens */
   }
-  .download-button {
-    padding: 5px 10px; /* Minimal padding for very small screens */
-    font-size: 10px; /* Compact font size */
-  }
+
   .video-subtext {
     font-size: 18px; /* Small font size for subtext */
-  }
-}
-
-/* Responsive design: Adjust buttons' sizes on smaller screens */
-@media (max-width: 800px) {
-  .download-button {
-    padding: 8px 16px; /* Adjust padding */
-    font-size: 14px; /* Smaller font size */
-  }
-}
-
-@media (max-width: 600px) {
-  .download-button {
-    padding: 6px 12px; /* Further reduce padding */
-    font-size: 12px; /* Even smaller font size */
   }
 }

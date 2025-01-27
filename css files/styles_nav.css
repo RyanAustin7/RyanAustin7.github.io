@@ -71,11 +71,12 @@ html, body {
   border-radius: 8px;
   border: 2px solid #FFFFFF; /* White border for all thumbnails */
   cursor: pointer;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, border-color 0.2s ease; /* Add transition for border color */
 }
 
 .responsive-thumbnail:hover {
   transform: scale(1.05);
+  border-color: gold;
 }
 
 
@@ -185,7 +186,7 @@ li a {
 }
 
 li a:hover:not(.active):not(.semi-active) {
-  color: #32CD32;
+  color: gold;
 }
 
 
@@ -405,44 +406,6 @@ li.dropdown:hover .dropdown-content {
 
 
 
-.download-container {
-  display: flex;
-  justify-content: center; /* Center-align buttons horizontally */
-  gap: 10px; /* Adjust space between buttons */
-  margin-bottom: 65px; /* Adjust this value to increase the space below the buttons */
-}
-
-/* Styling for each button */
-.download-button {
-  display: inline-block;
-  padding: 10px 20px; /* Base padding */
-  font-size: 18px; /* Base font size */
-  text-align: center;
-  line-height: 1.5; /* Helps balance the two lines */
-  border: 2px solid #000; /* Adjust border style */
-  border-radius: 5px; /* Rounded corners for the button */
-  text-decoration: none;
-  color: #000; /* Text color */
-  background-color: #c6f0ff; /* Light sky blue */
-  transition: background-color 0.3s ease, font-size 0.3s ease, padding 0.3s ease; /* Hover and size transitions */
-  font-style: italic; /* Make text italic */
-  font-weight: bold;
-}
-
-/* Button hover effect */
-.download-button:hover {
-  background-color: yellow; /* Change to yellow on hover */
-}
-
-/* Button active (clicked) effect */
-.download-button:active {
-  background-color: #4CAF50; /* Vibrant grass green */
-}
-
-
-
-
-
 @media (max-width: 850px) {
   li {
     padding: 0 16px; /* Slightly reduced padding */
@@ -504,6 +467,64 @@ li.dropdown:hover .dropdown-content {
     padding: 20px 20px 1px;
   }
 }
+
+/* Update the download container to display buttons in a column */
+.download-container {
+  display: flex; /* Enable flex layout */
+  flex-direction: column; /* Stack buttons vertically */
+  justify-content: center; /* Center the buttons vertically */
+  align-items: center; /* Horizontally center the buttons */
+  gap: 20px; /* Adjust space between buttons */
+  margin-bottom: 65px; /* Adjust this value to increase the space below the buttons */
+}
+
+/* Styling for each button */
+.download-button {
+  display: inline-block;
+  width: 80%; /* Make buttons take up full width of container */
+  padding: 10px 20px; /* Base padding */
+  font-size: 18px; /* Base font size */
+  text-align: center;
+  line-height: 1.5; /* Helps balance the two lines */
+  border: 2px solid #000; /* Adjust border style */
+  border-radius: 5px; /* Rounded corners for the button */
+  text-decoration: none;
+  color: #000000; /* Text color */
+  background-color: #c6f0ff; /* Light sky blue */
+  transition: background-color 0.3s ease, font-size 0.3s ease, padding 0.3s ease; /* Hover and size transitions */
+  font-style: italic; /* Make text italic */
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
+  min-width: 250px; /* Ensure minimum width for consistency */
+}
+
+/* Button hover effect */
+.download-button:hover {
+  background-color: gold; /* Change to yellow on hover */
+}
+
+/* Button active (clicked) effect */
+.download-button:active {
+  background-color: #4CAF50; /* Vibrant grass green */
+}
+
+/* Adjust button widths and layout on smaller screens */
+@media (max-width: 768px) {
+  .download-button {
+    width: 80%;  /* Make buttons take up most of the width on smaller screens */
+    font-size: 16px;  /* Smaller text for smaller screens */
+    padding: 8px 16px; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .download-button {
+    width: 80%;  /* Maximize button width on small screens */
+    font-size: 12px;
+    padding: 8px 15px;
+  }
+}
+
 
 @media (max-width: 550px) {
   ul {
