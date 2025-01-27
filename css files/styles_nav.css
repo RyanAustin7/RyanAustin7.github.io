@@ -122,7 +122,7 @@ html, body {
 
 /* Small video subtext alignment */
 .small-video-container .video-subtext {
-  font-size: 22px; /* Adjust font size for smaller subtext */
+  font-size: 16px; /* Adjust font size for smaller subtext */
   margin-top: 8px; /* Add spacing between the thumbnail and the subtext */
   color: #FFFFFF;
   /*color: #EDE3D9; /* Ensure consistent text color */
@@ -424,7 +424,7 @@ li.dropdown:hover .dropdown-content {
     margin-top: 30px; /* Add some space above the small videos */
   }
   .small-video-container .video-subtext {
-    font-size: 18px; /* Adjust font size for smaller subtext */
+    font-size: 15px; /* Adjust font size for smaller subtext */
     margin-top: 0px; /* Add spacing between the thumbnail and the subtext */
   }
   .small-thumbnail {
