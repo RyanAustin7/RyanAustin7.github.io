@@ -15,6 +15,22 @@ html, body {
   background-color: #3A393B; /* Set your desired background color */
 }
 
+
+.footer {
+  font-size: 10px; /* Adjust the font size */
+  color: #FFFFFF; /* Choose your font color */
+  font-family: 'Raleway', sans-serif;
+  background-color: rgba(0, 0, 0, 0.4); /* Optional: Adds a slight background for contrast */
+  padding: 5px 0px; /* Padding for spacing */
+  border-radius: 5px; /* Optional: Adds rounded corners */
+}
+
+
+
+
+
+
+
 .section-title {
   font-size: 2rem; /* Adjust to desired size */
   font-weight: bold; /* Make it bold */
@@ -475,7 +491,7 @@ li.dropdown:hover .dropdown-content {
   justify-content: center; /* Center the buttons vertically */
   align-items: center; /* Horizontally center the buttons */
   gap: 20px; /* Adjust space between buttons */
-  margin-bottom: 65px; /* Adjust this value to increase the space below the buttons */
+  margin-bottom: 0px; /* Adjust this value to increase the space below the buttons */
 }
 
 /* Styling for each button */

@@ -6,6 +6,8 @@
   <title>Portfolio</title>
   <link rel="stylesheet" type="text/css" href="../css files/styles_indx.css">
   <link rel="stylesheet" type="text/css" href="../css files/styles_nav.css">
+  <link rel="stylesheet" type="text/css" href="../css files/mininav.css">  
+
   <link rel="icon" href="../MIDIController.png" type="image/png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,6 +35,15 @@
 
 <div class="line-separator"></div>
 
+<!-- Second Navbar -->
+<!--commenting out the mininav right now because it's slightly unnecessary-->
+<nav class="secondary-navbar">
+  <ul class="secondary-nav-list fade-in">
+    <li><a href="#sound-design">Sound Design</a></li>
+    <li><a href="#implementation">Implementation</a></li>
+    <li><a href="#music">Music</a></li>
+  </ul>
+</nav>
 
 <!-- Lightbox container -->
 <div id="lightbox" class="hidden">
@@ -49,7 +60,7 @@
 </div>
 
 <!-- Sound Design Section -->
-<h2 class="section-title fade-in-hidden fade-in fade-in-delay-1">Sound Design Demos</h2>
+<h2 id="sound-design" class="section-title fade-in-hidden fade-in fade-in-delay-1">Sound Design Demos</h2>
 <div class="small-video-container fade-in-hidden fade-in fade-in-delay-1">
   <div class="small-video-item fade-in-hidden fade-in fade-in-delay-1">
     <a href="https://www.youtube.com/embed/Gq46Bo-M-dc?si=VlYqri2WiYXgNaVT" class="video-lightbox-trigger">
@@ -70,14 +81,51 @@
 <div class="line-separator-1 fade-in-hidden fade-in fade-in-delay-1"></div>
 
 <!-- Implementation Section -->
-<h2 class="section-title fade-in-hidden fade-in fade-in-delay-1a">Implementation Demos</h2>
+<h2 id="implementation" class="section-title fade-in-hidden fade-in fade-in-delay-1a">Implementation Demos</h2>
+
 <div class="small-video-container fade-in-hidden fade-in fade-in-delay-1a">
+  <!-- Video 1 -->
+  <div class="small-video-item">
+    <a href="https://www.youtube.com/embed/634gIqVfeHw?si=u6imWNq_V4X5FlGI" class="video-lightbox-trigger">
+      <img src="../thumbs/demo_thumb.webp" alt="FG: Showcase" class="responsive-thumbnail small-thumbnail">
+    </a>
+    <p class="video-subtext">Flighting Game - Game/Audio System Showcase</p>
+  </div>
+
+  <!-- Video 2 -->
+  <div class="small-video-item">
+    <a href="https://www.youtube.com/embed/iY5IjnvGKlw?si=NRsmc_XI0e2akuto" class="video-lightbox-trigger">
+      <img src="../thumbs/FG_Music_Thumbnail.png" alt="FG: Music System Breakdown" class="responsive-thumbnail small-thumbnail">
+    </a>
+    <p class="video-subtext">Flighting Game - Music System Breakdown</p>
+  </div>
+</div>
+
+<div class="small-video-container fade-in-hidden fade-in fade-in-delay-1b">
   <!-- Video 1 -->
   <div class="small-video-item fade-in-hidden fade-in fade-in-delay-1a">
     <a href="https://www.youtube.com/embed/ElOdl83fDoM?si=3FTlXcwWaeZnh4KK" class="video-lightbox-trigger">
       <img src="../thumbs/fg_full.webp" alt="'Flighting Game' - Full Breakdown!" class="responsive-thumbnail small-thumbnail">
     </a>
-    <p class="video-subtext">FLIGHTING GAME – Full Breakdown</p>
+    <p class="video-subtext">Flighting Game - Full Breakdown</p>
+  </div>
+
+  <!-- Video 2 -->
+  <div class="small-video-item">
+    <a href="https://www.youtube.com/embed/LmkXgKEbWhg?si=nZ5CcKKqFnV1nGl6" class="video-lightbox-trigger">
+      <img src="../thumbs/FG_Menu_Thumbnail.png" alt="FG: Menu System Breakdown" class="responsive-thumbnail small-thumbnail">
+    </a>
+    <p class="video-subtext">Flighting Game - Menu System Breakdown</p>
+  </div>
+</div>
+
+<div class="small-video-container fade-in-hidden fade-in fade-in-delay-1b">
+  <!-- Video 1 -->
+  <div class="small-video-item">
+    <a href="https://www.youtube.com/embed/iY5IjnvGKlw?si=NRsmc_XI0e2akuto" class="video-lightbox-trigger">
+      <img src="../thumbs/sp_thumb.png" alt="Sisyphean Pinball Showcase" class="responsive-thumbnail small-thumbnail">
+    </a>
+    <p class="video-subtext">Sisyphean Pinball - Implementation Showcase</p>
   </div>
 
   <!-- Video 2 -->
@@ -89,30 +137,12 @@
   </div>
 </div>
 
-<div class="small-video-container fade-in-hidden fade-in fade-in-delay-1b">
-  <!-- Video 1 -->
-  <div class="small-video-item">
-    <a href="https://www.youtube.com/embed/iY5IjnvGKlw?si=NRsmc_XI0e2akuto" class="video-lightbox-trigger">
-      <img src="../thumbs/FG_Music_Thumbnail.png" alt="FG: Music System Breakdown" class="responsive-thumbnail small-thumbnail">
-    </a>
-    <p class="video-subtext">FG: Music System Breakdown</p>
-  </div>
-
-  <!-- Video 2 -->
-  <div class="small-video-item">
-    <a href="https://www.youtube.com/embed/LmkXgKEbWhg?si=nZ5CcKKqFnV1nGl6" class="video-lightbox-trigger">
-      <img src="../thumbs/FG_Menu_Thumbnail.png" alt="FG: Menu System Breakdown" class="responsive-thumbnail small-thumbnail">
-    </a>
-    <p class="video-subtext">FG: Menu System Breakdown</p>
-  </div>
-</div>
-
 
 
 <div class="line-separator-1 fade-in-hidden fade-in fade-in-delay-2"></div>
 
 <!-- Music Section -->
-<h2 class="section-title fade-in-hidden fade-in fade-in-delay-2">Music</h2>
+<h2 id="music" class="section-title fade-in-hidden fade-in fade-in-delay-2">Music</h2>
 <div class="small-video-container fade-in-hidden fade-in fade-in-delay-3">
   <div class="small-video-item">
     <a href="https://www.youtube.com/embed/VX6Heq5EtnY?si=V1THh6IyIzMScO4M" class="video-lightbox-trigger">
@@ -140,6 +170,18 @@
   </div>
 </div>
 
+<nav class="secondary-navbar">
+  <ul class="secondary-nav-list">
+    <li><a href="#">Back to Top</a></li> 
+  </ul>
+</nav>
+
 <script src="../javascript files/lightbox.js"></script>
+
+<!-- Footer Section -->
+<footer class="footer">
+  <p>Designed and Developed by Ryan Austin</p>
+</footer>
+
 </body>
 </html>

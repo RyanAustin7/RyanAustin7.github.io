@@ -19,8 +19,8 @@ html, body {
 .video-container {
   margin: 0 auto; /* Center-align the container */
   margin-top: 0px;
-  width: 80%; /* Adjust width to make room for a larger video */
-  max-width: 1000px; /* Match or exceed iframe's max-width */
+  width: 75%; /* Adjust width to make room for a larger video */
+  max-width: 750px; /* Match or exceed iframe's max-width */
   text-align: center; /* Ensure centered alignment */
 }
 
@@ -45,7 +45,7 @@ html, body {
 
 /* Add padding to the last video container */
 .video-container:last-of-type {
-  padding-bottom: 200px; /* Adjust this value for space below the last video */
+  padding-bottom: 20px; /* Adjust this value for space below the last video */
 }
 
 /* Flex container for images */
