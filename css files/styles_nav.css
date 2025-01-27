@@ -17,12 +17,14 @@ html, body {
 
 
 .footer {
-  font-size: 10px; /* Adjust the font size */
-  color: #FFFFFF; /* Choose your font color */
+  font-size: 10px;
+  color: #FFFFFF;
   font-family: 'Raleway', sans-serif;
-  background-color: rgba(0, 0, 0, 0.4); /* Optional: Adds a slight background for contrast */
-  padding: 5px 0px; /* Padding for spacing */
-  border-radius: 5px; /* Optional: Adds rounded corners */
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 5px 0px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center; /* Optional: Center the text */
 }
 
 
