@@ -25,15 +25,14 @@ html, body {
 
 .center-image object p {
   font-size: 20px; /* Increase font size */
-  color: #FFFFFF; /* Optional: Set font color */
+  color: #F0FFF5; /* Optional: Set font color */
   margin-left: 15px; /* Add left margin */
   margin-right: 15px; /* Add right margin */
   line-height: 1.5; /* Optional: Improve line spacing for better readability */
 }
 
 .center-image a {
-  color: #ADD8E6; /* Light blue color */
-  text-decoration: underline; /* Optional: Underline on hover */
+  color: #2DC78E;
 }
 
 

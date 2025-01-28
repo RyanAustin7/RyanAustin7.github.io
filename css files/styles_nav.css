@@ -13,7 +13,7 @@ html, body {
   height: 100%;
   min-height: 100%; /* Ensure it grows with content */
   z-index: -1;
-  background-color: #000000; /* Set your desired background color */
+  background: linear-gradient(to right, #1B1E22, #000000, #000000, #000000, #1B1E22);
 }
 
 .bg-color-dark{
@@ -29,7 +29,6 @@ html, body {
   font-size: 10px;
   color: #F0FFF5;
   font-family: 'Raleway', sans-serif;
-  background-color: rgba(0, 0, 0, 0.4);
   padding: 5px 0px;
   width: 100%; /* Ensure full width */
   box-sizing: border-box;
@@ -241,7 +240,6 @@ li a:hover:not(.active):not(.semi-active) {
 
 .hero {
   text-align: center;
-  background: radial-gradient(ellipse 45% 100%, #3A393B, #3A393B, #000000, #000000);
 }
 
 .herofade{
