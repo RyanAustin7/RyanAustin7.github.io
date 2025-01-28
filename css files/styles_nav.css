@@ -22,6 +22,9 @@ html, body {
   flex: 1;
 }
 
+body {
+  overflow-x: hidden; /* Prevent mobile horizontal scrolling */
+}
 
 
 
