@@ -15,7 +15,7 @@
     padding-bottom: 20px; /* Adds space inside the second navbar at the bottom */
     padding-top: 20px;
   }
-  
+
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
@@ -39,7 +39,7 @@ html {
 .secondary-navbar a {
     display: inline-block; /* Keeps links consistent */
     text-decoration: none; /* Removes underline */
-    color: #D3D3D3; /* Matches primary navbar text color */
+    color: #2DC78E; /* Matches primary navbar text color */
     padding: 1px 5px; /* Balanced spacing for links */
     background-color: rgba(0, 0, 0, 0); /* Transparent background */
     transition: color 0.3s ease; /* Smooth hover effect */
@@ -53,10 +53,10 @@ html {
 
 /* Debugging Borders for Alignment (Optional for Testing) */
 /*.secondary-navbar {
-    border: 1px solid red; 
+    border: 1px solid red;
 }
 .secondary-navbar ul {
-    border: 1px solid blue; 
+    border: 1px solid blue;
 .secondary-navbar li {
     border: 1px solid green; */
 
@@ -72,7 +72,7 @@ html {
 }
 
 @media (max-width: 550px) {
-    
+
     .secondary-navbar li {
         padding: 6px 12px; /* Smaller spacing for compact screens */
         font-size: 13px; /* Reduce font size for smaller screens */

@@ -2,6 +2,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  min-height: 100vh;
 }
 
 .background-container {
@@ -12,13 +13,21 @@ html, body {
   height: 100%;
   min-height: 100%; /* Ensure it grows with content */
   z-index: -1;
-  background-color: #3A393B; /* Set your desired background color */
+  background-color: #000000; /* Set your desired background color */
 }
+
+.bg-color-dark{
+  background-color: #2F353B;
+  z-index: -0.5;
+  flex: 1;
+}
+
+
 
 
 .footer {
   font-size: 10px;
-  color: #FFFFFF;
+  color: #F0FFF5;
   font-family: 'Raleway', sans-serif;
   background-color: rgba(0, 0, 0, 0.4);
   padding: 5px 0px;
@@ -28,6 +37,8 @@ html, body {
   bottom: 0; /* Position it at the bottom */
   left: 0; /* Ensure it's aligned to the left edge */
   right: 0; /* Ensure it extends across the screen */
+  margin-top: auto; /* Pushes the footer to the bottom */
+
 }
 
 
@@ -41,7 +52,7 @@ html, body {
   font-weight: bold; /* Make it bold */
   text-align: center; /* Center-align the text */
   margin-bottom: 40px; /* Add some spacing below */
-  color: #FFFFFF; /* Adjust to desired color */
+  color: #F0FFF5; /* Adjust to desired color */
 }
 
 
@@ -90,14 +101,14 @@ html, body {
 .responsive-thumbnail {
   max-width: 100%;
   border-radius: 8px;
-  border: 2px solid #FFFFFF; /* White border for all thumbnails */
+  border: 3px solid #F0FFF5;
   cursor: pointer;
-  transition: transform 0.2s ease-in-out, border-color 0.2s ease; /* Add transition for border color */
+  transition: transform 0.2s ease-in-out, border-color 0.2s ease;
 }
 
 .responsive-thumbnail:hover {
   transform: scale(1.05);
-  border-color: gold;
+  border-color: #2DC78E;
 }
 
 
@@ -128,7 +139,7 @@ html, body {
   max-width: 400px; /* Ensure a reasonable maximum size */
   aspect-ratio: 16 / 9; /* Maintain a consistent 16:9 ratio */
   cursor: pointer; /* Indicate interactivity */
-  border: 2px solid #FFFFFF; /* Add an optional white border for styling */
+  border: 3px solid #F0FFF5; /* Add an optional white border for styling */
   border-radius: 5px; /* Round corners slightly */
   transition: transform 0.3s ease; /* Smooth scaling effect on hover */
   object-fit: cover; /* Ensures the image fills the box */
@@ -145,7 +156,7 @@ html, body {
 .small-video-container .video-subtext {
   font-size: 16px; /* Adjust font size for smaller subtext */
   margin-top: 8px; /* Add spacing between the thumbnail and the subtext */
-  color: #FFFFFF;
+  color: #F0FFF5;
   /*color: #EDE3D9; /* Ensure consistent text color */
 }
 
@@ -198,7 +209,7 @@ li:last-child {
 
 li a {
   display: block;
-  color: #D3D3D3;
+  color: #2DC78E;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -207,13 +218,12 @@ li a {
 }
 
 li a:hover:not(.active):not(.semi-active) {
-  color: gold;
+  color: #249F71;
 }
 
 
 .active {
-  color: #E0F7FF;
-  text-decoration: underline; /* Underline on hover */
+  color: #F0FFF5;
 }
 
 .semi-active {
@@ -224,14 +234,14 @@ li a:hover:not(.active):not(.semi-active) {
 .page_name {
   font-family: Times New Roman, Serif;
   font-size: 36px; /* Fixed font size */
-  color: #FFFFFF; /* Change to your desired font color */
+  color: #F0FFF5; /* Change to your desired font color */
   margin-top: 10px;
 }
 
 
 .hero {
   text-align: center;
-  background: radial-gradient(ellipse 45% 100%, #58585A, #3A393B, #3A393B); /* Slightly larger ellipse */
+  background: radial-gradient(ellipse 45% 100%, #3A393B, #3A393B, #000000, #000000);
 }
 
 .herofade{
@@ -240,24 +250,25 @@ li a:hover:not(.active):not(.semi-active) {
 
 .hero-name {
   font-size: 3rem; /* Large font size for your name */
-  margin: 20px 50px 0px 50px;
-  color: #121212;
+  margin: 0px 50px 0px 50px;
+  color: #F0FFF5;
 }
 
 .hero-title {
-  font-size: 1.2rem; /* Slightly smaller font for the title */
+  font-size: 1.4rem; /* Slightly smaller font for the title */
   margin: 0 50px 10px 50px;
-  color: rgb(45, 199, 142); /* Optional: Subtle color difference for the title */
+  color: #F0FFF5;
+  font-weight: bold;
 }
 
 .line-separator {
-  border-bottom: 3px solid #FFFFFF; /* You can change the color and thickness */
+  border-bottom: 3px solid #F0FFF5; /* You can change the color and thickness */
   margin: 15px auto; /* 15px margin on top and bottom, and auto for left and right */
   width: 60%; /* Adjust to make the line smaller */
   max-width: 550px;
 }
 .line-separator-1 {
-  border-bottom: 2px solid #FFFFFF; /* You can change the color and thickness */
+  border-bottom: 2px solid #F0FFF5; /* You can change the color and thickness */
   margin: 1px auto 30px;
   width: 45%; /* Adjust to make the line smaller */
   max-width: 550px;
@@ -286,7 +297,7 @@ h1 {
 }
 
 
-.dropdown-content a {
+/*.dropdown-content a {
   color: #D3D3D3;
   padding: 8px 12px;
   font-size: 20px;
@@ -297,30 +308,30 @@ h1 {
 
 .dropdown-content a:hover {
   background-color: #111;
-}
+} */
 
 /* Dropdown content starts hidden */
-.dropdown-content {
+/*.dropdown-content {
   display: none;
   opacity: 0;
-  visibility: hidden; /* Initially hidden */
+  visibility: hidden;
   position: absolute;
   background-color: rgba(44, 44, 44, 0.99);
   min-width: 60px;
   z-index: 1;
-  transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth fade-in effect */
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .dropdown-content a.semi-active {
-  color: #E0F7FF; /* This will ensure that the semi-active links in the dropdown are white */
-}
+  color: #E0F7FF;
+}*/
 
 /* When hovering over the dropdown tab, show the dropdown menu with fade-in */
-li.dropdown:hover .dropdown-content {
+/*li.dropdown:hover .dropdown-content {
   display: block;
-  opacity: 1; /* Fade in */
-  visibility: visible; /* Make it visible */
-  animation: fadeInNav 0.3s ease-in-out forwards; /* Smooth fade-in animation */
+  opacity: 1;
+  visibility: visible;
+  animation: fadeInNav 0.3s ease-in-out forwards; */
 }
 
 /* Fade-in animation without verticality */
@@ -511,7 +522,7 @@ li.dropdown:hover .dropdown-content {
   border-radius: 5px; /* Rounded corners for the button */
   text-decoration: none;
   color: #000000; /* Text color */
-  background-color: #c6f0ff; /* Light sky blue */
+  background-color: #F0FFF5; /* Light sky blue */
   transition: background-color 0.3s ease, font-size 0.3s ease, padding 0.3s ease; /* Hover and size transitions */
   font-style: italic; /* Make text italic */
   font-weight: bold;
@@ -521,7 +532,7 @@ li.dropdown:hover .dropdown-content {
 
 /* Button hover effect */
 .download-button:hover {
-  background-color: gold; /* Change to yellow on hover */
+  background-color: #249F71; /* Change to yellow on hover */
 }
 
 /* Button active (clicked) effect */

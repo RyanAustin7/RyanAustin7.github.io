@@ -9,10 +9,11 @@ html, body {
 .center-image {
   display: block;
   margin: 20px auto;
-  width: 85%;
+  width: 80%;
   max-width: 100%; /* Ensures responsiveness */
-  height: calc(100vh - 200px); /* Subtract the total margin (top + bottom) */
+  height: calc(100vh - 2px); /* Subtract the total margin (top + bottom) */
   position: relative;
+  padding-bottom: 65px;
 }
 
 /* Object tag inside center-image */

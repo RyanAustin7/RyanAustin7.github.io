@@ -31,10 +31,15 @@ html, body {
 
 .socials a {
   font-family: Arial, sans-serif;
-  color: #007bff;
+  color: #2DC78E;
   text-decoration: none;
   margin: 0; /* Remove any margin from links */
 }
+
+.socials p:last-of-type {
+  padding-bottom: 160px; /* Or padding-bottom: 50px; */
+}
+
 
 .active {
   font-weight: bold;
@@ -42,7 +47,7 @@ html, body {
 
 .semi-active {
   font-weight: bold;
-  color: #2681D9; /* Highlighted color */
+  color: #249F71; /* Highlighted color */
 }
 
 .socials p {
@@ -59,8 +64,7 @@ html, body {
 
 
 .socials a:hover {
-  text-decoration: underline;
-  color: #3399ff;
+  color: #249F71;
 }
 
 @media (max-width: 500px) {
