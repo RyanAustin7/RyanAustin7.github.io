@@ -29,8 +29,9 @@ img {
   padding: 0px 20px 100px; /* Corrected padding syntax */
   z-index: 1;
   text-align: center; /* Center-aligns the text in .body-paragraph */
-  color: #FFFFFF; /* Change to your desired font color */
+  color: #F0FFF5; /* Change to your desired font color */
   font-family: 'Raleway', sans-serif;
+  line-height: 1.6; /* Increased line height for better spacing */
 
 }
 
@@ -44,7 +45,7 @@ img {
   padding: 0; /* Remove padding */
   margin: 10px auto; /* Center the list container */
   text-align: center; /* Center-align list items */
-  color: #FFFFFF; /* Change to your desired font color */
+  color: #F0FFF5; /* Change to your desired font color */
 
 }
 
@@ -53,7 +54,7 @@ img {
   margin-bottom: 10px;
   font-size: inherit;
   border: none; /* Ensure no border is applied */
-  color: #FFFFFF; /* Change to your desired font color */
+  color: #F0FFF5; /* Change to your desired font color */
 
 }
 
@@ -73,9 +74,10 @@ li::after {
 
 @media (max-width: 600px) {
   .body-paragraph {
-    font-size: 18px; /* Smaller font size for the paragraph on small screens */
+    font-size: 19px; /* Smaller font size for the paragraph on small screens */
     padding-bottom: 40px; /* Adjusted padding for smaller screens */
     margin-bottom: 20px;
+    line-height: 1.8; /* Increased line height for better spacing */
   }
 
   .body-paragraph ul {
