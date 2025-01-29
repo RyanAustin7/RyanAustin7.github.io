@@ -198,6 +198,7 @@ ul {
   justify-content: center; /* Center the items horizontally */
   margin: 0 auto; /* Center the .nav-list container */
   padding: 0 10px; /* Optional: Add padding for space between items and screen edges */
+  max-width: 100%; /* Prevents it from expanding too far */
 }
 
 
@@ -582,15 +583,15 @@ h1 {
 
 @media (max-width: 450px) {
   ul {
-    font-size: 15px; /* Slightly smaller font size */
+    font-size: 16px; /* Slightly smaller font size */
   }
 
   li {
-    padding: 0 8px; /* Slightly reduced padding */
+    padding: 0 5px; /* Slightly reduced padding */
   }
 
   li a {
-    padding: 10px 5px; /* Slightly reduced padding */
+    padding: 10px 3px; /* Slightly reduced padding */
   }
 
   .dropdown-content a {
