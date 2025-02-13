@@ -593,11 +593,11 @@ h1 {
   }
 
   li {
-    padding: 0 5px; /* Slightly reduced padding */
+    padding: 0 8px; /* Slightly reduced padding */
   }
 
   li a {
-    padding: 10px 3px; /* Slightly reduced padding */
+    padding: 10px 5px; /* Slightly reduced padding */
   }
 
   .dropdown-content a {
