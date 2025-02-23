@@ -1,73 +1,60 @@
 /* Secondary Navbar Styles */
 .secondary-navbar {
-    display: flex;
-    justify-content: center; /* Centers the navbar items horizontally */
-    align-items: center; /* Vertically aligns items */
-    width: 100%; /* Spans the full width */
-    margin: 0 auto; /* Centers the navbar container */
-    padding: 0; /* Removes unwanted padding */
-    background-color: transparent; /* Matches the primary navbar */
-    text-align: center; /* Ensures text aligns center */
+    text-align: center; /* Center the nav */
+    margin-top: 0px;
+    padding-bottom: 20px;
+    padding-top: 0px;
+    background-color: transparent; /* Matches primary navbar */
     font-family: raleway, sans-serif;
     z-index: 10;
 }
 
 .secondary-navbar:last-of-type {
     padding-bottom: 20px; /* Adds space inside the second navbar at the bottom */
-    padding-top: 20px;
+    padding-top: 5px;
 }
 
 /* Smooth scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
 html, body {
     scroll-behavior: smooth;
 }
 
-
 .secondary-navbar ul {
-    display: inline-block; /* Prevents full-width stretching */
-    margin: 0 auto; /* Centers the list within the parent */
-    padding: 0; /* Removes browser default padding */
-    list-style-type: none; /* Removes bullets */
+    display: inline-block; /* Keep list items centered */
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none; /* Remove bullets */
 }
 
 .secondary-navbar li {
-    display: inline-block; /* Keeps items inline */
-    margin: 0; /* Ensures no extra margin */
-    padding: 8px 35px; /* Ensures no extra padding */
-    font-size: 18px;
+    display: inline-block; /* Keep nav items side-by-side */
+    margin: 0 15px; /* Even spacing between items */
+    font-size: 1.2rem;
 }
 
 .secondary-navbar a {
-    display: inline-block; /* Keeps links consistent */
-    text-decoration: none; /* Removes underline */
-    color: #2DC78E; /* Matches primary navbar text color */
-    padding: 1px 5px; /* Balanced spacing for links */
-    background-color: rgba(0, 0, 0, 0); /* Transparent background */
-    transition: color 0.3s ease; /* Smooth hover effect */
+    text-decoration: none;
+    color: #00bcd4; /* Match Contact Me link color */
+    font-weight: 600;
+    padding: 5px 10px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
 .secondary-navbar a:hover {
-    color: gold; /* Matches hover effect of the primary navbar */
+    color: #249F71; /* Same hover color as Contact Me */
 }
 
 /* Mobile-Friendly Adjustments */
 @media (max-width: 768px) {
-    .secondary-navbar ul {
-        gap: 10px; /* Adjust spacing for smaller screens */
-    }
     .secondary-navbar li {
-        padding: 8px 20px; /* Balanced for medium screens */
-        font-size: 15px;
+        margin: 0 8px;
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 550px) {
     .secondary-navbar li {
-        padding: 6px 12px; /* Smaller spacing for compact screens */
+        margin: 10px 0;
         font-size: 13px; /* Reduce font size for smaller screens */
     }
 }

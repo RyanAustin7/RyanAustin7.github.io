@@ -18,7 +18,7 @@ html, body {
 
 .video-container {
   margin: 0 auto; /* Center-align the container */
-  margin-top: 0px;
+  margin-top: 50px;
   width: 80%; /* Adjust width to make room for a larger video */
   max-width: 1000px; /* Match or exceed iframe's max-width */
   text-align: center; /* Ensure centered alignment */
