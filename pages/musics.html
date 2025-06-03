@@ -4,9 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
+
   <link rel="stylesheet" type="text/css" href="../css files/styles_indx.css">
   <link rel="stylesheet" type="text/css" href="../css files/styles_nav.css">
   <link rel="stylesheet" type="text/css" href="../css files/mininav.css">
+  <link rel="stylesheet" href="../css files/videoscroll.css">
 
   <link rel="icon" href="../MIDIController.png" type="image/png">
 
@@ -37,14 +39,9 @@
 
   <div class="line-separator"></div>
 
-  <!-- Second Navbar -->
-  <nav class="secondary-navbar">
-    <ul class="secondary-nav-list fade-in">
-      <li><a href="#sound-design">Sound Design</a></li>
-      <li><a href="#implementation">Implementation</a></li>
-      <li><a href="#music">Music</a></li>
-    </ul>
-  </nav>
+
+
+
 
   <!-- Lightbox container -->
   <div id="lightbox" class="hidden">
@@ -60,142 +57,133 @@
     </div>
   </div>
 
-  <!-- SOUND DESIGN SECTION -->
-  <h2 id="sound-design" class="section-title fade-in-hidden fade-in fade-in-delay-1">Sound Design Demos</h2>
-  <div class="small-video-container fade-in-hidden fade-in fade-in-delay-1">
-    <div class="small-video-item">
-      <a href="https://www.youtube.com/embed/l2FqMQjcyWk?si=-NqbiEuZV8SHLuMX" class="video-lightbox-trigger">
-        <img src="../thumbs/SD_DemoThumb.png" alt="Sound Design Demo Reel" class="responsive-thumbnail small-thumbnail">
-      </a>
-      <p class="video-subtext">Sound Design Demo Reel</p>
+
+<!--- SOUND DESIGN ----------------------------------->
+
+  <section class="section">
+  <h2 class="section-title">Sound Design</h2>
+  <div class="horizontal-scroll-container">
+    <div class="scroll-inner"> <!-- ✅ Add this wrapper -->
+
+      <div class="video-card">
+        <a href="https://www.youtube.com/embed/l2FqMQjcyWk?si=-NqbiEuZV8SHLuMX" class="video-lightbox-trigger">
+          <img src="../thumbs/SD_DemoThumb.png" alt="Sound Design Demo Reel" class="responsive-thumbnail" />
+        </a>
+        <p>Sound Design Demo Reel</p>
+      </div>
+
+      <div class="video-card">
+        <a href="https://www.youtube.com/embed/Gq46Bo-M-dc?si=VlYqri2WiYXgNaVT" class="video-lightbox-trigger">
+          <img src="../thumbs/MR.png" alt="Marvel Rivals - Sound Redesign" class="responsive-thumbnail" />
+        </a>
+        <p>Marvel Rivals - Sound Redesign</p>
+      </div>
+
+      <div class="video-card">
+        <a href="https://www.youtube.com/embed/dA608WRvMuE?si=EyyeiBjyegcDO5Lb" class="video-lightbox-trigger">
+          <img src="../thumbs/lou copy.png" alt="The Last of Us - Foley Project" class="responsive-thumbnail" />
+        </a>
+        <p>The Last of Us - Foley Project</p>
+      </div>
+
+    </div> <!-- end .scroll-inner -->
+  </div> <!-- end .horizontal-scroll-container -->
+</section>
+
+
+<!--- IMPLEMENTATION / TECHNICAL SOUND DESIGN ------------------------------>
+
+<section class="section">
+  <h2 id="implementation" class="section-title">Implementation / Technical Sound Design</h2>
+  <div class="horizontal-scroll-container">
+    <div class="scroll-inner">
+
+      <div class="video-card">
+        <a href="https://www.youtube.com/embed/634gIqVfeHw?si=u6imWNq_V4X5FlGI" class="video-lightbox-trigger">
+          <img src="../thumbs/demo_thumb.webp" alt="FG: Showcase" class="responsive-thumbnail" />
+        </a>
+        <p>Flighting Game - Game/Audio System Showcase</p>
+      </div>
+
+      <div class="video-card">
+        <a href="https://www.youtube.com/embed/iY5IjnvGKlw?si=NRsmc_XI0e2akuto" class="video-lightbox-trigger">
+          <img src="../thumbs/FG_Music_Thumbnail.png" alt="FG: Music System Breakdown" class="responsive-thumbnail" />
+        </a>
+        <p>Flighting Game - Music System Breakdown</p>
+      </div>
+
+      <div class="video-card">
+        <a href="https://www.youtube.com/embed/LmkXgKEbWhg?si=nZ5CcKKqFnV1nGl6" class="video-lightbox-trigger">
+          <img src="../thumbs/FG_Menu_Thumbnail.png" alt="FG: Menu System Breakdown" class="responsive-thumbnail" />
+        </a>
+        <p>Flighting Game - Menu System Breakdown</p>
+      </div>
+
+
+      <div class="video-card">
+        <a href="https://www.youtube.com/embed/NegxlQIopEI?si=DgzS4dZas_OobD9i" class="video-lightbox-trigger">
+          <img src="../thumbs/sp_thumb.png" alt="Sisyphean Pinball Showcase" class="responsive-thumbnail" />
+        </a>
+        <p>Sisyphean Pinball - Implementation Showcase</p>
+      </div>
+
+
+      <div class="video-card">
+        <a href="https://www.youtube.com/embed/ElOdl83fDoM?si=3FTlXcwWaeZnh4KK" class="video-lightbox-trigger">
+          <img src="../thumbs/fg_full.webp" alt="'Flighting Game' - Full Breakdown" class="responsive-thumbnail" />
+        </a>
+        <p>Flighting Game - Full Breakdown</p>
+      </div>
+
+
+      <div class="video-card">
+        <a href="https://www.youtube.com/embed/osWUlkm5ZDY" class="video-lightbox-trigger">
+          <img src="../thumbs/rando_vid.jpg" alt="A Random Adventure" class="responsive-thumbnail" />
+        </a>
+        <p>A Random Adventure: Wwise/Unity Audio Breakdown</p>
+      </div>
+
     </div>
   </div>
-  
-  <div class="small-video-container fade-in-hidden fade-in fade-in-delay-1">
-    <div class="small-video-item fade-in-hidden fade-in fade-in-delay-1">
-      <a href="https://www.youtube.com/embed/Gq46Bo-M-dc?si=VlYqri2WiYXgNaVT" class="video-lightbox-trigger">
-        <img src="../thumbs/MR.png" alt="Marvel Rivals Launch Trailer - Re-Sound Designed" class="responsive-thumbnail small-thumbnail">
-      </a>
-      <p class="video-subtext">Marvel Rivals Launch Trailer - Re-Sound Designed</p>
-    </div>
-
-    <div class="small-video-item fade-in-hidden fade-in fade-in-delay-1">
-      <a href="https://www.youtube.com/embed/dA608WRvMuE?si=EyyeiBjyegcDO5Lb" class="video-lightbox-trigger">
-        <img src="../thumbs/lou copy.png" alt="The Last of Us - Re-Sound Designed" class="responsive-thumbnail small-thumbnail">
-      </a>
-      <p class="video-subtext">The Last of Us - Re-Sound Designed (Foley Project)</p>
-    </div>
-  </div>
+</section>
 
 
-  <nav class="secondary-navbar">
-    <ul class="secondary-nav-list">
-      <li><a href="#top">Back to Top</a></li>
-    </ul>
-  </nav>
 
+<!--- MUSIC  ---------------------------------------------->
 
-  <div class="line-separator-1 fade-in-hidden fade-in fade-in-delay-1"></div>
+<section class="section">
+  <h2 id="music" class="section-title">Music</h2>
+  <div class="horizontal-scroll-container">
+    <div class="scroll-inner">
 
- 
+      <div class="video-card">
+        <a href="https://www.youtube.com/embed/VX6Heq5EtnY?si=V1THh6IyIzMScO4M" class="video-lightbox-trigger">
+          <img src="../thumbs/Sparks_thumbnail.jpeg" alt="'Sparks' - Coldplay (cover)" class="responsive-thumbnail" />
+        </a>
+        <p>"Sparks" - Coldplay (cover)</p>
+      </div>
 
-  <!-- IMPLEMENTATION SECTION -->
-  <h2 id="implementation" class="section-title fade-in-hidden fade-in fade-in-delay-1a">Implementation Demos</h2>
+      <div class="video-card">
+        <a href="https://www.youtube.com/embed/anp5pJiUYzI?si=SzzXQmWKvWO4Bg2I" class="video-lightbox-trigger">
+          <img src="../thumbs/guitar.jpeg" alt="'Halfway Home' - Tommy Emmanuel (cover)" class="responsive-thumbnail" />
+        </a>
+        <p>"Halfway Home" - Tommy Emmanuel (cover)</p>
+      </div>
 
-  <div class="small-video-container fade-in-hidden fade-in fade-in-delay-1a">
-    <!-- Video 1 -->
-    <div class="small-video-item">
-      <a href="https://www.youtube.com/embed/634gIqVfeHw?si=u6imWNq_V4X5FlGI" class="video-lightbox-trigger">
-        <img src="../thumbs/demo_thumb.webp" alt="FG: Showcase" class="responsive-thumbnail small-thumbnail">
-      </a>
-      <p class="video-subtext">Flighting Game - Game/Audio System Showcase</p>
-    </div>
+      <div class="video-card">
+        <a href="https://www.youtube.com/embed/4A-IdHC0cbc" class="video-lightbox-trigger">
+          <img src="../thumbs/woods.jpeg" alt="'Amhrán na Coillte' (original)" class="responsive-thumbnail" />
+        </a>
+        <p>"Amhrán na Coillte" (original)</p>
+      </div>
 
-    <!-- Video 2 -->
-    <div class="small-video-item">
-      <a href="https://www.youtube.com/embed/iY5IjnvGKlw?si=NRsmc_XI0e2akuto" class="video-lightbox-trigger">
-        <img src="../thumbs/FG_Music_Thumbnail.png" alt="FG: Music System Breakdown" class="responsive-thumbnail small-thumbnail">
-      </a>
-      <p class="video-subtext">Flighting Game - Music System Breakdown</p>
     </div>
   </div>
-
-  <div class="small-video-container fade-in-hidden fade-in fade-in-delay-1b">
-    <!-- Video 1 -->
-    <div class="small-video-item fade-in-hidden fade-in fade-in-delay-1a">
-      <a href="https://www.youtube.com/embed/ElOdl83fDoM?si=3FTlXcwWaeZnh4KK" class="video-lightbox-trigger">
-        <img src="../thumbs/fg_full.webp" alt="'Flighting Game' - Full Breakdown!" class="responsive-thumbnail small-thumbnail">
-      </a>
-      <p class="video-subtext">Flighting Game - Full Breakdown</p>
-    </div>
-
-    <!-- Video 2 -->
-    <div class="small-video-item">
-      <a href="https://www.youtube.com/embed/LmkXgKEbWhg?si=nZ5CcKKqFnV1nGl6" class="video-lightbox-trigger">
-        <img src="../thumbs/FG_Menu_Thumbnail.png" alt="FG: Menu System Breakdown" class="responsive-thumbnail small-thumbnail">
-      </a>
-      <p class="video-subtext">Flighting Game - Menu System Breakdown</p>
-    </div>
-  </div>
-
-  <div class="small-video-container fade-in-hidden fade-in fade-in-delay-1b">
-    <!-- Video 1 -->
-    <div class="small-video-item">
-      <a href="https://www.youtube.com/embed/iY5IjnvGKlw?si=NRsmc_XI0e2akuto" class="video-lightbox-trigger">
-        <img src="../thumbs/sp_thumb.png" alt="Sisyphean Pinball Showcase" class="responsive-thumbnail small-thumbnail">
-      </a>
-      <p class="video-subtext">Sisyphean Pinball - Implementation Showcase</p>
-    </div>
-
-    <!-- Video 2 -->
-    <div class="small-video-item fade-in-hidden fade-in fade-in-delay-1a">
-      <a href="https://www.youtube.com/embed/osWUlkm5ZDY" class="video-lightbox-trigger">
-        <img src="../thumbs/rando_vid.jpg" alt="'A Random Adventure' Breakdown" class="responsive-thumbnail small-thumbnail">
-      </a>
-      <p class="video-subtext">A Random Adventure: Wwise/Unity Audio Breakdown</p>
-    </div>
-  </div>
-
-  <nav class="secondary-navbar">
-    <ul class="secondary-nav-list">
-      <li><a href="#top">Back to Top</a></li>
-    </ul>
-  </nav>
+</section>
 
 
 
-  <div class="line-separator-1 fade-in-hidden fade-in fade-in-delay-2"></div>
 
-
-
-  <!-- MUSIC SECTION -->
-  <h2 id="music" class="section-title fade-in-hidden fade-in fade-in-delay-2">Music</h2>
-  <div class="small-video-container fade-in-hidden fade-in fade-in-delay-3">
-    <div class="small-video-item">
-      <a href="https://www.youtube.com/embed/VX6Heq5EtnY?si=V1THh6IyIzMScO4M" class="video-lightbox-trigger">
-        <img src="../thumbs/Sparks_thumbnail.jpeg" alt="'Sparks' - Coldplay (cover)" class="responsive-thumbnail small-thumbnail">
-      </a>
-      <p class="video-subtext">"Sparks" - Coldplay (cover)</p>
-    </div>
-  </div>
-
-  <div class="small-video-container fade-in-hidden fade-in fade-in-delay-2">
-    <!-- Video 2 -->
-    <div class="small-video-item fade-in-hidden fade-in fade-in-delay-3">
-      <a href="https://www.youtube.com/embed/anp5pJiUYzI?si=SzzXQmWKvWO4Bg2I" class="video-lightbox-trigger">
-        <img src="../thumbs/guitar.jpeg" alt="'Halfway Home' - Tommy Emmanuel (cover)" class="responsive-thumbnail small-thumbnail">
-      </a>
-      <p class="video-subtext">"Halfway Home" - Tommy Emmanuel (cover)</p>
-    </div>
-
-    <!-- Video 3 -->
-    <div class="small-video-item fade-in-hidden fade-in fade-in-delay-3">
-      <a href="https://www.youtube.com/embed/4A-IdHC0cbc" class="video-lightbox-trigger">
-        <img src="../thumbs/woods.jpeg" alt="'Amhrán na Coillte' (original)" class="responsive-thumbnail small-thumbnail">
-      </a>
-      <p class="video-subtext">"Amhrán na Coillte" (original)</p>
-    </div>
-  </div>
 
   <nav class="secondary-navbar">
     <ul class="secondary-nav-list">

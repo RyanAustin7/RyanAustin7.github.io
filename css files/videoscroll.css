@@ -1,0 +1,151 @@
+
+.section {
+  height: auto;           /* Let the section expand naturally */
+  min-height: 50vh;       /* Optional: keep a minimum height */
+  padding: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content from the top */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.horizontal-scroll-container {
+  display: flex;
+  justify-content: center; /* center the inner content when not scrollable */
+  overflow-x: auto;
+  overflow-y: visible;       /* allow vertical overflow */
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x proximity;
+  width: 100%;
+  height: auto;              /* flexible height */
+  max-height: 275px;         /* optional max height */
+  padding: 0;                /* keep padding removed */
+  scroll-padding-left: 1rem;
+  scroll-padding-right: 1rem;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+.section-title {
+  font-size: 2rem;          /* Slightly smaller on small screens */
+  margin-bottom: 40px;      /* Maintain a balanced gap */
+  color: #F0FFF5; /* Change to your desired font color */
+}
+
+.scroll-inner {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  padding: 0 1rem;
+  overflow-x: auto;             /* Scroll happens here */
+  scroll-snap-type: x proximity;
+  scroll-padding-left: 1rem;
+  scroll-padding-right: 1rem;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.video-card {
+  flex: 0 0 auto;
+  width: 450px;
+  background: #222529;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  padding: 1rem;
+  text-align: center;
+}
+
+.horizontal-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+
+.video-card img.responsive-thumbnail {
+  width: 91%;
+  height: auto;
+  border-radius: 8px;
+  border: 3px solid #F0FFF5;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, border-color 0.2s ease;
+
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.video-card img.responsive-thumbnail:hover {
+  transform: scale(1.05);
+  border-color: #2DC78E;
+}
+
+
+.video-card p {
+  margin-top: 0.5rem;
+  color: #F0FFF5;
+  font-size: 1rem;
+}
+
+
+
+.scroll-container::-webkit-scrollbar {
+  display: none; /* optional: hides scrollbar */
+}
+
+
+
+
+
+@media (min-width: 1000px) {
+  .scroll-inner {
+    gap: 1.3rem; /* increase gap on larger screens */
+  }
+}
+
+@media (min-width: 1200px) {
+  .scroll-inner {
+    gap: 1.6rem; /* increase gap on larger screens */
+  }
+}
+
+@media (min-width: 1400px) {
+  .scroll-inner {
+    gap: 1.9rem; /* increase gap on larger screens */
+  }
+}
+
+@media (min-width: 1600px) {
+  .scroll-inner {
+    gap: 2.2rem; /* increase gap on larger screens */
+  }
+}
+
+@media (min-width: 1800px) {
+  .scroll-inner {
+    gap: 2.5rem; /* increase gap on larger screens */
+  }
+}
+
+@media (min-width: 2000px) {
+  .scroll-inner {
+    gap: 2.8rem; /* increase gap on larger screens */
+  }
+}
+
+@media (min-width: 2200px) {
+  .scroll-inner {
+    gap: 3.1rem; /* increase gap on larger screens */
+  }
+}
+
+@media (min-width: 2400px) {
+  .scroll-inner {
+    gap: 3.4rem; /* increase gap on larger screens */
+  }
+}

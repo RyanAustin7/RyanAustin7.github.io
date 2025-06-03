@@ -12,21 +12,21 @@ html, body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%; /* Use viewport width */
+  width: 100vw; /* Use viewport width (changed from 100% to 100vw) */
   height: 100vh; /* Use viewport height */
   z-index: -1;
   background: linear-gradient(to right, #1B1E22, #000000, #000000, #000000, #1B1E22);
   overflow-x: hidden; /* Prevent horizontal overflow */
-
 }
 
-.bg-color-dark{
+.bg-color-dark {
   background-color: #2F353B;
   z-index: -0.5;
   flex: 1;
+  /* Added: to avoid zoom out on mobile (if needed)
+  min-height: 100vh;
+  */
 }
-
-
 
 .footer {
   font-size: 10px;
@@ -40,14 +40,7 @@ html, body {
   left: 0; /* Ensure it's aligned to the left edge */
   right: 0; /* Ensure it extends across the screen */
   margin-top: auto; /* Pushes the footer to the bottom */
-
 }
-
-
-
-
-
-
 
 .section-title {
   font-size: 2rem; /* Adjust to desired size */
@@ -56,7 +49,6 @@ html, body {
   margin-bottom: 40px; /* Add some spacing below */
   color: #F0FFF5; /* Adjust to desired color */
 }
-
 
 /* Lightbox styling */
 #lightbox {
@@ -113,9 +105,6 @@ html, body {
   border-color: #2DC78E;
 }
 
-
-
-
 /* Flex container for small videos */
 .small-video-container {
   display: flex; /* Arrange the thumbnails horizontally */
@@ -124,7 +113,6 @@ html, body {
   margin-top: 20px; /* Add some space above the small videos */
   margin-bottom: 20px;
 }
-
 
 .small-video-item {
   display: flex;
@@ -147,8 +135,6 @@ html, body {
   object-fit: cover; /* Ensures the image fills the box */
 }
 
-
-
 /* Hover effect for thumbnails */
 .small-thumbnail:hover {
   transform: scale(1.05); /* Slightly enlarge the thumbnail on hover */
@@ -161,9 +147,6 @@ html, body {
   color: #F0FFF5;
   /*color: #EDE3D9; /* Ensure consistent text color */
 }
-
-
-
 
 header {
   width: 100%;
@@ -184,13 +167,6 @@ header {
   margin-bottom: 10px; /* Adjust spacing between items as needed */
 }
 
-
-
-
-
-
-
-
 ul {
   list-style-type: none;
   margin: 0;
@@ -200,11 +176,13 @@ ul {
 }
 
 .nav-list {
-  display: flex; /* Make the list a flex container */
-  justify-content: center; /* Center the items horizontally */
-  margin: 0 auto; /* Center the .nav-list container */
-  padding: 0 10px; /* Optional: Add padding for space between items and screen edges */
-  max-width: 100%; /* Prevents it from expanding too far */
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 25px; /* More space on left/right */
+  max-width: 800px; /* Limit max spread */
+  width: 100%;
+  box-sizing: border-box; /* Make sure padding is included in width */
 }
 
 
@@ -223,14 +201,13 @@ li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  background-color: rgba(0, 0, 0, 0); /* Transparent gray background for inactive tabs */
+  background-color: rgba(0, 0, 0, 0); /* Transparent background for inactive tabs */
   transition: background-color 0.3s ease;
 }
 
 li a:hover:not(.active):not(.semi-active) {
   color: #249F71;
 }
-
 
 .active {
   color: #F0FFF5;
@@ -240,7 +217,6 @@ li a:hover:not(.active):not(.semi-active) {
   color: #000000;
 }
 
-
 .page_name {
   font-family: Times New Roman, Serif;
   font-size: 36px; /* Fixed font size */
@@ -248,12 +224,11 @@ li a:hover:not(.active):not(.semi-active) {
   margin-top: 10px;
 }
 
-
 .hero {
   text-align: center;
 }
 
-.herofade{
+.herofade {
   animation: fadeInHero 1.5s ease-in-out;
 }
 
@@ -276,17 +251,13 @@ li a:hover:not(.active):not(.semi-active) {
   width: 60%; /* Adjust to make the line smaller */
   max-width: 550px;
 }
+
 .line-separator-1 {
   border-bottom: 2px solid #F0FFF5; /* You can change the color and thickness */
   margin: 1px auto 30px;
   width: 45%; /* Adjust to make the line smaller */
   max-width: 550px;
 }
-
-
-
-
-
 
 @keyframes fadeInHero {
   from {
@@ -299,14 +270,14 @@ li a:hover:not(.active):not(.semi-active) {
   }
 }
 
-
 h1 {
   color: black;
   text-align: center;
 }
 
-
-/*.dropdown-content a {
+/* Dropdown content commented out for now */
+/*
+.dropdown-content a {
   color: #D3D3D3;
   padding: 8px 12px;
   font-size: 20px;
@@ -317,10 +288,9 @@ h1 {
 
 .dropdown-content a:hover {
   background-color: #111;
-} */
+}
 
-/* Dropdown content starts hidden */
-/*.dropdown-content {
+.dropdown-content {
   display: none;
   opacity: 0;
   visibility: hidden;
@@ -333,17 +303,16 @@ h1 {
 
 .dropdown-content a.semi-active {
   color: #E0F7FF;
-}*/
+}
 
-/* When hovering over the dropdown tab, show the dropdown menu with fade-in */
-/*li.dropdown:hover .dropdown-content {
+li.dropdown:hover .dropdown-content {
   display: block;
   opacity: 1;
   visibility: visible;
-  animation: fadeInNav 0.3s ease-in-out forwards; */
+  animation: fadeInNav 0.3s ease-in-out forwards;
 }
+*/
 
-/* Fade-in animation without verticality */
 @keyframes fadeInNav {
   from {
     opacity: 0;
@@ -352,7 +321,7 @@ h1 {
     opacity: 1;
   }
 }
-/* Fade-in animation */
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -363,257 +332,58 @@ h1 {
     transform: translateY(0);
   }
 }
+
 @keyframes fadeInA {
   from {
     opacity: 0;
-    transform: translateX(20px); /* Slight upward motion */
+    transform: translateX(20px);
   }
   to {
     opacity: 1;
     transform: translateX(0);
   }
 }
+
 /* Prevent elements from appearing before animation starts */
 .fade-in-hidden {
   opacity: 0; /* Start fully hidden */
   visibility: hidden; /* Avoid interaction before fade-in */
   animation-fill-mode: forwards; /* Retain end state after animation */
 }
+
 /* Generic fade-in class */
 .fade-in {
-  animation: fadeIn 0.5s ease-in-out;
-  animation-fill-mode: forwards; /* Retain final state after animation */
-}
-.fade-in-a {
-  animation: fadeInA 0.17s ease-in-out;
-  animation-fill-mode: forwards; /* Retain final state after animation */
-  visibility: visible; /* Ensure visibility when the animation starts */
-
-}
-.fade-in-delay-1a {
-  animation-delay: 0.117s;
-}
-.fade-in-delay-1b {
-  animation-delay: 0.17s;
-}
-/* Staggered delays */
-.fade-in-delay-1 {
-  animation-delay: 0.2s;
-}
-.fade-in-delay-2 {
-  animation-delay: 0.4s;
-}
-.fade-in-delay-3 {
-  animation-delay: 0.6s;
-}
-.fade-in-delay-4 {
-  animation-delay: 0.8s;
-}
-.fade-in-delay-5 {
-  animation-delay: 0.9s;
-}
-.fade-in-delay-01 {
-  animation-delay: 0.23s;
-}
-.fade-in-delay-02 {
-  animation-delay: 0.26s;
-}
-.fade-in-delay-03 {
-  animation-delay: 0.29s;
-}
-.fade-in-delay-04 {
-  animation-delay: 0.32s;
-}
-.fade-in-delay-05 {
-  animation-delay: 0.35s;
-}
-.fade-in-delay-06 {
-  animation-delay: 0.38s;
-}
-.fade-in-delay-07 {
-  animation-delay: 0.41s;
-}
-.fade-in-delay-08 {
-  animation-delay: 0.44s;
-}
-.fade-in-delay-09 {
-  animation-delay: 0.47s;
-}
-/* Combine fade-in and visibility change */
-.fade-in {
-  visibility: visible; /* Restore visibility during animation */
+  animation: fadeIn 0.5s ease forwards;
+  visibility: visible;
 }
 
-
-
-
-@media (max-width: 850px) {
-  li {
-    padding: 0 16px; /* Slightly reduced padding */
-  }
-  li a {
-    padding: 12px 14px; /* Slightly reduced padding */
-  }
+/* Additional fade-in left animation */
+.fade-in-left {
+  animation: fadeInA 0.7s ease forwards;
+  visibility: visible;
 }
 
-@media (max-width: 768px) {
-  .small-video-container {
-    flex-direction: column; /* Stack thumbnails vertically */
-    align-items: center; /* Center thumbnails when stacked */
-    gap: 10px;
-    margin-bottom: 3px;
-    margin-top: 30px; /* Add some space above the small videos */
-  }
-  .small-video-container .video-subtext {
-    font-size: 15px; /* Adjust font size for smaller subtext */
-    margin-top: 0px; /* Add spacing between the thumbnail and the subtext */
-  }
-  .small-thumbnail {
-    width: 80%; /* Reduce width for better fit */
-    margin-bottom: 15px; /* Add space below each thumbnail */
-  }
-
-  
-
+/* For smooth scroll on anchor links */
+html {
+  scroll-behavior: smooth;
 }
 
-
-/* Media query for mobile screens */
-@media (max-width: 700px) {
-
-  li {
-    padding: 0 16px; /* Slightly reduced padding */
-  }
-
-  li a {
-    padding: 10px 5px; /* Slightly reduced padding */
-  }
-
-  .page_name {
-    font-size: 32px; /* Slightly smaller font size for page title */
-  }
-
-  .dropdown-content a {
-    font-size: 18px; /* Slightly smaller font size for dropdown links */
-  }
-
-  .hero-name {
-    font-size: 43px;
-    margin: 0px 10px 0 10px;
-  }
-  .hero-title {
-    font-size: 20px;
-  }
-  .hero {
-    margin: 0;
-    padding: 20px 20px 1px;
-  }
-}
-
-/* Update the download container to display buttons in a column */
-.download-container {
-  display: flex; /* Enable flex layout */
-  flex-direction: column; /* Stack buttons vertically */
-  justify-content: center; /* Center the buttons vertically */
-  align-items: center; /* Horizontally center the buttons */
-  gap: 20px; /* Adjust space between buttons */
-  margin-bottom: 0px; /* Adjust this value to increase the space below the buttons */
-}
-
-/* Styling for each button */
-.download-button {
-  display: inline-block;
-  width: 80%; /* Make buttons take up full width of container */
-  padding: 10px 20px; /* Base padding */
-  font-size: 18px; /* Base font size */
-  text-align: center;
-  line-height: 1.5; /* Helps balance the two lines */
-  border: 2px solid #000; /* Adjust border style */
-  border-radius: 5px; /* Rounded corners for the button */
-  text-decoration: none;
-  color: #000000; /* Text color */
-  background-color: #F0FFF5; /* Light sky blue */
-  transition: background-color 0.3s ease, font-size 0.3s ease, padding 0.3s ease; /* Hover and size transitions */
-  font-style: italic; /* Make text italic */
-  font-weight: bold;
-  font-family: 'Raleway', sans-serif;
-  min-width: 250px; /* Ensure minimum width for consistency */
-}
-
-/* Button hover effect */
-.download-button:hover {
-  background-color: #249F71; /* Change to yellow on hover */
-}
-
-/* Button active (clicked) effect */
-.download-button:active {
-  background-color: #4CAF50; /* Vibrant grass green */
-}
-
-/* Adjust button widths and layout on smaller screens */
-@media (max-width: 768px) {
-  .download-button {
-    width: 80%;  /* Make buttons take up most of the width on smaller screens */
-    font-size: 16px;  /* Smaller text for smaller screens */
-    padding: 8px 16px; /* Adjust padding for smaller screens */
-  }
-}
-
+/* Responsive styles for mobile */
 @media (max-width: 600px) {
-  .download-button {
-    width: 80%;  /* Maximize button width on small screens */
-    font-size: 12px;
-    padding: 8px 15px;
-  }
-}
-
-
-@media (max-width: 550px) {
-  ul {
-    font-size: 19px; /* Slightly smaller font size */
+  .small-video-container {
+    flex-direction: column; /* Stack vertically on small screens */
+    gap: 20px;
   }
 
-  li {
-    padding: 0 14px; /* Slightly reduced padding */
+  .small-thumbnail {
+    width: 100%; /* Full width on small screens */
   }
 
-  li a {
-    padding: 12px 1px; /* Slightly reduced padding */
-  }
-
-  .page_name {
-    font-size: 30px; /* Slightly smaller font size for page title */
-  }
-
-
-}
-
-@media (max-width: 450px) {
-  ul {
-    font-size: 16px; /* Slightly smaller font size */
+  .nav-list {
+    flex-direction: column; /* Stack nav items vertically */
   }
 
   li {
-    padding: 0 8px; /* Slightly reduced padding */
-  }
-
-  li a {
-    padding: 10px 5px; /* Slightly reduced padding */
-  }
-
-  .dropdown-content a {
-    font-size: 14px; /* Slightly smaller font size for dropdown links */
-  }
-
-  .hero-name {
-    font-size: 30px;
-    margin: auto;
-  }
-  .hero-title {
-    font-size: 20px;
-  }
-  .hero {
-    margin: 0;
-    padding: 15px 20px .1px;
+    padding: 2px 0;
   }
 }
