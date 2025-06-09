@@ -257,6 +257,7 @@ li a:hover:not(.active):not(.semi-active) {
 
 .hero-logo {
   width: auto;
+  max-width: 100%;
   height: 150px;
   border: none;
   border-radius: 0;
