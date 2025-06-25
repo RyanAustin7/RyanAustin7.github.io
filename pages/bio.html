@@ -31,7 +31,11 @@
 
 
 <header>
-  <ul class="nav-list">
+  <button id="hamburgerBtn" class="hamburger" onclick="toggleMenu()">
+    <span class="icon">☰</span> <span class="label">Menu</span>
+  </button>
+
+  <ul class="nav-list" id="navMenu">
     <li><a href="../index.html">Demo Reel</a></li>
     <li><a href="musics.html">Portfolio</a></li>
     <li><a href="resume.html">Resume</a></li>
@@ -81,3 +85,25 @@
 
 </body>
 </html>
+
+
+
+<!-------- Hamburger Menu JavaScript -------->
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('navMenu');
+    const btn = document.getElementById('hamburgerBtn');
+    const icon = btn.querySelector('.icon');
+    const label = btn.querySelector('.label');
+
+    menu.classList.toggle('show');
+
+    if (menu.classList.contains('show')) {
+      icon.textContent = '✖';    // X icon
+      label.textContent = 'Close'; // smaller text
+    } else {
+      icon.textContent = '☰';    // hamburger icon
+      label.textContent = 'Menu';  // smaller text
+    }
+  }
+</script>
