@@ -436,7 +436,7 @@ html {
 }
 
 /* On mobile: show hamburger and hide menu initially */
-@media (max-width: 600px) {
+@media (max-width: 625px) {
   .hamburger {
     font-size: 28px;
     background: none;
