@@ -1,46 +1,41 @@
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  text-align: center; /* Center-aligns the text in the body */
-}
-
+/* ============================================================
+   styles_res.css — resume page styles
+   (base html/body lives in styles_nav.css)
+   ============================================================ */
 
 .center-image {
   display: block;
   margin: 20px auto;
   width: 80%;
-  max-width: 100%; /* Ensures responsiveness */
-  height: calc(100vh - 2px); /* Subtract the total margin (top + bottom) */
+  max-width: 100%;
+  height: calc(100vh - 2px);
   position: relative;
   padding-bottom: 65px;
 }
 
-/* Object tag inside center-image */
 .center-image object {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* This allows the PDF to scale while maintaining its aspect ratio */
+  object-fit: contain;
 }
 
 .center-image object p {
-  font-size: 20px; /* Increase font size */
-  color: #F0FFF5; /* Optional: Set font color */
-  margin-left: 15px; /* Add left margin */
-  margin-right: 15px; /* Add right margin */
-  line-height: 1.5; /* Optional: Improve line spacing for better readability */
+  font-size: 20px;
+  color: #F0FFF5;
+  margin-left: 15px;
+  margin-right: 15px;
+  line-height: 1.5;
 }
 
 .center-image a {
   color: #2DC78E;
 }
 
-
-/* Media query for mobile screens */
+/* ---------- Responsive ---------- */
 @media (max-width: 500px) {
   .center-image {
     width: 100%;
-    height: 80vh; /* Set height more explicitly for better scaling */
+    height: 80vh;
     margin: 10px auto;
   }
 

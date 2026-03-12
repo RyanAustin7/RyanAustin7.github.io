@@ -1,13 +1,7 @@
-
-.section {
-  height: auto;           /* Let the section expand naturally */
-  min-height: 50vh;       /* Optional: keep a minimum height */
-  padding: 1rem;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* Align content from the top */
-}
+/* ============================================================
+   videoscroll.css — horizontal scroll sections for portfolio
+   (section-title color/size lives in styles_nav.css)
+   ============================================================ */
 
 *,
 *::before,
@@ -15,63 +9,75 @@
   box-sizing: border-box;
 }
 
+.section {
+  height: auto;
+  min-height: 50vh;
+  padding: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
 .horizontal-scroll-container {
   position: relative;
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
-
-  /* remove display:flex here */
   display: block;
-
   width: 100%;
   max-height: 300px;
-  padding-bottom: 30px;  /* add space inside container below content */
-
-
+  padding-bottom: 30px;
   box-sizing: content-box;
-
   scrollbar-width: thin;
   scrollbar-color: #888 #222;
 }
 
 .scroll-inner {
-  display: inline-flex;       /* inline-flex to shrink-wrap width */
-  gap: 1rem;
-  padding: 0 1rem;
+  display: inline-flex;
+  /* clamp() replaces 9 individual gap breakpoints */
+  gap: clamp(1rem, 0.5rem + 1vw, 3.4rem);
+  padding: 0 1rem 25px;
   scroll-snap-type: x proximity;
   scroll-padding-left: 1rem;
   scroll-padding-right: 1rem;
   -webkit-overflow-scrolling: touch;
-
-  padding-bottom: 25px;  /* or margin-bottom: 25px; */
-
-
-  justify-content: center;    /* center cards if narrower than container */
+  justify-content: center;
 }
-
-
-
-.section-title {
-  font-size: 2rem;          /* Slightly smaller on small screens */
-  margin-bottom: 40px;      /* Maintain a balanced gap */
-  color: #F0FFF5; /* Change to your desired font color */
-}
-
-
-
 
 .video-card {
   flex: 0 0 auto;
   width: 450px;
   background: #222529;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   padding: 1rem;
   text-align: center;
-
 }
 
+.video-card img.responsive-thumbnail {
+  width: 91%;
+  height: auto;
+  border-radius: 8px;
+  border: 3px solid #F0FFF5;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, border-color 0.2s ease;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.video-card img.responsive-thumbnail:hover {
+  transform: scale(1.05);
+  border-color: #2DC78E;
+}
+
+.video-card p {
+  margin-top: 0.5rem;
+  color: #F0FFF5;
+  font-size: 1rem;
+}
+
+/* ---------- Scrollbar ---------- */
 .horizontal-scroll-container::-webkit-scrollbar {
   height: 8px;
 }
@@ -84,44 +90,13 @@
 .horizontal-scroll-container::-webkit-scrollbar-thumb {
   background-color: #888;
   border-radius: 4px;
-  transition: background-color 0.3s ease;  /* smooth color change */
+  transition: background-color 0.3s ease;
 }
 
-
-.video-card img.responsive-thumbnail {
-  width: 91%;
-  height: auto;
-  border-radius: 8px;
-  border: 3px solid #F0FFF5;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out, border-color 0.2s ease;
-
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-}
-
-.video-card img.responsive-thumbnail:hover {
-  transform: scale(1.05);
-  border-color: #2DC78E;
-}
-
-
-.video-card p {
-  margin-top: 0.5rem;
-  color: #F0FFF5;
-  font-size: 1rem;
-}
-
-
-
-.scroll-container::-webkit-scrollbar {
-  display: none; /* optional: hides scrollbar */
-}
-
-
+/* ---------- Responsive ---------- */
 @media (max-width: 625px) {
   .video-card {
-    width: 300px !important; /* override default 450px */
+    width: 300px !important;
     padding: 0.75rem;
   }
 
@@ -131,58 +106,5 @@
 
   .responsive-thumbnail {
     width: 90%;
-  }
-}
-
-
-
-
-
-
-@media (min-width: 1000px) {
-  .scroll-inner {
-    gap: 1.3rem; /* increase gap on larger screens */
-  }
-}
-
-@media (min-width: 1200px) {
-  .scroll-inner {
-    gap: 1.6rem; /* increase gap on larger screens */
-  }
-}
-
-@media (min-width: 1400px) {
-  .scroll-inner {
-    gap: 1.9rem; /* increase gap on larger screens */
-  }
-}
-
-@media (min-width: 1600px) {
-  .scroll-inner {
-    gap: 2.2rem; /* increase gap on larger screens */
-  }
-}
-
-@media (min-width: 1800px) {
-  .scroll-inner {
-    gap: 2.5rem; /* increase gap on larger screens */
-  }
-}
-
-@media (min-width: 2000px) {
-  .scroll-inner {
-    gap: 2.8rem; /* increase gap on larger screens */
-  }
-}
-
-@media (min-width: 2200px) {
-  .scroll-inner {
-    gap: 3.1rem; /* increase gap on larger screens */
-  }
-}
-
-@media (min-width: 2400px) {
-  .scroll-inner {
-    gap: 3.4rem; /* increase gap on larger screens */
   }
 }

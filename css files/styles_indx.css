@@ -1,125 +1,102 @@
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  text-align: center; /* Center-align text in the body */
-  color: #FFFFFF; /* Change to your desired font color */
-
-}
-
-
+/* ============================================================
+   styles_indx.css — index / demo reel page styles
+   (base html/body, .active live in styles_nav.css)
+   ============================================================ */
 
 .page_name {
-  font-size: 24px; /* Adjust font size for consistency */
-  margin: 35px 0 30px 0;
-  color: #EDE3D9; /* Change to your desired font color */
+  font-size: 24px;
+  margin: 35px 0 30px;
+  color: #EDE3D9;
 }
 
-
 .video-container {
-  margin: 0 auto; /* Center-align the container */
-  margin-top: 50px;
-  width: 80%; /* Adjust width to make room for a larger video */
-  max-width: 1000px; /* Match or exceed iframe's max-width */
-  text-align: center; /* Ensure centered alignment */
+  margin: 50px auto 0;
+  width: 80%;
+  max-width: 1000px;
+  text-align: center;
 }
 
 .video-container iframe {
-  width: 100%; /* Fully utilize the container's width */
-  max-width: 1000px; /* Ensure the iframe can grow larger */
-  aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */
-  margin: 0 auto; /* Center-align the iframe */
-  display: block; /* Ensure proper alignment and spacing */
+  width: 100%;
+  max-width: 1000px;
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+  display: block;
 }
 
-
+.video-container:last-of-type {
+  padding-bottom: 20px;
+}
 
 .video-subtext {
-  font-size: 25px; /* Small font size for subtext */
+  font-size: 25px;
   margin-top: 18px;
   margin-bottom: 50px;
-  color: #FFFFFF; /* Change to your desired font color */
-  text-align: center; /* Center-align the subtext */
+  color: #FFFFFF;
+  text-align: center;
   font-family: 'Raleway', sans-serif;
 }
 
-/* Add padding to the last video container */
-.video-container:last-of-type {
-  padding-bottom: 20px; /* Adjust this value for space below the last video */
-}
-
-/* Flex container for images */
+/* ---------- Image flex ---------- */
 .image-flex-container {
-  display: flex; /* Enable Flexbox */
-  flex-direction: row; /* Keep images in a horizontal layout */
-  align-items: center; /* Center items vertically */
-  justify-content: center; /* Center items horizontally */
-  margin: 20px auto; /* Center the image container */
-  top: 30px; /* Space from the top; adjust as needed */
-  padding: 0 100px; /* Add padding to left and right edges */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  top: 30px;
+  padding: 0 100px;
 }
 
-/* Image container styles */
 .image-container {
-  display: flex; /* Enable Flexbox for image container */
-  justify-content: center; /* Center images */
-  align-items: center; /* Center images horizontally */
-  margin: 15px 0 20px; /* Remove margin around image container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0 20px;
 }
 
-/* Image styles */
 .responsive-image {
-  width: 25%; /* Scales based on container width */
-  max-width: 200px; /* Limits the maximum width */
-  height: auto; /* Maintains aspect ratio */
-  margin: 0 25px; /* Adds horizontal space between images */
+  width: 25%;
+  max-width: 200px;
+  height: auto;
+  margin: 0 25px;
 }
-
-/* Update the flex container for videos and buttons */
 
 .video-button-container {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center-align the container */
-  justify-content: center; /* Centers the content */
-  margin: 0 auto; /* No margin at all */
-  max-width: 700px; /* Limiting the max width */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 700px;
 }
 
-
-.active {
-  font-weight: bold;
-}
-
+/* ---------- Responsive ---------- */
 @media (max-width: 1000px) {
   .responsive-image {
-    margin: 0 10px; /* Adds horizontal space between images */
-    max-width: 270px; /* Limits the maximum width */
+    margin: 0 10px;
+    max-width: 270px;
   }
 }
 
 @media (max-width: 768px) {
-  .video-subtext {
-    font-size: 20px; /* Small font size for subtext */
-  }
+  .video-subtext { font-size: 20px; }
 }
 
 @media (max-width: 700px) {
   .responsive-image {
-    width: 33%; /* Scales better for small screens */
-    max-width: 138px; /* Further limits the size */
-    margin: 0 10px; /* Slightly reduces spacing on smaller screens */
+    width: 33%;
+    max-width: 138px;
+    margin: 0 10px;
   }
 }
 
 @media (max-width: 410px) {
   .responsive-image {
-    width: 47%; /* Scales better for small screens */
-    max-width: 85px; /* Further limits the size */
-    margin: 0 5px; /* Slightly reduces spacing on smaller screens */
+    width: 47%;
+    max-width: 85px;
+    margin: 0 5px;
   }
 
-  .video-subtext {
-    font-size: 18px; /* Small font size for subtext */
-  }
+  .video-subtext { font-size: 18px; }
 }

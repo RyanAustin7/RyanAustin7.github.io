@@ -1,91 +1,77 @@
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
+/* ============================================================
+   styles_cont.css — contact page styles
+   (base html/body, .active, .semi-active live in styles_nav.css)
+   ============================================================ */
 
 .page_name {
   margin-top: 10px;
 }
 
 .body-paragraph {
-  font-size: 36px; /* Increase font size */
-  max-width: 600px; /* Slightly reduced max-width */
-  margin: 0 auto; /* Center the text block */
-  padding: 0; /* No padding */
+  font-size: 36px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0;
   z-index: 1;
-  text-align: center; /* Center-align the text */
+  text-align: center;
   color: #FFFFFF;
 }
 
 .socials {
-  font-size: 32px; /* Fixed font size */
+  font-size: 32px;
   max-width: 500px;
-  margin: 0 auto; /* Center the social links */
-  padding: 20px 20px; /* Adjust padding to only include top and bottom */
+  margin: 0 auto;
+  padding: 20px;
   z-index: 1;
-  text-align: center; /* Align text to the center */
+  text-align: center;
 }
 
 .socials a {
   font-family: Arial, sans-serif;
   color: #2DC78E;
   text-decoration: none;
-  margin: 0; /* Remove any margin from links */
+  margin: 0;
 }
-
-.socials p:last-of-type {
-  padding-bottom: 160px; /* Or padding-bottom: 50px; */
-}
-
-
-.active {
-  font-weight: bold;
-}
-
-.semi-active {
-  font-weight: bold;
-  color: #249F71; /* Highlighted color */
-}
-
-.socials p {
-  display: flex;
-  align-items: center; /* Vertically center the image and text */
-  margin-bottom: 130px; /* Add some space between the links */
-}
-
-.socials .social-icon {
-  width: 70px; /* Adjust size of the icons */
-  height: auto; /* Maintain aspect ratio */
-  margin-right: 25px; /* Space between the image and the text */
-}
-
 
 .socials a:hover {
   color: #249F71;
 }
 
+.socials p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 130px;
+}
+
+.socials p:last-of-type {
+  padding-bottom: 160px;
+}
+
+.socials .social-icon {
+  width: 70px;
+  height: auto;
+  margin-right: 25px;
+}
+
+/* ---------- Responsive ---------- */
 @media (max-width: 500px) {
   .body-paragraph {
-    font-size: 20px; /* Smaller font size for the paragraph */
-    margin-bottom: 10px; /* Reduced space between the paragraph and links */
+    font-size: 20px;
+    margin-bottom: 10px;
     padding: 0 15px;
   }
 
-  .socials .social-icon {
-    width: 50px; /* Smaller icon size on mobile */
-    margin-right: 15px; /* Less space between icon and text on mobile */
-  }
-
   .socials {
-    font-size: 24px; /* Smaller font size for social links */
-    padding: 5px 28px; /* Adjust padding to only include top and bottom */
-
+    font-size: 24px;
+    padding: 5px 28px;
   }
 
   .socials p {
-    margin: 75px 0; /* Reduced space between each social link for smaller screens */
+    margin: 75px 0;
+  }
+
+  .socials .social-icon {
+    width: 50px;
+    margin-right: 15px;
   }
 }

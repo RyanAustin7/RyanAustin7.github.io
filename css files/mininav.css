@@ -1,60 +1,57 @@
-/* Secondary Navbar Styles */
+/* ============================================================
+   mininav.css — secondary navbar styles
+   (scroll-behavior smooth lives in styles_nav.css)
+   ============================================================ */
+
 .secondary-navbar {
-    text-align: center; /* Center the nav */
-    margin-top: 0px;
-    padding-bottom: 20px;
-    padding-top: 0px;
-    background-color: transparent; /* Matches primary navbar */
-    font-family: raleway, sans-serif;
-    z-index: 10;
+  text-align: center;
+  margin-top: 0;
+  padding: 0 0 20px;
+  background-color: transparent;
+  font-family: 'Raleway', sans-serif;
+  z-index: 10;
 }
 
 .secondary-navbar:last-of-type {
-    padding-bottom: 20px; /* Adds space inside the second navbar at the bottom */
-    padding-top: 5px;
-}
-
-/* Smooth scrolling */
-html, body {
-    scroll-behavior: smooth;
+  padding: 5px 0 20px;
 }
 
 .secondary-navbar ul {
-    display: inline-block; /* Keep list items centered */
-    margin: 0 auto;
-    padding: 0;
-    list-style-type: none; /* Remove bullets */
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
 }
 
 .secondary-navbar li {
-    display: inline-block; /* Keep nav items side-by-side */
-    margin: 0 15px; /* Even spacing between items */
-    font-size: 1.2rem;
+  display: inline-block;
+  margin: 0 15px;
+  font-size: 1.2rem;
 }
 
 .secondary-navbar a {
-    text-decoration: none;
-    color: #00bcd4; /* Match Contact Me link color */
-    font-weight: 600;
-    padding: 5px 10px;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
+  text-decoration: none;
+  color: #00bcd4;
+  font-weight: 600;
+  padding: 5px 10px;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
 .secondary-navbar a:hover {
-    color: #249F71; /* Same hover color as Contact Me */
+  color: #249F71;
 }
 
-/* Mobile-Friendly Adjustments */
+/* ---------- Responsive ---------- */
 @media (max-width: 768px) {
-    .secondary-navbar li {
-        margin: 0 8px;
-        font-size: 1rem;
-    }
+  .secondary-navbar li {
+    margin: 0 8px;
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 550px) {
-    .secondary-navbar li {
-        margin: 10px 0;
-        font-size: 13px; /* Reduce font size for smaller screens */
-    }
+  .secondary-navbar li {
+    margin: 10px 0;
+    font-size: 13px;
+  }
 }

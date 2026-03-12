@@ -1,3 +1,8 @@
+/* ============================================================
+   styles_nav.css — shared base styles (nav, layout, animations)
+   ============================================================ */
+
+/* ---------- Reset / Base ---------- */
 html, body {
   height: 100%;
   margin: 0;
@@ -6,53 +11,52 @@ html, body {
   overflow-x: hidden;
   width: 100%;
   max-width: 100vw;
+  scroll-behavior: smooth;
 }
 
-
-
+/* ---------- Background ---------- */
 .background-container {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw; /* Use viewport width (changed from 100% to 100vw) */
-  height: 100vh; /* Use viewport height */
+  width: 100vw;
+  height: 100vh;
   z-index: -1;
   background: linear-gradient(to right, #1B1E22, #000000, #000000, #000000, #1B1E22);
-  overflow-x: hidden; /* Prevent horizontal overflow */
+  overflow-x: hidden;
 }
 
 .bg-color-dark {
   background-color: #2F353B;
   z-index: -0.5;
   flex: 1;
-  /* Added: to avoid zoom out on mobile (if needed)
-  min-height: 100vh;
-  */
 }
 
+/* ---------- Footer ---------- */
 .footer {
   font-size: 10px;
   color: #F0FFF5;
   font-family: 'Raleway', sans-serif;
-  padding: 5px 0px;
-  width: 100%; /* Ensure full width */
+  padding: 5px 0;
+  width: 100%;
   box-sizing: border-box;
   text-align: center;
-  bottom: 0; /* Position it at the bottom */
-  left: 0; /* Ensure it's aligned to the left edge */
-  right: 0; /* Ensure it extends across the screen */
-  margin-top: auto; /* Pushes the footer to the bottom */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-top: auto;
 }
 
+/* ---------- Section title ---------- */
 .section-title {
-  font-size: 2rem; /* Adjust to desired size */
-  font-weight: bold; /* Make it bold */
-  text-align: center; /* Center-align the text */
-  margin-bottom: 40px; /* Add some spacing below */
-  color: #F0FFF5; /* Adjust to desired color */
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #F0FFF5;
 }
 
-/* Lightbox styling */
+/* ---------- Lightbox ---------- */
 #lightbox {
   position: fixed;
   top: 0;
@@ -74,9 +78,9 @@ html, body {
   position: relative;
   width: 85%;
   max-width: 1250px;
-  border: 2px solid #FFFFFF; /* Add a white border like the responsive thumbnails */
-  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.9);
-  overflow: visible; /* Prevent content from spilling outside */
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
+  overflow: visible;
 }
 
 .lightbox-content iframe {
@@ -93,7 +97,7 @@ html, body {
   cursor: pointer;
 }
 
-/* Thumbnail styling */
+/* ---------- Thumbnails ---------- */
 .responsive-thumbnail {
   max-width: 100%;
   border-radius: 8px;
@@ -107,12 +111,12 @@ html, body {
   border-color: #2DC78E;
 }
 
-/* Flex container for small videos */
+/* ---------- Small video containers ---------- */
 .small-video-container {
-  display: flex; /* Arrange the thumbnails horizontally */
-  justify-content: center; /* Center them horizontally */
-  gap: 70px; /* Add space between thumbnails */
-  margin-top: 20px; /* Add some space above the small videos */
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
@@ -122,58 +126,43 @@ html, body {
   align-items: center;
   text-align: center;
   max-width: 400px;
-  width: 100%; /* Ensure it expands to fit its container */
+  width: 100%;
 }
 
-/* Small video thumbnail styles */
 .small-thumbnail {
-  width: 85%; /* Allow two thumbnails to fit side by side */
-  max-width: 400px; /* Ensure a reasonable maximum size */
-  aspect-ratio: 16 / 9; /* Maintain a consistent 16:9 ratio */
-  cursor: pointer; /* Indicate interactivity */
-  border: 3px solid #F0FFF5; /* Add an optional white border for styling */
-  border-radius: 5px; /* Round corners slightly */
-  transition: transform 0.3s ease; /* Smooth scaling effect on hover */
-  object-fit: cover; /* Ensures the image fills the box */
+  width: 85%;
+  max-width: 400px;
+  aspect-ratio: 16 / 9;
+  cursor: pointer;
+  border: 3px solid #F0FFF5;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+  object-fit: cover;
 }
 
-/* Hover effect for thumbnails */
 .small-thumbnail:hover {
-  transform: scale(1.05); /* Slightly enlarge the thumbnail on hover */
+  transform: scale(1.05);
 }
 
-/* Small video subtext alignment */
 .small-video-container .video-subtext {
-  font-size: 16px; /* Adjust font size for smaller subtext */
-  margin-top: 8px; /* Add spacing between the thumbnail and the subtext */
+  font-size: 16px;
+  margin-top: 8px;
   color: #F0FFF5;
-  /*color: #EDE3D9; /* Ensure consistent text color */
 }
 
+/* ---------- Header / Nav ---------- */
 header {
   width: 100%;
   top: 0;
   margin-bottom: 20px;
-  z-index: 1000; /* Ensure header is above other content */
-}
-
-.bio-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  font-size: 24px;
-  width: 100%;
-}
-
-.bio-list li {
-  margin-bottom: 10px; /* Adjust spacing between items as needed */
+  z-index: 1000;
 }
 
 ul {
   list-style-type: none;
   margin: 0;
   background-color: transparent;
-  font-size: 20px; /* Fixed font size */
+  font-size: 20px;
   width: 100%;
 }
 
@@ -181,16 +170,15 @@ ul {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 0 25px; /* More space on left/right */
-  max-width: 800px; /* Limit max spread */
+  padding: 0 25px;
+  max-width: 800px;
   width: 100%;
-  box-sizing: border-box; /* Make sure padding is included in width */
+  box-sizing: border-box;
 }
-
 
 li {
   display: inline-block;
-  padding: 0 20px; /* Fixed padding */
+  padding: 0 20px;
 }
 
 li:last-child {
@@ -203,7 +191,7 @@ li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  background-color: rgba(0, 0, 0, 0); /* Transparent background for inactive tabs */
+  background-color: transparent;
   transition: background-color 0.3s ease;
 }
 
@@ -211,44 +199,26 @@ li a:hover:not(.active):not(.semi-active) {
   color: #249F71;
 }
 
+/* ---------- Active / semi-active states ---------- */
 .active {
+  font-weight: bold;
   color: #F0FFF5;
 }
 
 .semi-active {
-  color: #000000;
+  font-weight: bold;
+  color: #249F71;
 }
 
+/* ---------- Page name ---------- */
 .page_name {
-  font-family: Times New Roman, Serif;
-  font-size: 36px; /* Fixed font size */
-  color: #F0FFF5; /* Change to your desired font color */
+  font-family: 'Times New Roman', Serif;
+  font-size: 36px;
+  color: #F0FFF5;
   margin-top: 10px;
 }
 
-.hero {
-  text-align: center;
-}
-
-.herofade {
-  animation: fadeInHero 1.5s ease-in-out;
-}
-
-.hero-name {
-  font-size: 2rem; /* Large font size for your name */
-  margin: 0px 50px 5px 50px;
-  color: #F0FFF5;
-}
-
-.hero-title {
-  font-size: 1.4rem; /* Slightly smaller font for the title */
-  margin: 0 50px 20px 50px;
-  color: #F0FFF5;
-  font-weight: bold;
-}
-
-
-
+/* ---------- Hero ---------- */
 .hero-text {
   display: flex;
   flex-direction: column;
@@ -266,151 +236,107 @@ li a:hover:not(.active):not(.semi-active) {
   margin: 0 auto;
 }
 
+.hero-name {
+  font-size: 2rem;
+  margin: 0 50px 5px;
+  color: #F0FFF5;
+}
 
+.hero-title {
+  font-size: 1.4rem;
+  margin: 0 50px 20px;
+  color: #F0FFF5;
+  font-weight: bold;
+}
 
-
-
-
-
-
-
-
+/* ---------- Separators ---------- */
 .line-separator {
-  border-bottom: 3px solid #F0FFF5; /* You can change the color and thickness */
-  margin: 15px auto; /* 15px margin on top and bottom, and auto for left and right */
-  width: 60%; /* Adjust to make the line smaller */
+  border-bottom: 3px solid #F0FFF5;
+  margin: 15px auto;
+  width: 60%;
   max-width: 550px;
 }
 
 .line-separator-1 {
-  border-bottom: 2px solid #F0FFF5; /* You can change the color and thickness */
+  border-bottom: 2px solid #F0FFF5;
   margin: 1px auto 30px;
-  width: 45%; /* Adjust to make the line smaller */
+  width: 45%;
   max-width: 550px;
 }
 
+/* ---------- Bio list ---------- */
+.bio-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  width: 100%;
+}
+
+.bio-list li {
+  margin-bottom: 10px;
+}
+
+/* ---------- Animations ---------- */
 @keyframes fadeInHero {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
-
-h1 {
-  color: black;
-  text-align: center;
-}
-
-/* Dropdown content commented out for now */
-/*
-.dropdown-content a {
-  color: #D3D3D3;
-  padding: 8px 12px;
-  font-size: 20px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.dropdown-content a:hover {
-  background-color: #111;
-}
-
-.dropdown-content {
-  display: none;
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  background-color: rgba(44, 44, 44, 0.99);
-  min-width: 60px;
-  z-index: 1;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-.dropdown-content a.semi-active {
-  color: #E0F7FF;
-}
-
-li.dropdown:hover .dropdown-content {
-  display: block;
-  opacity: 1;
-  visibility: visible;
-  animation: fadeInNav 0.3s ease-in-out forwards;
-}
-*/
 
 @keyframes fadeInNav {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px); /* Slight upward motion */
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeInA {
-  from {
-    opacity: 0;
-    transform: translateX(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(20px); }
+  to   { opacity: 1; transform: translateX(0); }
 }
 
-/* Prevent elements from appearing before animation starts */
+.herofade {
+  animation: fadeInHero 1.5s ease-in-out;
+}
+
 .fade-in-hidden {
-  opacity: 0; /* Start fully hidden */
-  visibility: hidden; /* Avoid interaction before fade-in */
-  animation-fill-mode: forwards; /* Retain end state after animation */
+  opacity: 0;
+  visibility: hidden;
+  animation-fill-mode: forwards;
 }
 
-/* Generic fade-in class */
 .fade-in {
   animation: fadeIn 0.5s ease forwards;
   visibility: visible;
 }
 
-/* Additional fade-in left animation */
 .fade-in-left {
   animation: fadeInA 0.7s ease forwards;
   visibility: visible;
 }
 
-/* For smooth scroll on anchor links */
-html {
-  scroll-behavior: smooth;
+/* ---------- h1 default ---------- */
+h1 {
+  color: black;
+  text-align: center;
 }
 
-/* Responsive styles for mobile */
+/* ---------- Responsive ---------- */
 @media (max-width: 600px) {
   .small-video-container {
-    flex-direction: column; /* Stack vertically on small screens */
+    flex-direction: column;
     gap: 20px;
   }
 
   .small-thumbnail {
-    width: 100%; /* Full width on small screens */
+    width: 100%;
   }
 
   .nav-list {
-    flex-direction: column; /* Stack nav items vertically */
+    flex-direction: column;
   }
 
   li {
@@ -418,13 +344,7 @@ html {
   }
 }
 
-
-
-
-
-/*  ~~~~~~~~~~~~ Hamburger Menu ~~~~~~~~~~~~ */
-
-/* Hide hamburger on desktop */
+/* ---------- Hamburger menu ---------- */
 .hamburger {
   display: none;
   font-size: 28px;
@@ -435,27 +355,26 @@ html {
   padding: 10px 20px;
 }
 
-/* On mobile: show hamburger and hide menu initially */
 @media (max-width: 625px) {
   .hamburger {
+    display: flex;
+    align-items: center;
+    gap: 6px;
     font-size: 28px;
     background: none;
     color: #2DC78E;
     border: none;
     cursor: pointer;
     padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
   }
 
   .hamburger .icon {
-    font-size: 28px;  /* big icon */
+    font-size: 28px;
     line-height: 1;
   }
 
   .hamburger .label {
-    font-size: 14px;  /* much smaller text */
+    font-size: 14px;
     font-weight: normal;
     user-select: none;
   }
@@ -479,7 +398,6 @@ html {
     opacity: 1;
   }
 
-
   .nav-list li {
     text-align: center;
     padding: 10px 0;
@@ -490,6 +408,3 @@ html {
     font-size: 18px;
   }
 }
-
-
-/*  ~~~~~~~~~~~~ End of Hamburger Menu ~~~~~~~~~~~~ */

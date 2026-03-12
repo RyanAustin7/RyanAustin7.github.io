@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <link rel="stylesheet" type="text/css" href="css files/styles_indx.css">
-  <link rel="stylesheet" type="text/css" href="css files/styles_nav.css">
-  <link rel="stylesheet" type="text/css" href="css files/mininav.css">
-  <link rel="icon" href="../MIDIController.png" type="image/png">
+  <title>Ryan Austin — Audio Specialist</title>
+
+  <link rel="stylesheet" href="css files/styles_indx.css">
+  <link rel="stylesheet" href="css files/styles_nav.css">
+  <link rel="stylesheet" href="css files/mininav.css">
+
+  <link rel="icon" href="MIDIController.png" type="image/png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -22,8 +27,6 @@
   </div>
 </div>
 
-
-
 <!-- Lightbox container -->
 <div id="lightbox" class="hidden">
   <div class="lightbox-content">
@@ -37,7 +40,6 @@
     <span id="lightbox-close">&times;</span>
   </div>
 </div>
-
 
 <header>
   <button id="hamburgerBtn" class="hamburger" onclick="toggleMenu()">
@@ -53,25 +55,20 @@
   </ul>
 </header>
 
-<!-- Wrap content with bg-color-dark -->
 <div class="bg-color-dark">
   <div class="line-separator"></div>
 
-  <!-- <h1 class="page_name fade-in">Sound Design Demo Reel</h1> -->
-
-  <!-- Sound Design Content -->
+  <!-- Sound Design Demo Reel -->
   <div class="video-container fade-in" id="SD">
     <a href="https://www.youtube.com/embed/VY8NDuwjFug?si=izYrn8UV8j7iaogL" class="video-lightbox-trigger">
       <img src="thumbs/Thumbnail_SDR.png" alt="Sound Design Demo Reel" class="responsive-thumbnail">
     </a>
-    <p class="video-subtext">Sound Design Demo Reel </p>
+    <p class="video-subtext">Sound Design Demo Reel</p>
   </div>
 
   <div class="line-separator-1 fade-in-hidden fade-in fade-in-delay-1"></div>
 
-
-  <!-- <h1 class="page_name fade-in-hidden fade-in fade-in-delay-2">Technical Sound Design Showcase</h1> -->
-  <!-- Technical Sound Design Content -->
+  <!-- Technical Sound Design -->
   <div class="video-container fade-in-hidden fade-in fade-in-delay-2" id="fg">
     <a href="https://www.youtube.com/embed/634gIqVfeHw?si=u6imWNq_V4X5FlGI" class="video-lightbox-trigger">
       <img src="thumbs/demo_thumb.webp" alt="Flighting Game Demo" class="responsive-thumbnail">
@@ -79,7 +76,6 @@
     <p class="video-subtext">FLIGHTING GAME – Technical Sound Design Showcase</p>
 
     <div class="small-video-container fade-in-hidden fade-in fade-in-delay-2">
-      <!-- Video 1 -->
       <div class="small-video-item">
         <a href="https://www.youtube.com/embed/iY5IjnvGKlw?si=NRsmc_XI0e2akuto" class="video-lightbox-trigger">
           <img src="thumbs/FG_Music_Thumbnail.png" alt="FG: Music System Breakdown" class="responsive-thumbnail small-thumbnail">
@@ -87,7 +83,6 @@
         <p class="video-subtext">Music System Breakdown<br>(Wwise and C#)</p>
       </div>
 
-      <!-- Video 2 -->
       <div class="small-video-item">
         <a href="https://www.youtube.com/embed/LmkXgKEbWhg?si=nZ5CcKKqFnV1nGl6" class="video-lightbox-trigger">
           <img src="thumbs/FG_Menu_Thumbnail.png" alt="FG: Menu System Breakdown" class="responsive-thumbnail small-thumbnail">
@@ -96,22 +91,6 @@
       </div>
     </div>
 
-    <!-- Download container -->
-    <!-- <div class="download-container fade-in-hidden fade-in fade-in-delay-5"> -->
-      <!-- Windows Download Button -->
-      <!-- <a href="https://drive.google.com/uc?export=download&id=1z14LgGmaz1jL1iQMfJ4KNWaG6mmq9yM5" class="download-button" target="_blank">
-        Download Flighting Game (Windows)
-      </a> -->
-      <!-- Mac Download Button -->
-      <!-- <a href="https://drive.google.com/uc?export=download&id=1FbdbFKd4ec6oRvAaPp-bbMkx7Xl-O3ES" class="download-button" target="_blank">
-        Download Flighting Game (Mac)
-      </a> -->
-      <!-- Google Drive Link Button -->
-      <!-- <a href="https://drive.google.com/drive/folders/1F7Wj1C_91dtkIqzomN4I4JhrKA1BrmwI?usp=sharing" class="download-button" target="_blank">
-        Download Flighting Game from Google Drive
-      </a>
-    </div> -->
-
     <nav class="secondary-navbar">
       <ul class="secondary-nav-list">
         <li><a href="#top">Back to Top</a></li>
@@ -119,38 +98,15 @@
     </nav>
   </div>
 
-</div>
-
-  <!-- Footer Section -->
-  <footer class="footer">
-    <p>Designed and Developed by Ryan Austin</p>
-  </footer>
 </div> <!-- Close bg-color-dark -->
 
+<footer class="footer">
+  <p>Designed and Developed by Ryan Austin</p>
+</footer>
 
 <script src="javascript files/lightbox.js"></script>
-<script src="javascript files/resumeview_index.js"></script>
+<script src="javascript files/resumeview.js"></script>
+<script src="javascript files/nav.js"></script>
 
 </body>
 </html>
-
-
-<!-------- Hamburger Menu JavaScript -------->
-<script>
-  function toggleMenu() {
-    const menu = document.getElementById('navMenu');
-    const btn = document.getElementById('hamburgerBtn');
-    const icon = btn.querySelector('.icon');
-    const label = btn.querySelector('.label');
-
-    menu.classList.toggle('show');
-
-    if (menu.classList.contains('show')) {
-      icon.textContent = '✖';    // X icon
-      label.textContent = 'Close'; // smaller text
-    } else {
-      icon.textContent = '☰';    // hamburger icon
-      label.textContent = 'Menu';  // smaller text
-    }
-  }
-</script>

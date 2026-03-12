@@ -1,23 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bio — Ryan Austin</title>
 
-  <!-- Update the CSS file paths -->
-  <link rel="stylesheet" type="text/css" href="../css files/styles_nav.css">
-  <link rel="stylesheet" type="text/css" href="../css files/styles_bio.css">
+  <link rel="stylesheet" href="../css files/styles_nav.css">
+  <link rel="stylesheet" href="../css files/styles_bio.css">
 
-  <!-- Update the favicon path -->
   <link rel="icon" href="../MIDIController.png" type="image/png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
 </head>
 <body>
 
-<!-- Background container -->
 <div class="background-container"></div>
 
 <div id="top">
@@ -28,8 +26,6 @@
   </div>
 </div>
 
-
-
 <header>
   <button id="hamburgerBtn" class="hamburger" onclick="toggleMenu()">
     <span class="icon">☰</span> <span class="label">Menu</span>
@@ -39,17 +35,15 @@
     <li><a href="../index.html">Demo Reel</a></li>
     <li><a href="musics.html">Portfolio</a></li>
     <li><a href="resume.html">Resume</a></li>
-    <li><a href="bio.html"  class="active">Bio</a></li>
-   <!-- <li><a href="contact.html">Contact</a></li> -->
+    <li><a href="bio.html" class="active">Bio</a></li>
+    <!-- <li><a href="contact.html">Contact</a></li> -->
   </ul>
 </header>
 
-<!-- Wrap content with bg-color-dark -->
 <div class="bg-color-dark">
 
   <div class="line-separator"></div>
 
-  <!-- Contact Section -->
   <div class="contact-section fade-in-hidden fade-in fade-in-delay-2">
     <ul class="contact-links">
       <li><a href="https://www.linkedin.com/in/ryan-austin-042086298/" target="_blank">LinkedIn</a></li>
@@ -58,52 +52,22 @@
     </ul>
   </div>
 
-
-  <!-- <h1 class="page_name fade-in">About Me</h1> -->
-
-  <!-- Center image of Ryan Austin -->
   <div class="center-image fade-in-hidden fade-in fade-in-delay-1b">
     <img src="../me.jpg" alt="Image of Ryan Austin">
   </div>
 
-  <!-- Main content -->
   <div class="body-paragraph fade-in-hidden fade-in fade-in-delay-1">
-    <p class="fade-in-hidden fade-in fade-in-delay-1">Hi! I'm Ryan Austin. I'm a Sound Designer, Audio Programmer, Composer, Technical Sound Designer, and Musician. I specialize in building interactive audio systems for games, designing sounds for media, and composing music in various styles. After graduating from Berklee College of Music with a degree in Game and Interactive Media Scoring, I developed a passion for interactive audio and technical sound design. I'm Wwise certified and have hands-on experience in game audio implementation, sound design, and audio programming, which you can explore through the video projects featured on my website! </p>
+    <p>Hi! I'm Ryan Austin. I'm a Sound Designer, Audio Programmer, Composer, Technical Sound Designer, and Musician. I specialize in building interactive audio systems for games, designing sounds for media, and composing music in various styles. After graduating from Berklee College of Music with a degree in Game and Interactive Media Scoring, I developed a passion for interactive audio and technical sound design. I'm Wwise certified and have hands-on experience in game audio implementation, sound design, and audio programming, which you can explore through the video projects featured on my website!</p>
   </div>
 
+</div>
 
-
-
-</div> <!-- Close bg-color-dark -->
-
-<!-- Footer Section -->
 <footer class="footer">
   <p>Designed and Developed by Ryan Austin</p>
 </footer>
 
-<script src="../javascript files/resumeview.js"></script> <!-- Add this line to reference your new JS file -->
+<script src="../javascript files/nav.js"></script>
+<script src="../javascript files/resumeview.js"></script>
 
 </body>
 </html>
-
-
-
-<!-------- Hamburger Menu JavaScript -------->
-<script>
-  function toggleMenu() {
-    const menu = document.getElementById('navMenu');
-    const btn = document.getElementById('hamburgerBtn');
-    const icon = btn.querySelector('.icon');
-    const label = btn.querySelector('.label');
-
-    menu.classList.toggle('show');
-
-    if (menu.classList.contains('show')) {
-      icon.textContent = '✖';    // X icon
-      label.textContent = 'Close'; // smaller text
-    } else {
-      icon.textContent = '☰';    // hamburger icon
-      label.textContent = 'Menu';  // smaller text
-    }
-  }
-</script>

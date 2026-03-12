@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Ryan Austin</title>
 
-  <!-- Corrected paths for CSS files -->
-  <link rel="stylesheet" type="text/css" href="../css files/styles_nav.css">
-  <link rel="stylesheet" type="text/css" href="../css files/styles_cont.css">
+  <link rel="stylesheet" href="../css files/styles_nav.css">
+  <link rel="stylesheet" href="../css files/styles_cont.css">
 
-  <!-- Corrected favicon path -->
   <link rel="icon" href="../MIDIController.png" type="image/png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,10 +16,9 @@
 </head>
 <body>
 
-<!-- Background container -->
 <div class="background-container"></div>
 
-<div>
+<div id="top">
   <div class="hero-text">
     <img src="../RA_Audio3.svg" alt="RA Logo" class="hero-logo">
     <h1 class="hero-name">Ryan Austin</h1>
@@ -47,48 +46,29 @@
 
   <h1 class="page_name fade-in">Contact Me!</h1>
 
-  <!-- Social media links -->
   <div class="socials">
     <p class="fade-in-hidden fade-in fade-in-delay-1">
-      <img src="../pics/email.png" alt="Email" class="social-icon"> <a href="mailto:raustintex@gmail.com">Email Me</a>
+      <img src="../pics/email.png" alt="Email" class="social-icon">
+      <a href="mailto:raustintex@gmail.com">Email Me</a>
     </p>
     <p class="fade-in-hidden fade-in fade-in-delay-2">
-      <img src="../pics/insta.png" alt="Instagram" class="social-icon"> <a href="https://www.instagram.com/ryan.austin_/">My Instagram</a>
+      <img src="../pics/insta.png" alt="Instagram" class="social-icon">
+      <a href="https://www.instagram.com/ryan.austin_/">My Instagram</a>
     </p>
     <p class="fade-in-hidden fade-in fade-in-delay-3">
-      <img src="../pics/yt.png" alt="YouTube" class="social-icon"> <a href="https://www.youtube.com/channel/UCsLjAG6WBFxUZ_8kdu-JDmg">My YouTube</a>
+      <img src="../pics/yt.png" alt="YouTube" class="social-icon">
+      <a href="https://www.youtube.com/channel/UCsLjAG6WBFxUZ_8kdu-JDmg">My YouTube</a>
     </p>
   </div>
+
 </div>
-<!-- Footer Section -->
+
 <footer class="footer">
   <p>Designed and Developed by Ryan Austin</p>
 </footer>
 
-<script src="../javascript files/resumeview.js"></script> <!-- Add this line to reference your new JS file -->
+<script src="../javascript files/nav.js"></script>
+<script src="../javascript files/resumeview.js"></script>
 
 </body>
 </html>
-
-
-
-
-<!-------- Hamburger Menu JavaScript -------->
-<script>
-  function toggleMenu() {
-    const menu = document.getElementById('navMenu');
-    const btn = document.getElementById('hamburgerBtn');
-    const icon = btn.querySelector('.icon');
-    const label = btn.querySelector('.label');
-
-    menu.classList.toggle('show');
-
-    if (menu.classList.contains('show')) {
-      icon.textContent = '✖';    // X icon
-      label.textContent = 'Close'; // smaller text
-    } else {
-      icon.textContent = '☰';    // hamburger icon
-      label.textContent = 'Menu';  // smaller text
-    }
-  }
-</script>
