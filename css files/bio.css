@@ -224,3 +224,24 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 480px) {
+  .credential-item {
+    padding: 1rem 1rem;
+    min-height: 48px; /* minimum touch target */
+  }
+
+  .credential-text {
+    font-size: 0.82rem;
+  }
+
+  .bio-body p {
+    font-size: 0.95rem;
+    line-height: 1.85;
+  }
+
+  .bio-links a {
+    min-height: 48px; /* minimum touch target */
+    padding: 0.85rem 1.3rem;
+  }
+}

@@ -54,14 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.appendChild(overlay);
   }
 
-  // Fade overlay OUT on page load (every page opens softly)
-  requestAnimationFrame(() => {
-    requestAnimationFrame(() => {
-      overlay.classList.add('loaded');
-    });
-  });
-
-  // Intercept internal link clicks
+  // Intercept internal link clicks — fade out before navigating
   document.querySelectorAll('a[href]').forEach(link => {
     const href = link.getAttribute('href');
 
@@ -75,7 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     link.addEventListener('click', e => {
       e.preventDefault();
-      overlay.classList.remove('loaded');
       overlay.classList.add('fade-out');
       setTimeout(() => {
         window.location.href = href;

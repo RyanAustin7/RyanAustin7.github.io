@@ -14,11 +14,14 @@ gsap.registerPlugin(ScrollTrigger);
 /* ============================================================
    1. LENIS SMOOTH SCROLLING
    ============================================================ */
+const isTouch = window.matchMedia('(hover: none)').matches;
+
 const lenis = new Lenis({
   duration: 1.3,
   easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
   orientation: 'vertical',
-  smoothWheel: true,
+  smoothWheel: !isTouch,   // disable on touch — iOS Safari fights it
+  smoothTouch: false,       // never smooth-scroll on touch
 });
 
 lenis.on('scroll', ScrollTrigger.update);
@@ -117,10 +120,12 @@ function initMagnetic(selector, strength = 0.4) {
   });
 }
 
-initMagnetic('.hero-cta', 0.35);
-initMagnetic('.nav-links a', 0.3);
-initMagnetic('.bio-links a', 0.25);
-initMagnetic('.dl-btn', 0.3);
+if (!isTouch) {
+  initMagnetic('.hero-cta', 0.35);
+  initMagnetic('.nav-links a', 0.3);
+  initMagnetic('.bio-links a', 0.25);
+  initMagnetic('.dl-btn', 0.3);
+}
 
 /* ============================================================
    4. TEXT SPLITTING + HERO ANIMATION
