@@ -296,7 +296,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 6rem 2rem 4rem;
+  padding: 6rem 2rem 7rem;
   position: relative;
   overflow: hidden;
 }
@@ -322,7 +322,21 @@ a:hover {
   width: auto;
   margin-bottom: 2rem;
   filter: drop-shadow(0 0 30px rgba(45,199,142,0.2));
-  animation: heroFadeDown 1s ease both;
+  animation: heroFadeDown 1s ease both, heroFloat 4s ease-in-out 1s infinite;
+  display: block;
+}
+
+.hero-logo svg {
+  height: clamp(90px, 14vw, 180px);
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+@keyframes heroFloat {
+  0%   { transform: translateY(0)     scale(1); }
+  50%  { transform: translateY(-10px) scale(1.018); }
+  100% { transform: translateY(0)     scale(1); }
 }
 
 .hero-eyebrow {
@@ -354,15 +368,15 @@ a:hover {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--white-dim);
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.2rem;
   animation: heroFadeUp 0.8s 0.7s ease both;
 }
 
 .hero-divider {
   width: 1px;
-  height: 60px;
+  height: 30px;
   background: linear-gradient(to bottom, transparent, var(--gold), transparent);
-  margin: 0 auto 2.5rem;
+  margin: 0 auto 1.2rem;
   animation: heroFadeUp 0.8s 0.9s ease both;
 }
 
@@ -391,6 +405,7 @@ a:hover {
   text-decoration: none;
   transition: all var(--transition);
   animation: heroFadeUp 0.8s 1.3s ease both;
+  margin-bottom: 1rem;
 }
 
 .hero-cta:hover {
@@ -410,7 +425,7 @@ a:hover {
 
 .hero-scroll {
   position: absolute;
-  bottom: 2.5rem;
+  bottom: 1.75rem;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -431,7 +446,7 @@ a:hover {
 
 .hero-scroll-line {
   width: 1px;
-  height: 50px;
+  height: 30px;
   background: linear-gradient(to bottom, var(--white-dim), transparent);
   animation: scrollPulse 2s ease infinite;
 }
