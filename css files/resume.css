@@ -1,0 +1,93 @@
+/* ============================================================
+   resume.css — Resume page
+   ============================================================ */
+
+.resume-wrap {
+  padding: 9rem 3rem 5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.resume-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.resume-header h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 300;
+}
+
+.resume-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: all var(--transition);
+  border-radius: var(--radius);
+  flex-shrink: 0;
+}
+
+.resume-download:hover {
+  background: var(--accent);
+  color: var(--black);
+}
+
+.resume-download svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* ---------- Resume image (replaces PDF viewer) ---------- */
+.resume-viewer {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--surface);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resume-viewer:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+}
+
+.resume-img-link {
+  display: block;
+  cursor: none;
+}
+
+.resume-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-lg);
+  transition: opacity 0.3s ease;
+}
+
+.resume-img-link:hover .resume-img {
+  opacity: 0.9;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 680px) {
+  .resume-wrap {
+    padding: 8rem 1.5rem 4rem;
+  }
+
+  .resume-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,226 @@
+/* ============================================================
+   bio.css — Bio page
+   ============================================================ */
+
+.bio-wrap {
+  min-height: 100vh;
+  padding: 9rem 3rem 6rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+/* ---------- Left column ---------- */
+.bio-left {
+  position: sticky;
+  top: 100px;
+}
+
+.bio-photo-wrap {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.bio-photo {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  display: block;
+  filter: grayscale(15%) contrast(1.05);
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 0 0 4px rgba(255,255,255,0.04), 0 20px 50px rgba(0,0,0,0.5);
+}
+
+.bio-photo-accent {
+  display: none;
+}
+
+.bio-credentials {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.credential-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  transition: border-color var(--transition);
+}
+
+.credential-item:hover {
+  border-color: var(--border-light);
+}
+
+.credential-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+.credential-text {
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--white-dim);
+  letter-spacing: 0.02em;
+}
+
+.credential-text strong {
+  color: var(--white);
+  font-weight: 500;
+}
+
+/* ---------- Right column ---------- */
+.bio-right {
+  padding-top: 1rem;
+}
+
+.bio-right h1 {
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.bio-right .hero-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  opacity: 1;
+  animation: none;
+}
+
+.bio-body {
+  margin: 2rem 0;
+}
+
+.bio-body p {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: var(--white-dim);
+  margin-bottom: 1.25rem;
+}
+
+.bio-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Specializations ---------- */
+.bio-skills {
+  margin: 2.5rem 0;
+}
+
+.bio-skills h3 {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.82rem;
+  color: var(--white-dim);
+}
+
+.skill-item::before {
+  content: '';
+  width: 18px;
+  height: 1px;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+/* ---------- Contact links ---------- */
+.bio-contact {
+  margin-top: 3rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.bio-contact h3 {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.25rem;
+}
+
+.bio-contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+}
+
+.bio-contact-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--white-dim);
+  padding: 0.65rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: all var(--transition);
+}
+
+.bio-contact-links a:hover {
+  color: var(--accent);
+  border-color: rgba(45,199,142,0.3);
+  background: var(--accent-dim);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .bio-wrap {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 8rem 1.5rem 5rem;
+  }
+
+  .bio-left {
+    position: static;
+    max-width: 320px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .bio-photo {
+    aspect-ratio: 1/1;
+  }
+}
+
+@media (max-width: 500px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}

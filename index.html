@@ -2,118 +2,158 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ryan Austin — Audio Specialist</title>
-
-  <link rel="stylesheet" href="css files/styles_indx.css">
-  <link rel="stylesheet" href="css files/styles_nav.css">
-  <link rel="stylesheet" href="css files/mininav.css">
-
   <link rel="icon" href="MIDIController.png" type="image/png">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css files/base.css">
+  <link rel="stylesheet" href="css files/index.css">
 </head>
 <body>
 
-<div class="background-container"></div>
+<!-- ===================== HEADER ===================== -->
+<header class="site-header">
+  <a href="index.html" class="nav-logo">
+    <img src="RA_Audio3.svg" alt="RA Audio Logo">
+    <div class="nav-logo-text">
+      Ryan Austin
+      <span>Audio Specialist</span>
+    </div>
+  </a>
 
-<div class="hero herofade" id="top">
-  <div class="hero-text">
-    <img src="RA_Audio3.svg" alt="RA Logo" class="hero-logo">
-    <h1 class="hero-name">Ryan Austin</h1>
-    <p class="hero-title">Audio Specialist</p>
-  </div>
-</div>
-
-<!-- Lightbox container -->
-<div id="lightbox" class="hidden">
-  <div class="lightbox-content">
-    <iframe
-      id="lightbox-video"
-      src=""
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-    <span id="lightbox-close">&times;</span>
-  </div>
-</div>
-
-<header>
-  <button id="hamburgerBtn" class="hamburger" onclick="toggleMenu()">
-    <span class="icon">☰</span> <span class="label">Menu</span>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
   </button>
 
-  <ul class="nav-list" id="navMenu">
+  <ul class="nav-links" id="navMenu">
     <li><a href="index.html" class="active">Demo Reel</a></li>
     <li><a href="pages/musics.html">Portfolio</a></li>
     <li><a href="pages/resume.html">Resume</a></li>
     <li><a href="pages/bio.html">Bio</a></li>
-    <!-- <li><a href="pages/contact.html">Contact</a></li> -->
   </ul>
 </header>
 
-<div class="bg-color-dark">
-  <div class="line-separator"></div>
+<div id="page-transition"></div>
 
-  <!-- Sound Design Demo Reel -->
-  <div class="video-container fade-in" id="SD">
-    <a href="https://www.youtube.com/embed/VY8NDuwjFug?si=izYrn8UV8j7iaogL" class="video-lightbox-trigger">
-      <img src="thumbs/Thumbnail_SDR.png" alt="Sound Design Demo Reel" class="responsive-thumbnail">
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <img src="RA_Audio3.svg" alt="RA Audio" class="hero-logo">
+    <p class="hero-eyebrow">Sound Design &nbsp;·&nbsp; Composition &nbsp;·&nbsp; Implementation</p>
+    <h1 class="hero-name">Ryan Austin</h1>
+    <p class="hero-title">Audio Specialist</p>
+    <div class="hero-divider"></div>
+    <p class="hero-tagline">
+      Berklee-trained, Wwise-certified composer and audio designer crafting interactive systems, immersive soundscapes, and original scores for games, film, and media.
+    </p>
+    <a href="pages/musics.html" class="hero-cta">
+      View Portfolio
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
-    <p class="video-subtext">Sound Design Demo Reel</p>
   </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
 
-  <div class="line-separator-1 fade-in-hidden fade-in fade-in-delay-1"></div>
+<!-- ===================== LIGHTBOX ===================== -->
+<div id="lightbox" class="hidden">
+  <div class="lightbox-content">
+    <iframe id="lightbox-video" src="" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+    <span id="lightbox-close">Close</span>
+  </div>
+</div>
 
-  <!-- Technical Sound Design -->
-  <div class="video-container fade-in-hidden fade-in fade-in-delay-2" id="fg">
-    <a href="https://www.youtube.com/embed/634gIqVfeHw?si=u6imWNq_V4X5FlGI" class="video-lightbox-trigger">
-      <img src="thumbs/demo_thumb.webp" alt="Flighting Game Demo" class="responsive-thumbnail">
-    </a>
-    <p class="video-subtext">FLIGHTING GAME – Technical Sound Design Showcase</p>
+<!-- ===================== DEMO REEL ===================== -->
+<main>
+  <section class="reel-section reveal">
+    <div class="reel-header">
+      <p class="section-label">Featured</p>
+      <div class="rule"></div>
+      <h2>Sound Design Demo Reel</h2>
+    </div>
 
-    <div class="small-video-container fade-in-hidden fade-in fade-in-delay-2">
-      <div class="small-video-item">
-        <a href="https://www.youtube.com/embed/iY5IjnvGKlw?si=NRsmc_XI0e2akuto" class="video-lightbox-trigger">
-          <img src="thumbs/FG_Music_Thumbnail.png" alt="FG: Music System Breakdown" class="responsive-thumbnail small-thumbnail">
-        </a>
-        <p class="video-subtext">Music System Breakdown<br>(Wwise and C#)</p>
+    <div class="video-feature video-trigger" href="https://www.youtube.com/embed/VY8NDuwjFug?si=izYrn8UV8j7iaogL">
+      <img src="thumbs/Thumbnail_SDR.png" alt="Sound Design Demo Reel">
+      <div class="video-feature-overlay">
+        <div class="play-btn">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </div>
       </div>
+      <div class="video-feature-caption">
+        <p>Sound Design Demo Reel</p>
+      </div>
+    </div>
+  </section>
 
-      <div class="small-video-item">
-        <a href="https://www.youtube.com/embed/LmkXgKEbWhg?si=nZ5CcKKqFnV1nGl6" class="video-lightbox-trigger">
-          <img src="thumbs/FG_Menu_Thumbnail.png" alt="FG: Menu System Breakdown" class="responsive-thumbnail small-thumbnail">
-        </a>
-        <p class="video-subtext">Menu System Breakdown<br>(Wwise and C#)</p>
+  <section class="reel-section reveal">
+    <div class="reel-header">
+      <p class="section-label">Technical Sound Design</p>
+      <div class="rule"></div>
+      <h2>Flighting Game Showcase</h2>
+    </div>
+
+    <div class="video-feature video-trigger" href="https://www.youtube.com/embed/634gIqVfeHw?si=u6imWNq_V4X5FlGI">
+      <img src="thumbs/demo_thumb.webp" alt="Flighting Game — Full Showcase">
+      <div class="video-feature-overlay">
+        <div class="play-btn">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+      </div>
+      <div class="video-feature-caption">
+        <p>Game &amp; Audio System Showcase</p>
       </div>
     </div>
 
-    <nav class="secondary-navbar">
-      <ul class="secondary-nav-list">
-        <li><a href="#top">Back to Top</a></li>
-      </ul>
-    </nav>
-  </div>
+    <div class="video-grid-2">
+      <div class="video-card-sm video-trigger" href="https://www.youtube.com/embed/iY5IjnvGKlw?si=NRsmc_XI0e2akuto">
+        <img src="thumbs/FG_Music_Thumbnail.png" alt="Music System Breakdown">
+        <div class="video-card-sm-overlay">
+          <div class="play-btn-sm">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
+        <div class="video-card-sm-label">
+          <p>Music System Breakdown — Wwise &amp; C#</p>
+        </div>
+      </div>
 
-</div> <!-- Close bg-color-dark -->
+      <div class="video-card-sm video-trigger" href="https://www.youtube.com/embed/LmkXgKEbWhg?si=nZ5CcKKqFnV1nGl6">
+        <img src="thumbs/FG_Menu_Thumbnail.png" alt="Menu System Breakdown">
+        <div class="video-card-sm-overlay">
+          <div class="play-btn-sm">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
+        <div class="video-card-sm-label">
+          <p>Menu System Breakdown — Wwise &amp; C#</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
-<footer class="footer">
-  <p>Designed and Developed by Ryan Austin</p>
-  <p>
-    <a href="https://www.linkedin.com/in/ryan-austin-042086298/" target="_blank">LinkedIn</a>
-    &nbsp;·&nbsp;
-    <a href="https://www.youtube.com/channel/UCsLjAG6WBFxUZ_8kdu-JDmg" target="_blank">YouTube</a>
-    &nbsp;·&nbsp;
-    <a href="mailto:raustintex@gmail.com">raustintex@gmail.com</a>
-  </p>
+<div class="back-top"><a href="#top">↑ Back to top</a></div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <ul class="footer-links">
+    <li><a href="pages/bio.html">Bio</a></li>
+    <li><span class="footer-dot"></span></li>
+    <li><a href="https://www.linkedin.com/in/ryan-austin-042086298/" target="_blank">LinkedIn</a></li>
+    <li><span class="footer-dot"></span></li>
+    <li><a href="https://www.youtube.com/channel/UCsLjAG6WBFxUZ_8kdu-JDmg" target="_blank">YouTube</a></li>
+    <li><span class="footer-dot"></span></li>
+    <li><a href="mailto:raustintex@gmail.com">raustintex@gmail.com</a></li>
+  </ul>
+  <p class="footer-copy">Designed &amp; developed by Ryan Austin</p>
 </footer>
 
+<script src="javascript files/nav.js"></script>
 <script src="javascript files/lightbox.js"></script>
 <script src="javascript files/resumeview.js"></script>
-<script src="javascript files/nav.js"></script>
-
 </body>
 </html>

@@ -4,230 +4,363 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio — Ryan Austin</title>
-
-  <link rel="stylesheet" href="../css files/styles_nav.css">
-  <link rel="stylesheet" href="../css files/styles_indx.css">
-  <link rel="stylesheet" href="../css files/mininav.css">
-  <link rel="stylesheet" href="../css files/videoscroll.css">
-
   <link rel="icon" href="../MIDIController.png" type="image/png">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css files/base.css">
+  <link rel="stylesheet" href="../css files/portfolio.css">
 </head>
 <body>
 
-<div class="background-container"></div>
+<div id="page-transition"></div>
 
-<div id="top">
-  <div class="hero-text">
-    <img src="../RA_Audio3.svg" alt="RA Logo" class="hero-logo">
-    <h1 class="hero-name">Ryan Austin</h1>
-    <p class="hero-title">Audio Specialist</p>
-  </div>
-</div>
+<!-- ===================== HEADER ===================== -->
+<header class="site-header">
+  <a href="../index.html" class="nav-logo">
+    <img src="../RA_Audio3.svg" alt="RA Audio Logo">
+    <div class="nav-logo-text">
+      Ryan Austin
+      <span>Audio Specialist</span>
+    </div>
+  </a>
 
-<header>
-  <button id="hamburgerBtn" class="hamburger" onclick="toggleMenu()">
-    <span class="icon">☰</span> <span class="label">Menu</span>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
   </button>
 
-  <ul class="nav-list" id="navMenu">
+  <ul class="nav-links" id="navMenu">
     <li><a href="../index.html">Demo Reel</a></li>
     <li><a href="musics.html" class="active">Portfolio</a></li>
     <li><a href="resume.html">Resume</a></li>
     <li><a href="bio.html">Bio</a></li>
-    <!-- <li><a href="contact.html">Contact</a></li> -->
   </ul>
 </header>
 
-<div class="bg-color-dark">
-
-  <div class="line-separator"></div>
-
-  <!-- Lightbox container -->
-  <div id="lightbox" class="hidden">
-    <div class="lightbox-content">
-      <iframe
-        id="lightbox-video"
-        src=""
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-      <span id="lightbox-close">&times;</span>
-    </div>
+<!-- ===================== LIGHTBOX ===================== -->
+<div id="lightbox" class="hidden">
+  <div class="lightbox-content">
+    <iframe id="lightbox-video" src="" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+    <span id="lightbox-close">Close</span>
   </div>
-
-
-  <!-- SOUND DESIGN -->
-  <section class="section fade-in-hidden fade-in">
-    <h2 class="section-title">Sound Design</h2>
-    <div class="horizontal-scroll-container">
-      <div class="scroll-inner">
-
-        <div class="video-card">
-          <a href="https://www.youtube.com/embed/rMpQbSq9dJ8?si=xZgNz_cXBJcTqbCD" class="video-lightbox-trigger">
-            <img src="../thumbs/narrowsthumb.png" alt="NARROWS (Animated Pilot)" class="responsive-thumbnail">
-          </a>
-          <p>NARROWS (Animated Pilot)</p>
-        </div>
-
-        <div class="video-card">
-          <a href="https://www.youtube.com/embed/3v4A5MOQM5U?si=mFzWkavVrALyfDGJ" class="video-lightbox-trigger">
-            <img src="../thumbs/hzd.png" alt="Horizon Zero Dawn Sound Redesign" class="responsive-thumbnail">
-          </a>
-          <p>Horizon: Zero Dawn - Sound Redesign</p>
-        </div>
-
-        <div class="video-card">
-          <a href="https://www.youtube.com/embed/XNxrVfJFkdw?si=Uf2HxyIdVemd_IDq" class="video-lightbox-trigger">
-            <img src="../thumbs/sfvi.png" alt="Street Fighter VI Sound Redesign" class="responsive-thumbnail">
-          </a>
-          <p>Street Fighter VI - Sound Redesign</p>
-        </div>
-
-        <div class="video-card">
-          <a href="https://www.youtube.com/embed/88wJE4cRETw?si=f80N-ObjIP2SOQ4s" class="video-lightbox-trigger">
-            <img src="../thumbs/MR.png" alt="Marvel Rivals Sound Redesign" class="responsive-thumbnail">
-          </a>
-          <p>Marvel Rivals - Sound Redesign</p>
-        </div>
-
-        <div class="video-card">
-          <a href="https://www.youtube.com/embed/sOX4kpAZW6E?si=aL2etWHr55qlUGN5" class="video-lightbox-trigger">
-            <img src="../thumbs/bayle.png" alt="Elden Ring Sound Redesign" class="responsive-thumbnail">
-          </a>
-          <p>Elden Ring: Bayle Boss Fight - Sound Redesign</p>
-        </div>
-
-        <div class="video-card">
-          <a href="https://www.youtube.com/embed/dA608WRvMuE?si=EyyeiBjyegcDO5Lb" class="video-lightbox-trigger">
-            <img src="../thumbs/tlou.png" alt="The Last of Us - Foley Project" class="responsive-thumbnail">
-          </a>
-          <p>The Last of Us - Foley Project</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- IMPLEMENTATION / TECHNICAL SOUND DESIGN -->
-  <section class="section fade-in-hidden fade-in">
-    <h2 id="implementation" class="section-title">Implementation / Technical Sound Design</h2>
-    <div class="horizontal-scroll-container">
-      <div class="scroll-inner">
-
-        <div class="video-card">
-          <a href="https://www.youtube.com/embed/634gIqVfeHw?si=u6imWNq_V4X5FlGI" class="video-lightbox-trigger">
-            <img src="../thumbs/demo_thumb.webp" alt="FG: Showcase" class="responsive-thumbnail">
-          </a>
-          <p>Flighting Game - Game/Audio System Showcase</p>
-        </div>
-
-        <div class="video-card">
-          <a href="https://www.youtube.com/embed/iY5IjnvGKlw?si=NRsmc_XI0e2akuto" class="video-lightbox-trigger">
-            <img src="../thumbs/FG_Music_Thumbnail.png" alt="FG: Music System Breakdown" class="responsive-thumbnail">
-          </a>
-          <p>Flighting Game - Music System Breakdown</p>
-        </div>
-
-        <div class="video-card">
-          <a href="https://www.youtube.com/embed/LmkXgKEbWhg?si=nZ5CcKKqFnV1nGl6" class="video-lightbox-trigger">
-            <img src="../thumbs/FG_Menu_Thumbnail.png" alt="FG: Menu System Breakdown" class="responsive-thumbnail">
-          </a>
-          <p>Flighting Game - Menu System Breakdown</p>
-        </div>
-
-        <div class="video-card">
-          <a href="https://www.youtube.com/embed/NegxlQIopEI?si=DgzS4dZas_OobD9i" class="video-lightbox-trigger">
-            <img src="../thumbs/sp_thumb.png" alt="Sisyphean Pinball Showcase" class="responsive-thumbnail">
-          </a>
-          <p>Sisyphean Pinball - Implementation Showcase</p>
-        </div>
-
-        <div class="video-card">
-          <a href="https://www.youtube.com/embed/ElOdl83fDoM?si=3FTlXcwWaeZnh4KK" class="video-lightbox-trigger">
-            <img src="../thumbs/fg_full.webp" alt="'Flighting Game' - Full Breakdown" class="responsive-thumbnail">
-          </a>
-          <p>Flighting Game - Full Breakdown</p>
-        </div>
-
-        <div class="video-card">
-          <a href="https://www.youtube.com/embed/osWUlkm5ZDY" class="video-lightbox-trigger">
-            <img src="../thumbs/rando_vid.jpg" alt="A Random Adventure" class="responsive-thumbnail">
-          </a>
-          <p>A Random Adventure: Wwise/Unity Audio Breakdown</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- MUSIC -->
-  <section class="section fade-in-hidden fade-in">
-    <h2 id="music" class="section-title">Music</h2>
-    <div class="horizontal-scroll-container">
-      <div class="scroll-inner">
-
-        <div class="video-card">
-          <a href="https://www.youtube.com/embed/VX6Heq5EtnY?si=V1THh6IyIzMScO4M" class="video-lightbox-trigger">
-            <img src="../thumbs/Sparks_thumbnail.jpeg" alt="'Sparks' - Coldplay (cover)" class="responsive-thumbnail">
-          </a>
-          <p>"Sparks" - Coldplay (cover)</p>
-        </div>
-
-        <div class="video-card">
-          <a href="https://www.youtube.com/embed/anp5pJiUYzI?si=SzzXQmWKvWO4Bg2I" class="video-lightbox-trigger">
-            <img src="../thumbs/guitar.jpeg" alt="'Halfway Home' - Tommy Emmanuel (cover)" class="responsive-thumbnail">
-          </a>
-          <p>"Halfway Home" - Tommy Emmanuel (cover)</p>
-        </div>
-
-        <div class="video-card">
-          <a href="https://www.youtube.com/embed/4A-IdHC0cbc" class="video-lightbox-trigger">
-            <img src="../thumbs/woods.jpeg" alt="'Amhrán na Coillte' (original)" class="responsive-thumbnail">
-          </a>
-          <p>"Amhrán na Coillte" (original)</p>
-        </div>
-
-        <div class="video-card">
-          <a href="https://www.youtube.com/embed/V4s8NN8x-iA?si=SwbOffcZ9aQotnIe" class="video-lightbox-trigger">
-            <img src="../thumbs/8bit_thumb.png" alt="8-bit Soundtrack" class="responsive-thumbnail">
-          </a>
-          <p>8-bit Soundtrack (Berklee Project)</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <nav class="secondary-navbar">
-    <ul class="secondary-nav-list">
-      <li><a href="#top">Back to Top</a></li>
-    </ul>
-  </nav>
-
-  <script src="../javascript files/lightbox.js"></script>
-  <script src="../javascript files/resumeview.js"></script>
-
 </div>
 
-<footer class="footer">
-  <p>Designed and Developed by Ryan Austin</p>
-  <p>
-    <a href="https://www.linkedin.com/in/ryan-austin-042086298/" target="_blank">LinkedIn</a>
-    &nbsp;·&nbsp;
-    <a href="https://www.youtube.com/channel/UCsLjAG6WBFxUZ_8kdu-JDmg" target="_blank">YouTube</a>
-    &nbsp;·&nbsp;
-    <a href="mailto:raustintex@gmail.com">raustintex@gmail.com</a>
-  </p>
+<!-- ===================== PAGE HERO ===================== -->
+<div class="portfolio-hero" id="top">
+  <p class="section-label">Work</p>
+  <div class="rule"></div>
+  <h1>Portfolio</h1>
+  <p>Sound design, implementation, and music — explore the full body of work.</p>
+</div>
+
+<!-- ===================== CATEGORY NAV ===================== -->
+<nav class="category-nav">
+  <a href="#sound-design" class="active">Sound Design</a>
+  <a href="#implementation">Implementation</a>
+  <a href="#music">Music</a>
+</nav>
+
+<main>
+
+  <!-- ===================== SOUND DESIGN ===================== -->
+  <section class="portfolio-section reveal" id="sound-design">
+    <div class="section-head">
+      <h2>Sound Design</h2>
+      <span class="section-count">6 projects</span>
+    </div>
+
+    <div class="scroll-track">
+
+      <div class="p-card video-trigger" href="https://www.youtube.com/embed/rMpQbSq9dJ8?si=xZgNz_cXBJcTqbCD">
+        <div class="p-card-thumb">
+          <img src="../thumbs/narrowsthumb.png" alt="NARROWS">
+          <div class="p-card-overlay"><div class="p-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        </div>
+        <div class="p-card-body">
+          <p class="p-card-title">NARROWS — Animated Pilot</p>
+          <p class="p-card-meta">Original sound design for animated pilot</p>
+          <div class="p-card-tags">
+            <span class="p-tag p-tag--accent">Sound Design</span>
+            <span class="p-tag">Nuendo</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-card video-trigger" href="https://www.youtube.com/embed/3v4A5MOQM5U?si=mFzWkavVrALyfDGJ">
+        <div class="p-card-thumb">
+          <img src="../thumbs/hzd.png" alt="Horizon Zero Dawn">
+          <div class="p-card-overlay"><div class="p-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        </div>
+        <div class="p-card-body">
+          <p class="p-card-title">Horizon: Zero Dawn — Sound Redesign</p>
+          <p class="p-card-meta">Full audio redesign of game sequence</p>
+          <div class="p-card-tags">
+            <span class="p-tag p-tag--accent">Redesign</span>
+            <span class="p-tag">Video Game</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-card video-trigger" href="https://www.youtube.com/embed/XNxrVfJFkdw?si=Uf2HxyIdVemd_IDq">
+        <div class="p-card-thumb">
+          <img src="../thumbs/sfvi.png" alt="Street Fighter VI">
+          <div class="p-card-overlay"><div class="p-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        </div>
+        <div class="p-card-body">
+          <p class="p-card-title">Street Fighter VI — Sound Redesign</p>
+          <p class="p-card-meta">Combat audio redesign for fighting game</p>
+          <div class="p-card-tags">
+            <span class="p-tag p-tag--accent">Redesign</span>
+            <span class="p-tag">Video Game</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-card video-trigger" href="https://www.youtube.com/embed/88wJE4cRETw?si=f80N-ObjIP2SOQ4s">
+        <div class="p-card-thumb">
+          <img src="../thumbs/MR.png" alt="Marvel Rivals">
+          <div class="p-card-overlay"><div class="p-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        </div>
+        <div class="p-card-body">
+          <p class="p-card-title">Marvel Rivals — Cinematic Trailer Redesign</p>
+          <p class="p-card-meta">Full cinematic trailer audio redesign</p>
+          <div class="p-card-tags">
+            <span class="p-tag p-tag--accent">Redesign</span>
+            <span class="p-tag">Cinematic</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-card video-trigger" href="https://www.youtube.com/embed/sOX4kpAZW6E?si=aL2etWHr55qlUGN5">
+        <div class="p-card-thumb">
+          <img src="../thumbs/bayle.png" alt="Elden Ring">
+          <div class="p-card-overlay"><div class="p-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        </div>
+        <div class="p-card-body">
+          <p class="p-card-title">Elden Ring: Bayle Boss Fight — Sound Redesign</p>
+          <p class="p-card-meta">Boss encounter full audio redesign</p>
+          <div class="p-card-tags">
+            <span class="p-tag p-tag--accent">Redesign</span>
+            <span class="p-tag">Video Game</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-card video-trigger" href="https://www.youtube.com/embed/dA608WRvMuE?si=EyyeiBjyegcDO5Lb">
+        <div class="p-card-thumb">
+          <img src="../thumbs/tlou.png" alt="The Last of Us">
+          <div class="p-card-overlay"><div class="p-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        </div>
+        <div class="p-card-body">
+          <p class="p-card-title">The Last of Us — Foley Project</p>
+          <p class="p-card-meta">Original foley recording and design</p>
+          <div class="p-card-tags">
+            <span class="p-tag p-tag--accent">Foley</span>
+            <span class="p-tag">Nuendo</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===================== IMPLEMENTATION ===================== -->
+  <section class="portfolio-section reveal" id="implementation">
+    <div class="section-head">
+      <h2>Implementation &amp; Technical Sound Design</h2>
+      <span class="section-count">6 projects</span>
+    </div>
+
+    <div class="scroll-track">
+
+      <div class="p-card video-trigger" href="https://www.youtube.com/embed/634gIqVfeHw?si=u6imWNq_V4X5FlGI">
+        <div class="p-card-thumb">
+          <img src="../thumbs/demo_thumb.webp" alt="Flighting Game Showcase">
+          <div class="p-card-overlay"><div class="p-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        </div>
+        <div class="p-card-body">
+          <p class="p-card-title">Flighting Game — Full System Showcase</p>
+          <p class="p-card-meta">Game &amp; audio system overview</p>
+          <div class="p-card-tags">
+            <span class="p-tag p-tag--accent">Wwise</span>
+            <span class="p-tag">Unity</span>
+            <span class="p-tag">C#</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-card video-trigger" href="https://www.youtube.com/embed/iY5IjnvGKlw?si=NRsmc_XI0e2akuto">
+        <div class="p-card-thumb">
+          <img src="../thumbs/FG_Music_Thumbnail.png" alt="Music System Breakdown">
+          <div class="p-card-overlay"><div class="p-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        </div>
+        <div class="p-card-body">
+          <p class="p-card-title">Flighting Game — Music System Breakdown</p>
+          <p class="p-card-meta">Adaptive music system design and implementation</p>
+          <div class="p-card-tags">
+            <span class="p-tag p-tag--accent">Wwise</span>
+            <span class="p-tag">C#</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-card video-trigger" href="https://www.youtube.com/embed/LmkXgKEbWhg?si=nZ5CcKKqFnV1nGl6">
+        <div class="p-card-thumb">
+          <img src="../thumbs/FG_Menu_Thumbnail.png" alt="Menu System Breakdown">
+          <div class="p-card-overlay"><div class="p-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        </div>
+        <div class="p-card-body">
+          <p class="p-card-title">Flighting Game — Menu System Breakdown</p>
+          <p class="p-card-meta">Interactive menu audio system</p>
+          <div class="p-card-tags">
+            <span class="p-tag p-tag--accent">Wwise</span>
+            <span class="p-tag">C#</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-card video-trigger" href="https://www.youtube.com/embed/NegxlQIopEI?si=DgzS4dZas_OobD9i">
+        <div class="p-card-thumb">
+          <img src="../thumbs/sp_thumb.png" alt="Sisyphean Pinball">
+          <div class="p-card-overlay"><div class="p-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        </div>
+        <div class="p-card-body">
+          <p class="p-card-title">Sisyphean Pinball — Implementation Showcase</p>
+          <p class="p-card-meta">Full audio implementation for pinball game</p>
+          <div class="p-card-tags">
+            <span class="p-tag p-tag--accent">Wwise</span>
+            <span class="p-tag">Unity</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-card video-trigger" href="https://www.youtube.com/embed/ElOdl83fDoM?si=3FTlXcwWaeZnh4KK">
+        <div class="p-card-thumb">
+          <img src="../thumbs/fg_full.webp" alt="Flighting Game Full Breakdown">
+          <div class="p-card-overlay"><div class="p-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        </div>
+        <div class="p-card-body">
+          <p class="p-card-title">Flighting Game — Full Breakdown</p>
+          <p class="p-card-meta">Comprehensive audio system deep-dive</p>
+          <div class="p-card-tags">
+            <span class="p-tag p-tag--accent">Wwise</span>
+            <span class="p-tag">Unity</span>
+            <span class="p-tag">C#</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-card video-trigger" href="https://www.youtube.com/embed/osWUlkm5ZDY">
+        <div class="p-card-thumb">
+          <img src="../thumbs/rando_vid.jpg" alt="A Random Adventure">
+          <div class="p-card-overlay"><div class="p-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        </div>
+        <div class="p-card-body">
+          <p class="p-card-title">A Random Adventure — Wwise/Unity Breakdown</p>
+          <p class="p-card-meta">Audio implementation breakdown</p>
+          <div class="p-card-tags">
+            <span class="p-tag p-tag--accent">Wwise</span>
+            <span class="p-tag">Unity</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===================== MUSIC ===================== -->
+  <section class="portfolio-section reveal" id="music">
+    <div class="section-head">
+      <h2>Music</h2>
+      <span class="section-count">4 pieces</span>
+    </div>
+
+    <div class="scroll-track">
+
+      <div class="p-card video-trigger" href="https://www.youtube.com/embed/VX6Heq5EtnY?si=V1THh6IyIzMScO4M">
+        <div class="p-card-thumb">
+          <img src="../thumbs/Sparks_thumbnail.jpeg" alt="Sparks">
+          <div class="p-card-overlay"><div class="p-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        </div>
+        <div class="p-card-body">
+          <p class="p-card-title">"Sparks" — Coldplay</p>
+          <p class="p-card-meta">Arrangement &amp; performance (cover)</p>
+          <div class="p-card-tags">
+            <span class="p-tag p-tag--accent">Cover</span>
+            <span class="p-tag">Full Arrangement</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-card video-trigger" href="https://www.youtube.com/embed/anp5pJiUYzI?si=SzzXQmWKvWO4Bg2I">
+        <div class="p-card-thumb">
+          <img src="../thumbs/guitar.jpeg" alt="Halfway Home">
+          <div class="p-card-overlay"><div class="p-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        </div>
+        <div class="p-card-body">
+          <p class="p-card-title">"Halfway Home" — Tommy Emmanuel</p>
+          <p class="p-card-meta">Fingerstyle guitar (cover)</p>
+          <div class="p-card-tags">
+            <span class="p-tag p-tag--accent">Cover</span>
+            <span class="p-tag">Guitar</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-card video-trigger" href="https://www.youtube.com/embed/4A-IdHC0cbc">
+        <div class="p-card-thumb">
+          <img src="../thumbs/woods.jpeg" alt="Amhrán na Coillte">
+          <div class="p-card-overlay"><div class="p-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        </div>
+        <div class="p-card-body">
+          <p class="p-card-title">"Amhrán na Coillte"</p>
+          <p class="p-card-meta">Original composition</p>
+          <div class="p-card-tags">
+            <span class="p-tag p-tag--accent">Original</span>
+            <span class="p-tag">Celtic</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-card video-trigger" href="https://www.youtube.com/embed/V4s8NN8x-iA?si=SwbOffcZ9aQotnIe">
+        <div class="p-card-thumb">
+          <img src="../thumbs/8bit_thumb.png" alt="8-bit Soundtrack">
+          <div class="p-card-overlay"><div class="p-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        </div>
+        <div class="p-card-body">
+          <p class="p-card-title">8-bit Soundtrack</p>
+          <p class="p-card-meta">Original score — Berklee College of Music project</p>
+          <div class="p-card-tags">
+            <span class="p-tag p-tag--accent">Original</span>
+            <span class="p-tag">Chiptune</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<div class="back-top"><a href="#top">↑ Back to top</a></div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <ul class="footer-links">
+    <li><a href="bio.html">Bio</a></li>
+    <li><span class="footer-dot"></span></li>
+    <li><a href="https://www.linkedin.com/in/ryan-austin-042086298/" target="_blank">LinkedIn</a></li>
+    <li><span class="footer-dot"></span></li>
+    <li><a href="https://www.youtube.com/channel/UCsLjAG6WBFxUZ_8kdu-JDmg" target="_blank">YouTube</a></li>
+    <li><span class="footer-dot"></span></li>
+    <li><a href="mailto:raustintex@gmail.com">raustintex@gmail.com</a></li>
+  </ul>
+  <p class="footer-copy">Designed &amp; developed by Ryan Austin</p>
 </footer>
 
 <script src="../javascript files/nav.js"></script>
-
+<script src="../javascript files/lightbox.js"></script>
+<script src="../javascript files/resumeview.js"></script>
 </body>
 </html>

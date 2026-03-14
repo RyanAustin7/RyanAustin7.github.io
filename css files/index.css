@@ -1,0 +1,243 @@
+/* ============================================================
+   index.css — Demo Reel page
+   ============================================================ */
+
+/* ---------- Page intro ---------- */
+.page-intro {
+  padding: 7rem 3rem 0;
+  text-align: center;
+}
+
+/* ---------- Video section ---------- */
+.reel-section {
+  padding: 4rem 3rem 6rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.reel-section + .reel-section {
+  border-top: 1px solid var(--border);
+  padding-top: 5rem;
+}
+
+.reel-header {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.reel-header h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- Main featured video ---------- */
+.video-feature {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.video-feature:hover {
+  border-color: rgba(255,255,255,0.22);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+.video-feature img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4,0,0.2,1);
+}
+
+.video-feature:hover img {
+  transform: scale(1.02);
+}
+
+.video-feature-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(8,10,12,0.8) 0%, transparent 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition);
+}
+
+.video-feature:hover .video-feature-overlay {
+  background: linear-gradient(to top, rgba(8,10,12,0.7) 0%, rgba(8,10,12,0.15) 100%);
+}
+
+.play-btn {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(244,240,235,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition);
+  backdrop-filter: blur(4px);
+  background: rgba(8,10,12,0.3);
+}
+
+.video-feature:hover .play-btn {
+  border-color: var(--accent);
+  background: rgba(45,199,142,0.15);
+  transform: scale(1.08);
+}
+
+.play-btn svg {
+  width: 22px;
+  height: 22px;
+  fill: var(--white);
+  margin-left: 3px;
+  transition: fill var(--transition);
+}
+
+.video-feature:hover .play-btn svg {
+  fill: var(--accent);
+}
+
+.video-feature-caption {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
+}
+
+.video-feature-caption p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--white);
+  font-family: var(--font-display);
+  font-style: italic;
+}
+
+/* ---------- Sub videos (2-up grid) ---------- */
+.video-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.video-card-sm {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.video-card-sm:hover {
+  border-color: rgba(255,255,255,0.22);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+}
+
+.video-card-sm img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+
+.video-card-sm:hover img {
+  transform: scale(1.04);
+}
+
+.video-card-sm-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(8,10,12,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition);
+}
+
+.video-card-sm:hover .video-card-sm-overlay {
+  background: rgba(8,10,12,0.05);
+}
+
+.play-btn-sm {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid rgba(244,240,235,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+  transition: all var(--transition);
+  background: rgba(8,10,12,0.2);
+}
+
+.video-card-sm:hover .play-btn-sm {
+  border-color: var(--accent);
+  background: rgba(45,199,142,0.15);
+  transform: scale(1.1);
+}
+
+.play-btn-sm svg {
+  width: 14px;
+  height: 14px;
+  fill: var(--white);
+  margin-left: 2px;
+  transition: fill var(--transition);
+}
+
+.video-card-sm:hover .play-btn-sm svg {
+  fill: var(--accent);
+}
+
+.video-card-sm-label {
+  position: absolute;
+  bottom: 0.85rem;
+  left: 1rem;
+  right: 1rem;
+}
+
+.video-card-sm-label p {
+  font-size: 0.8rem;
+  color: rgba(244,240,235,0.85);
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+/* ---------- Back to top ---------- */
+.back-top {
+  text-align: center;
+  padding: 1rem 0 4rem;
+}
+
+.back-top a {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--white-dim);
+  transition: color var(--transition);
+}
+
+.back-top a:hover {
+  color: var(--accent);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 680px) {
+  .reel-section {
+    padding: 3rem 1.5rem 4rem;
+  }
+
+  .video-grid-2 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

@@ -1,43 +1,44 @@
+// ============================================================
+//  lightbox.js — video lightbox
+// ============================================================
+
 document.addEventListener('DOMContentLoaded', () => {
 
   const lightbox      = document.getElementById('lightbox');
   const lightboxVideo = document.getElementById('lightbox-video');
-  const closeLightbox = document.getElementById('lightbox-close');
-  const triggers      = document.querySelectorAll('.video-lightbox-trigger');
+  const closeBtn      = document.getElementById('lightbox-close');
+  const triggers      = document.querySelectorAll('.video-trigger');
 
-  if (!lightbox || !lightboxVideo || !closeLightbox) return; // page has no lightbox
+  if (!lightbox || !lightboxVideo || !closeBtn) return;
 
-  // Open lightbox
+  const openLightbox = (url) => {
+    const autoUrl = url.includes('?') ? `${url}&autoplay=1` : `${url}?autoplay=1`;
+    lightboxVideo.src = autoUrl;
+    lightbox.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeLightbox = () => {
+    lightboxVideo.src = '';
+    lightbox.classList.add('hidden');
+    document.body.style.overflow = '';
+  };
+
   triggers.forEach(trigger => {
-    trigger.addEventListener('click', event => {
-      event.preventDefault();
-      const videoUrl    = trigger.getAttribute('href');
-      const autoplayUrl = videoUrl.includes('?')
-        ? `${videoUrl}&autoplay=1`
-        : `${videoUrl}?autoplay=1`;
-      lightboxVideo.src = autoplayUrl;
-      lightbox.classList.remove('hidden');
+    trigger.addEventListener('click', e => {
+      e.preventDefault();
+      openLightbox(trigger.getAttribute('href') || trigger.dataset.href);
     });
   });
 
-  // Close lightbox
-  const closeLightboxFunction = () => {
-    lightboxVideo.src = '';
-    lightbox.classList.add('hidden');
-  };
+  closeBtn.addEventListener('click', closeLightbox);
 
-  closeLightbox.addEventListener('click', closeLightboxFunction);
-
-  // Close when clicking outside the video
-  lightbox.addEventListener('click', event => {
-    if (event.target === lightbox) closeLightboxFunction();
+  lightbox.addEventListener('click', e => {
+    if (e.target === lightbox) closeLightbox();
   });
 
-  // Close on Escape key
-  document.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && !lightbox.classList.contains('hidden')) {
-      closeLightboxFunction();
-    }
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeLightbox();
   });
 
 });

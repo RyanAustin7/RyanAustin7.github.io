@@ -1,21 +1,19 @@
 // ============================================================
-//  resumeview.js — adjusts the Resume nav link on mobile
-//  Works for both index.html (root) and pages/ subpages.
+//  resumeview.js — swap resume link to PDF on mobile
 // ============================================================
 
 function adjustResumeLink() {
-  // Match whichever path is present in the nav
-  const resumeLink =
-    document.querySelector('a[href="resume.html"]') ||
-    document.querySelector('a[href="pages/resume.html"]');
+  const link =
+    document.querySelector('a[href="pages/resume.html"]') ||
+    document.querySelector('a[href="resume.html"]');
 
-  if (!resumeLink) return; // page has no resume link — do nothing
+  if (!link) return;
 
-  const isSubpage = resumeLink.getAttribute('href').startsWith('resume');
-  const pdfPath   = isSubpage ? '../RyanAustin_Resume.pdf' : 'RyanAustin_Resume.pdf';
-  const htmlPath  = isSubpage ? 'resume.html'              : 'pages/resume.html';
+  const isSubpage = link.getAttribute('href').startsWith('resume');
+  const pdf  = isSubpage ? '../RyanAustin_Resume.pdf' : 'RyanAustin_Resume.pdf';
+  const html = isSubpage ? 'resume.html' : 'pages/resume.html';
 
-  resumeLink.href = window.innerWidth <= 514 ? pdfPath : htmlPath;
+  link.href = window.innerWidth <= 514 ? pdf : html;
 }
 
 window.addEventListener('load',   adjustResumeLink);
