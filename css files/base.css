@@ -624,6 +624,12 @@ a:hover {
   transform: none;
 }
 
+/* Safety net — if JS fails, all content is still visible */
+.no-js .reveal {
+  opacity: 1;
+  transform: none;
+}
+
 /* ---------- Resume link mobile switch ---------- */
 /* handled by resumeview.js */
 
@@ -634,13 +640,20 @@ a:hover {
   background: var(--black);
   z-index: 9998;
   pointer-events: none;
-  opacity: 0;           /* default: invisible — JS controls transitions */
-  transition: opacity 0.5s ease;
+  opacity: 1;
+  animation: pageReveal 0.6s 0.1s ease forwards;
+}
+
+@keyframes pageReveal {
+  from { opacity: 1; }
+  to   { opacity: 0; pointer-events: none; }
 }
 
 #page-transition.fade-out {
+  animation: none;
   opacity: 1;
   pointer-events: all;
+  transition: opacity 0.4s ease;
 }
 
 /* ---------- Header + transition keyframes ---------- */

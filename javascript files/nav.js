@@ -44,6 +44,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.1 });
 
     reveals.forEach(el => io.observe(el));
+
+    // Safety net: force all reveals visible after 1.5s
+    // in case IntersectionObserver fires late on live servers
+    setTimeout(() => {
+      reveals.forEach(el => el.classList.add('visible'));
+    }, 1500);
   }
 
   // ---------- Page transitions ----------
@@ -54,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.appendChild(overlay);
   }
 
-  // Intercept internal link clicks — fade out before navigating
+  // Intercept internal link clicks — fade to black then navigate
   document.querySelectorAll('a[href]').forEach(link => {
     const href = link.getAttribute('href');
 
@@ -71,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
       overlay.classList.add('fade-out');
       setTimeout(() => {
         window.location.href = href;
-      }, 420);
+      }, 450);
     });
   });
 
