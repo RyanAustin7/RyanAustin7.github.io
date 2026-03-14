@@ -447,9 +447,18 @@ a:hover {
 
 .hero-scroll-line {
   width: 1px;
+  height: 40px;
   height: clamp(2px, 15vh, 120px);
+  height: clamp(2px, 15dvh, 120px);
   background: linear-gradient(to bottom, var(--white-dim), transparent);
   animation: scrollPulse 2s ease infinite;
+}
+
+@media (min-height: 700px) {
+  .hero-scroll-line { height: 60px; height: clamp(40px, 15dvh, 120px); }
+}
+@media (min-height: 900px) {
+  .hero-scroll-line { height: 80px; height: clamp(60px, 15dvh, 120px); }
 }
 
 /* ---------- Lightbox ---------- */
