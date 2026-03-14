@@ -632,7 +632,8 @@ a:hover {
   background: var(--black);
   z-index: 9998;
   pointer-events: none;
-  animation: pageReveal 0.6s 0.1s ease both;
+  opacity: 0;
+  animation: pageReveal 0.5s 0.05s ease both;
 }
 
 @keyframes pageReveal {
@@ -640,11 +641,14 @@ a:hover {
   to   { opacity: 0; }
 }
 
+@keyframes pageFadeOut {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
 #page-transition.fade-out {
-  animation: none;
-  opacity: 1;
+  animation: pageFadeOut 0.35s ease both;
   pointer-events: all;
-  transition: opacity 0.4s ease;
 }
 
 /* ---------- Header + transition keyframes ---------- */

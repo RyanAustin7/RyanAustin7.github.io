@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
       overlay.classList.add('fade-out');
       setTimeout(() => {
         window.location.href = href;
-      }, 450);
+      }, 380);
     });
   });
 
